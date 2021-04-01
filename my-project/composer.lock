@@ -1561,9 +1561,6 @@
                 "laminas",
                 "laminasframework"
             ],
-<<<<<<< Updated upstream
-            "time": "2019-12-31T16:28:24+00:00"
-=======
             "support": {
                 "chat": "https://laminas.dev/chat",
                 "docs": "https://docs.laminas.dev/laminas-code/",
@@ -1572,14 +1569,7 @@
                 "rss": "https://github.com/laminas/laminas-code/releases.atom",
                 "source": "https://github.com/laminas/laminas-code"
             },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2021-03-27T13:55:31+00:00"
->>>>>>> Stashed changes
+            "time": "2019-12-31T16:28:24+00:00"
         },
         {
             "name": "laminas/laminas-eventmanager",
@@ -4399,13 +4389,10 @@
                 "log",
                 "logging"
             ],
-<<<<<<< Updated upstream
-=======
             "support": {
                 "issues": "https://github.com/symfony/monolog-bundle/issues",
-                "source": "https://github.com/symfony/monolog-bundle/tree/v3.7.0"
+                "source": "https://github.com/symfony/monolog-bundle/tree/v3.6.0"
             },
->>>>>>> Stashed changes
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",

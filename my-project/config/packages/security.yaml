@@ -2,14 +2,18 @@ security:
     encoders:
         App\Entity\Candidat:
             algorithm: auto
+        App\Entity\Recruteur:
+            algorithm: auto
+
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         # used to reload user from session & other features (e.g. switch_user)
         app_user_provider:
             entity:
-                class: App\Entity\Candidat
+                class: App\Entity\Recruteur
                 property: email
+        # used to reload user from session & other features (e.g. switch_user)
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
