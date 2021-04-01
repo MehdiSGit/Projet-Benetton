@@ -9,7 +9,12 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         # used to reload user from session & other features (e.g. switch_user)
-        app_user_provider:
+        candidat_provider:
+            entity:
+                class: App\Entity\Candidat
+                property: email
+
+        recruteur_provider:
             entity:
                 class: App\Entity\Recruteur
                 property: email
@@ -20,8 +25,15 @@ security:
             security: false
         main:
             anonymous: true
-            lazy: true
-            provider: app_user_provider
+            #lazy: true
+            provider: candidat_provider
+            guard:
+                authenticators:
+                    - App\Security\CandidatAuthenticator
+            logout:
+                path: app_logout
+                # where to redirect after logout
+                # target: app_any_route
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
