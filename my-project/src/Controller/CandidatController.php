@@ -17,7 +17,7 @@ class CandidatController extends AbstractController
     {   
         $formulaire = $this->createForm(DocumentType::class)->handleRequest($request);
 
-        return $this->render('home.html.twig', [
+        return $this->render('candidat.html.twig', [
             'controller_name' => 'CandidatController',
             'formulaire' => $formulaire->createView()
             
