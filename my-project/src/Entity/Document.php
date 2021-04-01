@@ -26,11 +26,6 @@ class Document
     private $name;
 
     /**
-     * @ORM\Column(type="binary", nullable=true)
-     */
-    private $document;
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $urlProfil;
@@ -52,6 +47,12 @@ class Document
      */
     private $imageFile;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Candidat::class, inversedBy="documents")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $candidat;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -65,18 +66,6 @@ class Document
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getDocument()
-    {
-        return $this->document;
-    }
-
-    public function setDocument($document): self
-    {
-        $this->document = $document;
 
         return $this;
     }
@@ -130,5 +119,17 @@ class Document
     public function getImage()
     {
         return $this->image;
+    }
+
+    public function getCandidat(): ?Candidat
+    {
+        return $this->candidat;
+    }
+
+    public function setCandidat(?Candidat $candidat): self
+    {
+        $this->candidat = $candidat;
+
+        return $this;
     }
 }
