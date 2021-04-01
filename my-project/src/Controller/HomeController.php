@@ -23,11 +23,8 @@ class HomeController extends AbstractController
         if ($formulaire->isSubmitted() && $formulaire->isValid()){
             // $formulaire->getData() permet de récupérer l'objet Document (cf. Entity\Document.php)
             $document = $formulaire->getData();
-
-            dump($this->getUser());
-            // Il faut récupérer le candidat avant de faire l'insertion
-            die('stop');
-
+            $document->setCandidat($this->getUser());
+            
             // $entityManager = Doctrine = BDD
             // Informe doctrine qu'un nouveau document doit être inséré en BDD (PDO = prepare)
             $entityManager->persist($document);
