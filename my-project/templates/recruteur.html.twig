@@ -4,8 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-
+    
 		<title>
 			{% block title %}Equaly
 			{% endblock %}
@@ -29,12 +28,12 @@
 
 					<nav>
 						<a href="#">Espace Candidat</a>
-						<a href="#">Espace Candidat</a>
+						<a href="#">Espace Recruteur</a>
 					</nav>
 				</div>
 
 				<div class="header_main">
-					<h1>Ici votre handicap est une FORCE</h1>
+					<h1>Recruteur !!!</h1>
 					<a href="decouvrez.html">Découvrez nos offres
 					</a>
 				</div>
@@ -44,18 +43,22 @@
 				<div class="alert alert-success">{{ message }}</div>
 			{% endfor %}
 
-			<a href="{{ path('app_register') }}">Register</a></br>
-			
-			<a href="{{ path('app_login') }}">Sign in</a></br>
+			{# <a href="{{ path('candidat') }}">Se connecter</a> #}
 
-			<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
-
-			<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
-
-			{# {{ form_start(formulaire) }}
-			{{ form_rest(formulaire) }}
+			{# {{ form_start(formulaire2) }}
+			{{ form_rest(formulaire2) }}
 			<button>Valider</button>
-			{{ form_end(formulaire) }} #}
+			{{ form_end(formulaire2) }} #}
+
+			{# {% dump candidat %}
+			{% for document in candidat.documents %}
+				{% if loop.first and document.pieceJointe is not null %}
+					{{ dump(document) }}
+					{#<img src="{{ vich_uploader_asset(document, 'pieceJointe') }}" alt="{{ document.name }}" />#}
+				{# {% endif %}
+			{% endfor %} #} 
+
+			{#<img src="{{ vich_uploader_asset(product, 'image') }}" alt="{{ product.name }}" />#}
 
 		{% endblock %}
 	</body>
