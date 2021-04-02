@@ -13,8 +13,8 @@ class DocumentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('urlProfil')
+            // ->add('name')
+            // ->add('urlProfil')
             ->add('imageFile', VichImageType::class, [
                 'required' => false,
                 'allow_delete' => true,
