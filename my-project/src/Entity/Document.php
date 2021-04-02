@@ -36,19 +36,19 @@ class Document
     private $lastUpdate;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
-    private $image;
+    private $pieceJointe;
 
     /**
-     * @Vich\UploadableField(mapping="candidat", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="candidat", fileNameProperty="pieceJointe")
      * @var File
      */
-    private $imageFile;
+    private $pieceJointeFile;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Candidat::class, inversedBy="documents")
+     * @ORM\ManyToOne(targetEntity=Candidat::class, inversedBy="documents", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $candidat;
@@ -93,32 +93,32 @@ class Document
 
         return $this;
     }
-    public function setImageFile(File $image = null)
+    public function setpieceJointeFile(File $pieceJointe = null)
     {
-        $this->imageFile = $image;
+        $this->pieceJointeFile = $pieceJointe;
 
         // VERY IMPORTANT:
         // It is required that at least one field changes if you are using Doctrine,
         // otherwise the event listeners won't be called and the file is lost
-        if ($image) {
+        if ($pieceJointe) {
             // if 'lastUpdate' is not defined in your entity, use another property
             $this->lastUpdate = new \DateTime('now');
         }
     }
 
-    public function getImageFile()
+    public function getpieceJointeFile()
     {
-        return $this->imageFile;
+        return $this->pieceJointeFile;
     }
 
-    public function setImage($image)
+    public function setPieceJointe($pieceJointe)
     {
-        $this->image = $image;
+        $this->pieceJointe = $pieceJointe;
     }
 
-    public function getImage()
+    public function getPieceJointe()
     {
-        return $this->image;
+        return $this->pieceJointe;
     }
 
     public function getCandidat(): ?Candidat

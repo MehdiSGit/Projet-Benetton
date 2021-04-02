@@ -15,11 +15,9 @@ class DocumentType extends AbstractType
         $builder
             // ->add('name')
             // ->add('urlProfil')
-            ->add('imageFile', VichImageType::class, [
+            ->add('pieceJointeFile', VichImageType::class, [
                 'required' => false,
-                'allow_delete' => true,
-                'delete_label' => '...',
-                'download_label' => '...',
+                'download_label' => "Télécharger l'image",
                 'download_uri' => true,
                 'image_uri' => true,
                 'asset_helper' => true,

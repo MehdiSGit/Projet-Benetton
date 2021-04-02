@@ -2,8 +2,9 @@
 
 namespace App\Form;
 
-use App\Entity\CandidatProfil;
+use App\Entity\Candidat;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,13 +19,16 @@ class CandidatProfilType extends AbstractType
             ->add('education')
             ->add('experience')
             ->add('descriptionCandidat')
+            ->add('documents', CollectionType::class, [
+                'entry_type' => DocumentType::class,
+            ])
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => CandidatProfil::class,
+            'data_class' => Candidat::class,
         ]);
     }
 }

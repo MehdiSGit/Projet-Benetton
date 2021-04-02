@@ -51,7 +51,17 @@
 			<button>Valider</button>
 			{{ form_end(formulaire2) }}
 
-			{% endblock %}
+			{# {% dump candidat %}
+			{% for document in candidat.documents %}
+				{% if loop.first and document.pieceJointe is not null %}
+					{{ dump(document) }}
+					{#<img src="{{ vich_uploader_asset(document, 'pieceJointe') }}" alt="{{ document.name }}" />#}
+				{% endif %}
+			{% endfor %} #}
+
+			{#<img src="{{ vich_uploader_asset(product, 'image') }}" alt="{{ product.name }}" />#}
+
+		{% endblock %}
 	</body>
 
 </html>
