@@ -36,10 +36,10 @@ class HomeController extends AbstractController
             $this->addFlash('message_success', 'Votre image a bien été ajoutée');
 
             // Redirection sur la page d'accueil en GET
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('candidat');
         }
 
-        return $this->render('candidat.html.twig', [
+        return $this->render('home.html.twig', [
             'controller_name' => 'CandidatController',
             'formulaire' => $formulaire->createView()
             
