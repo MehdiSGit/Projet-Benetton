@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CandidatController extends AbstractController
 {
+    
     /**
      * @Route("/candidat", name="candidat")
      */
