@@ -38,11 +38,11 @@ class CandidatController extends AbstractController
         /** Candidat $candidat */
         $candidat = $this->getUser();
         
-        // Si les documents n'existent pas, je les initialisent
+        // Si les documents n'existent pas, je les initialisent pour la première fois
         if ($candidat->getDocuments()->count() < 3) {
             $candidat->addDocument((new Document())->setName('photo'));
             $candidat->addDocument((new Document())->setName('cv'));
-            $candidat->addDocument((new Document())->setName('motivation'));
+            $candidat->addDocument((new Document())->setName('lettre de motivation'));
         }
 
         $formulaire2 = $this->createForm(CandidatProfilType::class, $candidat)->handleRequest($request);
