@@ -43,22 +43,10 @@
 				<div class="alert alert-success">{{ message }}</div>
 			{% endfor %}
 
-			{# <a href="{{ path('candidat') }}">Se connecter</a> #}
-
-			{# {{ form_start(formulaire2) }}
-			{{ form_rest(formulaire2) }}
+			{{ form_start(formulaire3) }}
+			{{ form_rest(formulaire3) }}
 			<button>Valider</button>
-			{{ form_end(formulaire2) }} #}
-
-			{# {% dump candidat %}
-			{% for document in candidat.documents %}
-				{% if loop.first and document.pieceJointe is not null %}
-					{{ dump(document) }}
-					{#<img src="{{ vich_uploader_asset(document, 'pieceJointe') }}" alt="{{ document.name }}" />#}
-				{# {% endif %}
-			{% endfor %} #} 
-
-			{#<img src="{{ vich_uploader_asset(product, 'image') }}" alt="{{ product.name }}" />#}
+			{{ form_end(formulaire3) }}
 
 		{% endblock %}
 	</body>
