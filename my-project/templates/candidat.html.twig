@@ -45,12 +45,11 @@
 			{% endfor %}
 
 			{# <a href="{{ path('candidat') }}">Se connecter</a> #}
-			<a href="{{ path('app_register') }}">Se connecter</a> 
 
-			{# {{ form_start(formulaire) }}
+			{{ form_start(formulaire) }}
 			{{ form_rest(formulaire) }}
 			<button>Valider</button>
-			{{ form_end(formulaire) }} #}
+			{{ form_end(formulaire) }}
 
 		{% endblock %}
 	</body>

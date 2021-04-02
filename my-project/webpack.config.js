@@ -1,7 +1,7 @@
 const Encore = require('@symfony/webpack-encore');
 var dotenv = require('dotenv');
-const env = dotenv.config();
-
+const env = dotenv.config({ path: './.env.local' });
+const web_pack_public_path = env.parsed.WEBPACK_PUBLIC_PATH;
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
@@ -12,9 +12,9 @@ Encore
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
-    .setPublicPath(env.parsed.WEBPACK_PUBLIC_PATH+'/build')
+    .setPublicPath('/'+web_pack_public_path+'/build')
     // only needed for CDN's or sub-directory deploy
-    //.setManifestKeyPrefix('build/')
+    .setManifestKeyPrefix(web_pack_public_path+'/build/')
 
     /*
      * ENTRY CONFIG
