@@ -1,66 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'squelette.html.twig' %}
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-		<title>
-			{% block title %}Equaly
-			{% endblock %}
-		</title>
-		{# ci-dessous insert les balises <link> pour le fichier app.css #}
-		{{ encore_entry_link_tags('app') }}
-		{# ci-dessous insert les balises <script> pour le fichier app.js #}
-		{{ encore_entry_script_tags('app') }}
+{% block main %}
 
-		{# ci-dessous insert les balises <link> pour le fichier candidat.css #}
-		{{ encore_entry_link_tags('candidat') }}
-		{# ci-dessous insert les balises <script> pour le fichier candidat.js #}
-		{{ encore_entry_script_tags('candidat') }}
-	</head>
+	<div class="container">
 
-	<body>
-		{% block body %}
-			<header>
-				<div class="header_nav">
-					<h4>EQUALY</h4>
+	<h1>Page Candidat</h1>
 
-					<nav>
-						<a href="#">Espace Candidat</a>
-						<a href="#">Espace Recruteur</a>
-					</nav>
-				</div>
+	<section class="displayCandidat">
+		<h2>Vos informations personnelles</h2></br>
 
-				<div class="header_main">
-					<h1>CANDIDAT !!!</h1>
-					<a href="decouvrez.html">Découvrez nos offres
-					</a>
-				</div>
-			</header>
+		<p>Prénom : {{candidat.FirstName}}</p></br>
+		<p>Nom : {{candidat.LastName}}</p></br>
+		<p>Education : {{candidat.Education}}</p></br>
+		<p>Expérience : {{candidat.Experience}}</p></br>
+		<p>Votre description : {{candidat.DescriptionCandidat}}</p></br>
+	</section>
 
-			{% for message in app.flashes('message_success') %}
-				<div class="alert alert-success">{{ message }}</div>
-			{% endfor %}
 
-			{# <a href="{{ path('candidat') }}">Se connecter</a> #}
+	<section class="editCandidat">
 
-			{{ form_start(formulaire2) }}
-			{{ form_rest(formulaire2) }}
-			<button>Valider</button>
-			{{ form_end(formulaire2) }}
+	<h2>Editer votre profil</h2>
 
-			{# {% dump candidat %}
-			{% for document in candidat.documents %}
-				{% if loop.first and document.pieceJointe is not null %}
-					{{ dump(document) }}
-					{#<img src="{{ vich_uploader_asset(document, 'pieceJointe') }}" alt="{{ document.name }}" />#}
-				{# {% endif %}
-			{% endfor %} #} 
+		{{ form_start(formulaire2) }}
+		{{ form_rest(formulaire2) }}
+		<button>Valider</button>
+		{{ form_end(formulaire2) }}
+	</section>
 
-			{#<img src="{{ vich_uploader_asset(product, 'image') }}" alt="{{ product.name }}" />#}
+	{% for message in app.flashes('message_success') %}
+		<div class="alert alert-success">{{ message }}</div>
+	{% endfor %}
 
-		{% endblock %}
-	</body>
+	{# {% dump candidat %}
+	{% for document in candidat.documents %}
+	{% if loop.first and document.pieceJointe is not null %}
+		{{ dump(document) }}
+		{#<img src="{{ vich_uploader_asset(document, 'pieceJointe') }}" alt="{{ documname }}" />#}
+	{# {% endif %}
+	{% endfor %} #} 
 
-</html>
+	{#<img src="{{ vich_uploader_asset(product, 'image') }}" alt="{{ product.name }}" />#}
+	</div>
+{% endblock %}

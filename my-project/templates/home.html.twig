@@ -1,63 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'squelette.html.twig' %}
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
+{% block main %}
 
-		<title>
-			{% block title %}Equaly
-			{% endblock %}
-		</title>
-		{# ci-dessous insert les balises <link> pour le fichier app.css #}
-		{{ encore_entry_link_tags('app') }}
-		{# ci-dessous insert les balises <script> pour le fichier app.js #}
-		{{ encore_entry_script_tags('app') }}
+	{% for message in app.flashes('message_success') %}
+		<div class="alert alert-success">{{ message }}</div>
+	{% endfor %}
 
-		{# ci-dessous insert les balises <link> pour le fichier candidat.css #}
-		{{ encore_entry_link_tags('candidat') }}
-		{# ci-dessous insert les balises <script> pour le fichier candidat.js #}
-		{{ encore_entry_script_tags('candidat') }}
-	</head>
-
-	<body>
-		{% block body %}
-			<header>
-				<div class="header_nav">
-					<h4>EQUALY</h4>
-
-					<nav>
-						<a href="#">Espace Candidat</a>
-						<a href="#">Espace Candidat</a>
-					</nav>
-				</div>
-
-				<div class="header_main">
-					<h1>Ici votre handicap est une FORCE</h1>
-					<a href="decouvrez.html">Découvrez nos offres
-					</a>
-				</div>
-			</header>
-
-			{% for message in app.flashes('message_success') %}
-				<div class="alert alert-success">{{ message }}</div>
-			{% endfor %}
-
-			<a href="{{ path('app_register') }}">Register</a></br>
+	<a href="{{ path('app_register') }}">Register</a></br>
 			
-			<a href="{{ path('app_login') }}">Sign in</a></br>
+	<a href="{{ path('app_login') }}">Sign in</a></br>
 
-			<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
+	<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
 
-			<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
+	<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
 
-			{# {{ form_start(formulaire) }}
-			{{ form_rest(formulaire) }}
-			<button>Valider</button>
-			{{ form_end(formulaire) }} #}
-
-		{% endblock %}
-	</body>
-
-</html>
+{% endblock %}
