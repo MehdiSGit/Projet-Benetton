@@ -37,11 +37,7 @@ class RecruteurController extends AbstractController
             return $this->redirectToRoute('recruteur');
         }
 
-
-
-
-
-        return $this->render('recruteur.html.twig', [
+        return $this->render('recruteur/recruteur.html.twig', [
             'controller_name' => 'RecruteurController',
             'formulaire3' => $formulaire3->createView()
         ]);

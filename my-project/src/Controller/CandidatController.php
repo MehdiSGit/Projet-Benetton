@@ -64,7 +64,7 @@ class CandidatController extends AbstractController
             return $this->redirectToRoute('candidat');
         }
 
-        return $this->render('candidat.html.twig', [
+        return $this->render('candidat/candidat.html.twig', [
             'candidat' => $candidat,
             'formulaire2' => $formulaire2->createView()
         ]);
