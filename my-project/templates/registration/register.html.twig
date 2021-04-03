@@ -1,20 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/squelette.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
-{% block body %}
+{% block main %}
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-    <a href="{{ path('app_login') }}">Se connecter</a> 
-
-    <h1>Register</h1>
+    <h1>Création de compte</h1>
 
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+            label: 'Mot de pass : '
         }) }}
         {{ form_row(registrationForm.agreeTerms) }}
 

@@ -5,10 +5,6 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>
-			{% block title %}Equaly
-			{% endblock %}
-		</title>
 		{# ci-dessous insert les balises <link> pour le fichier app.css #}
 		{{ encore_entry_link_tags('app') }}
 		{# ci-dessous insert les balises <script> pour le fichier app.js #}
@@ -18,6 +14,11 @@
 		{{ encore_entry_link_tags('candidat') }}
 		{# ci-dessous insert les balises <script> pour le fichier candidat.js #}
 		{{ encore_entry_script_tags('candidat') }}
+
+		<title>
+			{% block title %}Equaly
+			{% endblock %}
+		</title>
 	</head>
     <body>
 
