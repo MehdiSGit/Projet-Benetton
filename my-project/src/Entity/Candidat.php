@@ -64,7 +64,7 @@ class Candidat implements UserInterface, \Serializable
     private $createAt;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $education;
 
