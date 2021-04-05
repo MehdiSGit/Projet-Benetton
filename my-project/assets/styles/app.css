@@ -14,6 +14,10 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    color:rgba(252,70,107,1)
+}
+.header_nav a {
+    color:rgba(252,70,107,1)
 }
 .header_main {
     margin-left: 8rem;

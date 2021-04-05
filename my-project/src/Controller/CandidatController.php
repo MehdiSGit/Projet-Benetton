@@ -37,6 +37,7 @@ class CandidatController extends AbstractController
         // $this->getUser() récupère l'utilisateur connecté
         /** Candidat $candidat */
         $candidat = $this->getUser();
+        // dd($candidat->getDocuments()[0]);
         
         // Si les documents n'existent pas, je les initialisent pour la première fois
         if ($candidat->getDocuments()->count() < 3) {
@@ -49,7 +50,9 @@ class CandidatController extends AbstractController
 
         if ($formulaire2->isSubmitted() && $formulaire2->isValid()){
             // $formulaire2->getData() permet de récupérer l'objet Document (cf. Entity\Document.php)
-         
+
+            $formulaire2->getData();
+        
             // $entityManager = Doctrine = BDD
             // Informe doctrine qu'un nouveau candidat doit être inséré en BDD (PDO = prepare)
             $entityManager->persist($candidat);

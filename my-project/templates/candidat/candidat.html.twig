@@ -4,39 +4,37 @@
 
 	<div class="container">
 
-	<h1>Page Candidat</h1>
+		<h1>Page Candidat</h1>
 
-	<section class="displayCandidat">
-		<h2>Vos informations personnelles</h2></br>
+		<section class="displayCandidat">
+			<h2>Vos informations personnelles</h2></br>
+			<p>Prénom : {{candidat.FirstName}}</p></br>
+			<p>Nom : {{candidat.LastName}}</p></br>
+			<p>Education : {{candidat.Education}}</p></br>
+			<p>Expérience : {{candidat.Experience}}</p></br>
+			<p>Votre description : {{candidat.DescriptionCandidat}}</p></br>
+			{% dump candidat.documents %}
+		</section>
 
-		<p>Prénom : {{candidat.FirstName}}</p></br>
-		<p>Nom : {{candidat.LastName}}</p></br>
-		<p>Education : {{candidat.Education}}</p></br>
-		<p>Expérience : {{candidat.Experience}}</p></br>
-		<p>Votre description : {{candidat.DescriptionCandidat}}</p></br>
+		<section class="editCandidat">
+			<h2>Editer votre profil</h2>
+			{{ form_start(formulaire2) }}
+			{{ form_rest(formulaire2) }}
+			<button>Valider</button>
+			{{ form_end(formulaire2) }}
+		</section>
+		
+		{% for message in app.flashes('message_success') %}
+			<div class="alert alert-success">{{ message }}</div>
+		{% endfor %}
 
-	<section class="editCandidat">
+		{# {% dump candidat %}
+		{% for document in candidat.documents %}
+		{{ document.name }}
+		<img src="{{ vich_uploader_asset(document.pieceJointe, 'image') }}" alt="{{ document.name }}" />
+		{% endfor %}  #}
 
-	<h2>Editer votre profil</h2>
-
-		{{ form_start(formulaire2) }}
-		{{ form_rest(formulaire2) }}
-		<button>Valider</button>
-		{{ form_end(formulaire2) }}
-	</section>
-
-	{% for message in app.flashes('message_success') %}
-		<div class="alert alert-success">{{ message }}</div>
-	{% endfor %}
-
-	{# {% dump candidat %}
-	{% for document in candidat.documents %}
-	{% if loop.first and document.pieceJointe is not null %}
-		{{ dump(document) }}
-		{#<img src="{{ vich_uploader_asset(document, 'pieceJointe') }}" alt="{{ documname }}" />#}
-	{# {% endif %}
-	{% endfor %} #} 
-
-	{#<img src="{{ vich_uploader_asset(product, 'image') }}" alt="{{ product.name }}" />#}
 	</div>
+	
+
 {% endblock %}
