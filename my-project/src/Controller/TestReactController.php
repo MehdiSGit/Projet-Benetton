@@ -13,6 +13,7 @@ class TestReactController extends AbstractController
      */
     public function index(): Response
     {
+        
         return $this->render('testReact.html.twig', [
             'controller_name' => 'TestReactController',
         ]);
