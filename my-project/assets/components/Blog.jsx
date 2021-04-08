@@ -2,13 +2,9 @@ import React from 'react';
 
 
 
-<<<<<<< Updated upstream
-class Blog extends React.Component {
-=======
-const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photoscc&q=&rows=10&facet=theme"
+const url = "https://jsonplaceholder.typicode.com/posts"
 
  class Blog extends React.Component {
->>>>>>> Stashed changes
     constructor() {
         super();
 
@@ -38,7 +34,7 @@ const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photosc
 
         const resultat =  fetch(url).then(response => response.json()).then(response => {
             this.setState({
-                events: response.records ,
+                events: response,
             })
         });
 
@@ -48,8 +44,9 @@ const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photosc
             <div>
                 {this.state.events.map(event => (
                     <div>
-                        <h4> Titre: {event.fields.titre}</h4>
-                        <h6>theme:{event.fields.theme} </h6>
+                        <img style={{width: "20%" }}src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt=""/>
+                        <h4>  {event.title}</h4>
+                        <p>{event.body} </p>
                     </div>
                 ))}
 
@@ -72,3 +69,4 @@ const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photosc
 }
 
 export default Blog;
+
