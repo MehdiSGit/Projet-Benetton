@@ -10,14 +10,14 @@ import './styles/app.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import Blog from './components/Blog';
 import Search from './components/SearchBar';
 
 ReactDOM.render(
-    (
-        <App/>
-    ),
-        document.getElementById('test')
-)
+    <React.StrictMode>
+        <Blog/>
+    </React.StrictMode>,
+        document.getElementById('Blog')
+);
 
 
