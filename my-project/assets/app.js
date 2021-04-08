@@ -11,6 +11,7 @@ import './styles/app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import Search from './components/SearchBar';
 
 ReactDOM.render(
     (
@@ -18,3 +19,5 @@ ReactDOM.render(
     ),
         document.getElementById('test')
 )
+
+

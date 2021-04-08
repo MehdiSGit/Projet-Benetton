@@ -8,7 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DiscoverController extends AbstractController
 {
-    #[Route('/lesoffres', name: 'offres')]
+    
+    /**
+     * @Route("/lesoffres", name="offres")
+     */
     public function index(): Response
     {
         return $this->render('discover.html.twig', [

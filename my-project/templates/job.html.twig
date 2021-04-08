@@ -1,0 +1,11 @@
+{% extends 'home/squelette.html.twig' %}
+
+            
+            
+{% block main %}        
+            {{ form_start(formulaireJob) }}
+			{{ form_rest(formulaireJob) }}
+			<button>Valider</button>
+			{{ form_end(formulaireJob) }}
+
+{% endblock %}
