@@ -5,10 +5,9 @@ class App extends React.Component {
         super();
     }
     
-    
     render(){
         return (
-           <p>Hello</p> 
+        <p>Hello</p> 
         )
     }
 }
