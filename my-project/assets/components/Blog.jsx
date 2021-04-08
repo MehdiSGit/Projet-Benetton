@@ -1,16 +1,20 @@
 import React from 'react';
-import { createPortal } from 'react-dom';
 
 
-const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photoscc&q=&rows=5&facet=theme"
 
+<<<<<<< Updated upstream
 class Blog extends React.Component {
+=======
+const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photoscc&q=&rows=10&facet=theme"
+
+ class Blog extends React.Component {
+>>>>>>> Stashed changes
     constructor() {
         super();
 
         this.state = {
             events: [],
-            currentPage: 1,
+            // currentPage: 1,
 
         };
         // this.fetchEvents = this.fetchEvents.bind(this);
@@ -40,18 +44,20 @@ class Blog extends React.Component {
 
 
         return (
-       <div>
+          
+            <div>
                 {this.state.events.map(event => (
-                <div> 
-                     <h4> Titre: {event.fields.titre}</h4>
-                     <h6>theme:{event.fields.theme} </h6>
-                </div> 
+                    <div>
+                        <h4> Titre: {event.fields.titre}</h4>
+                        <h6>theme:{event.fields.theme} </h6>
+                    </div>
                 ))}
-               
-            {/* <button onClick={this.fetchEvents}>Fetch</button> */}
-            <button>More articles</button>
-         </div>
-  
+
+                {/* <button onClick={this.fetchEvents}>Fetch</button> */}
+                {/* <button>More articles</button> */}
+            </div>
+
+           
     
         );
     }

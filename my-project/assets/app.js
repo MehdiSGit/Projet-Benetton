@@ -14,7 +14,13 @@ import Blog from './components/Blog';
 import Search from './components/SearchBar';
 
 ReactDOM.render(
+<<<<<<< Updated upstream
         <Blog/>,
+=======
+   
+        <Blog/>,
+ 
+>>>>>>> Stashed changes
         document.getElementById('blog')
 );
 
