@@ -14,10 +14,8 @@ import Blog from './components/Blog';
 import Search from './components/SearchBar';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Blog/>
-    </React.StrictMode>,
-        document.getElementById('Blog')
+        <Blog/>,
+        document.getElementById('blog')
 );
 
 

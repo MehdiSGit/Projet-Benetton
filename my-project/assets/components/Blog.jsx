@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 
 const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photoscc&q=&rows=5&facet=theme"
 
- export class Blog extends React.Component {
+class Blog extends React.Component {
     constructor() {
         super();
 

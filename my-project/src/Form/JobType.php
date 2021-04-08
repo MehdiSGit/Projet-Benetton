@@ -16,7 +16,7 @@ class JobType extends AbstractType
             ->add('name')
             ->add('description')
             //->add('datePublished')
-            //->add('jobStartDate')
+            ->add('jobStartDate')
         ;
     }
 
