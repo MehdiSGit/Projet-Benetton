@@ -2,10 +2,20 @@
 
             
             
-{% block main %}        
+{% block main %}  
+    
             {{ form_start(formulaireJob) }}
 			{{ form_rest(formulaireJob) }}
 			<button>Valider</button>
 			{{ form_end(formulaireJob) }}
+
+			{% for job in jobs %}
+			<ul>
+				<li>
+					<p>{{ job.name }}</p>
+					<p>{{ job.description }}</p>
+				</li>
+			</ul>
+			{% endfor %}
 
 {% endblock %}
