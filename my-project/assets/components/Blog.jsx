@@ -2,7 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 
 
-const url = "https://jsonplaceholder.typicode.com/posts"
+const url = "https://data.iledefrance.fr/api/records/1.0/search/?dataset=photoscc&q=&rows=5&facet=theme"
 
  export class Blog extends React.Component {
     constructor() {
@@ -10,31 +10,49 @@ const url = "https://jsonplaceholder.typicode.com/posts"
 
         this.state = {
             events: [],
+            currentPage: 1,
+
         };
-        this.fetchEvents = this.fetchEvents.bind(this);
+        // this.fetchEvents = this.fetchEvents.bind(this);
     }
 
+//  /**
+//    * Cette componentDidUpdate qui se déclenche à chaque fois qu'on fait un setState quelque part
+//    * ça sert à gérer les effets de bord.
+//    * @param prevProps
+//    * @param prevState
+//    */
+//   componentDidUpdate(prevProps, prevState) {
 
+//     // On ne veut relancer la requête que si l'ancienne page est différente de la nouvelle.
+//     if (prevState.currentPage !== this.state.currentPage) {
+//       this.fetchEvents();
+//     }
+//   }
+  
     render() {
-        return (
-           
 
-            <div>
-             <>
-            <button onClick={this.fetchEvents}>Fetch</button>
-            </>
+        const resultat =  fetch(url).then(response => response.json()).then(response => {
+            this.setState({
+                events: response.records ,
+            })
+        });
+
+
+        return (
+       <div>
                 {this.state.events.map(event => (
                 <div> 
-                     <p> Hello</p>
-                     <h4>Title: {event.title}</h4>
-                     <p>Body: {event.body}</p>
-                     <button>Decouvrez les articles</button>
+                     <h4> Titre: {event.fields.titre}</h4>
+                     <h6>theme:{event.fields.theme} </h6>
                 </div> 
                 ))}
                
-            </div>
+            {/* <button onClick={this.fetchEvents}>Fetch</button> */}
+            <button>More articles</button>
+         </div>
   
-     
+    
         );
     }
 
@@ -43,16 +61,6 @@ const url = "https://jsonplaceholder.typicode.com/posts"
     //         currentPage: number
     //     });
     // }
-
-    fetchEvents() {
-
-      
-        fetch(url).then(response => response.json()).then(response => {
-            this.setState({
-                events: response
-            })
-        });
-    }
 
 
 }
