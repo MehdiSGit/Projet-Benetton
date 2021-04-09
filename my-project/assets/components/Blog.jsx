@@ -32,9 +32,15 @@ const url = "https://jsonplaceholder.typicode.com/posts"
 
     render() {
 
-        const resultat =  fetch(url).then(response => response.json()).then(response => {
+        fetch(url).then(response => response.json()).then(response => {
+            console.log(response.records);
             this.setState({
+<<<<<<< Updated upstream
                 events: response,
+=======
+                
+                events: response.records ,
+>>>>>>> Stashed changes
             })
         });
 
