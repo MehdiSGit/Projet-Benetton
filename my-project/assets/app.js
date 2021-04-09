@@ -15,13 +15,19 @@ import Blog from './components/Blog';
 import Search from './components/SearchBar';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 
 
 ReactDOM.render(
         <App/>,
+<<<<<<< HEAD
 =======
 ReactDOM.render(
         <App />,
+>>>>>>> master
+=======
 >>>>>>> master
         document.getElementById('blog')
 )

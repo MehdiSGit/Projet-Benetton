@@ -3,6 +3,10 @@ import {BrowserRouter, NavLink, Route} from "react-router-dom";
 import Home from "./components/Home"
 import Register from "./components/Register"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import CreateCandidate from "./components/CreateCandidate";
+>>>>>>> master
 =======
 import CreateCandidate from "./components/CreateCandidate";
 >>>>>>> master
@@ -20,11 +24,17 @@ export default function App() {
       </NavLink>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
       <NavLink to='/createCandidate'>
-        {' ' } Create candidate
+        Create candidate
       </NavLink>
 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
       <Route path="/home">
         <Home/>
@@ -39,6 +49,7 @@ export default function App() {
       </Route>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       
 
             <Route path="/candidat">
@@ -50,6 +61,8 @@ export default function App() {
       </BrowserRouter>)
     }
 =======
+=======
+>>>>>>> master
       <Route path="/recruteur">
 
       </Route>
@@ -63,4 +76,7 @@ export default function App() {
     </BrowserRouter>
   )
 }
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

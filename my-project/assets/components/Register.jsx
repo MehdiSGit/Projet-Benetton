@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Register extends React.Component {
 
     render() {
@@ -14,6 +15,8 @@ class Register extends React.Component {
 
 export default Register
 =======
+=======
+>>>>>>> master
 class Home extends React.Component {
 
   render() {
@@ -27,4 +30,7 @@ class Home extends React.Component {
 }
 
 export default Home
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
