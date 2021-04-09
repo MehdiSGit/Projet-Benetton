@@ -27,7 +27,7 @@ export default class CreateCandidate extends React.Component {
           Email
           <input type="mail" value={this.state.email} onChange={this.updateEmail}/>
         </label>
-        <button onClick={this.save}>Save</button>
+        <button onClick={this.save}>Savve</button>
       </div>
     )
   }
