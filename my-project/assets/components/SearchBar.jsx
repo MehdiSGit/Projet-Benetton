@@ -1,14 +1,13 @@
 import React from 'react';
 
 class Search extends React.Component {
-    constructor(){
+    constructor() {
         super();
     }
-    
-    
-    render(){
+
+    render() {
         return (
-           <p>Hello</p> 
+            <p>Hello</p>
         )
     }
 }
