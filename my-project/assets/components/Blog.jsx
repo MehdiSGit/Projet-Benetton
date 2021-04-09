@@ -35,18 +35,13 @@ const url = "https://jsonplaceholder.typicode.com/posts"
         fetch(url).then(response => response.json()).then(response => {
             console.log(response.records);
             this.setState({
-<<<<<<< Updated upstream
-                events: response,
-=======
                 
-                events: response.records ,
->>>>>>> Stashed changes
+                events: response ,
             })
         });
 
-
         return (
-          
+        
             <div>
                 {this.state.events.map(event => (
                     <div>
