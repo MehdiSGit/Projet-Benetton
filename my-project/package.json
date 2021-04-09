@@ -2,8 +2,8 @@
     "devDependencies": {
         "@symfony/webpack-encore": "^1.0.0",
         "core-js": "^3.0.0",
-        "react": "^16.7.0",
-        "react-dom": "^16.7.0",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
         "regenerator-runtime": "^0.13.2",
         "stimulus": "^2.0.0",
         "webpack": "^5.31.0",
