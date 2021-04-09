@@ -27,12 +27,13 @@ export default function App() {
       <Route path="/candidat">
       </Route>
 
-      <Route path="/recruteur">
+      
 
-      </Route>
-      <Route>
-      </Route>
+            <Route path="/candidat">
+            </Route >
 
-    </BrowserRouter>
-  )
-}
+            <Route path="/register">
+                <Register></Register>
+            </Route>
+      </BrowserRouter>)
+    }
