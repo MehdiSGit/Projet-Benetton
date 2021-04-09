@@ -19,7 +19,9 @@ import Search from './components/SearchBar';
 
 
 ReactDOM.render(
+   
         <Blog/>,
+ 
         document.getElementById('blog')
 );
 
