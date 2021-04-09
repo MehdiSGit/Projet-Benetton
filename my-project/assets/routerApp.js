@@ -2,6 +2,10 @@ import React from "react";
 import {BrowserRouter, NavLink, Route} from "react-router-dom";
 import Home from "./components/Home"
 import Register from "./components/Register"
+<<<<<<< HEAD
+=======
+import CreateCandidate from "./components/CreateCandidate";
+>>>>>>> master
 
 export default function App() {
   return (
@@ -15,6 +19,13 @@ export default function App() {
         Register
       </NavLink>
 
+<<<<<<< HEAD
+=======
+      <NavLink to='/createCandidate'>
+        {' ' } Create candidate
+      </NavLink>
+
+>>>>>>> master
       <Route path="/home">
         <Home/>
       </Route>
@@ -27,6 +38,7 @@ export default function App() {
       <Route path="/candidat">
       </Route>
 
+<<<<<<< HEAD
       
 
             <Route path="/candidat">
@@ -37,3 +49,18 @@ export default function App() {
             </Route>
       </BrowserRouter>)
     }
+=======
+      <Route path="/recruteur">
+
+      </Route>
+
+      <Route>
+      </Route>
+      <Route path='/createCandidate'>
+        <CreateCandidate/>
+      </Route>
+
+    </BrowserRouter>
+  )
+}
+>>>>>>> master
