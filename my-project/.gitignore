@@ -25,3 +25,7 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 composer.lock
+<<<<<<< HEAD
+=======
+/assets/envjs.js
+>>>>>>> master
