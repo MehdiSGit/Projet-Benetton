@@ -22,11 +22,4 @@ class Home extends React.Component {
 }
 
 export default Home
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> master
-=======
->>>>>>> master
