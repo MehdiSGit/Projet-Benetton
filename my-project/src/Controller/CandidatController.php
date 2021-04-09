@@ -2,12 +2,16 @@
 
 namespace App\Controller;
 
+use App\Entity\Candidat;
 use App\Entity\Document;
 use App\Entity\CandidatProfil;
 use App\Form\DocumentType;
 use App\Form\CandidatProfilType;
+use App\Repository\CandidatRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,6 +32,42 @@ class CandidatController extends AbstractController
             
     //     ]);
     // }
+
+    /**
+     * @Route("/api/candidat/create", name="create_candidat")
+     *
+     * @param Request $request
+     * @param EntityManagerInterface $entityManager
+     * @param CandidatRepository $repository
+     * @return JsonResponse
+     */
+    public function create(Request $request, EntityManagerInterface $entityManager, CandidatRepository $repository) {
+        $content = $request->getContent();
+        $jsonParameters = json_decode($content, true);
+
+        $errorMessage = '';
+
+        $email = $jsonParameters['email'];
+        $firstname = $jsonParameters['firstname'];
+        $lastname = $jsonParameters['lastname'];
+
+        $candidat = new Candidat;
+
+        $candidat->setEmail($email)
+            ->setFirstName($firstname)
+            ->setLastName($lastname);
+
+//        $entityManager->persist($candidat);
+//        $entityManager->flush();
+
+        return new JsonResponse([
+            'parameters' => $jsonParameters,
+            'message' => "Boubou",
+            'created entity' => $candidat,
+        ]);
+    }
+
+
     /**
      * @Route("/candidat", name="candidat")
      */

@@ -1,33 +1,47 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Navlink,
-    BrowserRouter
-  } from "react-router-dom";
-  import Home from "./components/Home"
+import {BrowserRouter, NavLink, Route} from "react-router-dom";
+import Home from "./components/Home"
+import Register from "./components/Register"
+import CreateCandidate from "./components/CreateCandidate";
 
-  export default function App() {
-    return (
+export default function App() {
+  return (
+    <BrowserRouter>
 
-      <BrowserRouter>
+      <NavLink to='/home'>
+        Accueil
+      </NavLink>
 
-        <Navlink>
-        </Navlink>
+      <NavLink to='/register'>
+        Register
+      </NavLink>
 
-        <Route path="/home">
-          <Home></Home>
-        </Route>
+      <NavLink to='/createCandidate'>
+        {' ' } Create candidate
+      </NavLink>
 
-        <Route path="/candidat">
-        </Route >
+      <Route path="/home">
+        <Home/>
+      </Route>
 
-        <Route path="/recruteur">
+      <Route path="/register">
+        <Register/>
+      </Route>
 
-        </Route>
-        <Route>
-        </Route>
-      </BrowserRouter>)
-    }
+
+      <Route path="/candidat">
+      </Route>
+
+      <Route path="/recruteur">
+
+      </Route>
+
+      <Route>
+      </Route>
+      <Route path='/createCandidate'>
+        <CreateCandidate/>
+      </Route>
+
+    </BrowserRouter>
+  )
+}
