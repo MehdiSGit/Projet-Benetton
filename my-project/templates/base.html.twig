@@ -4,7 +4,6 @@
 <head>
     <!-- ... -->
 
-<<<<<<< HEAD
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
@@ -18,27 +17,4 @@
         {% block body %}{% endblock %}
         <div id="blog"></div>
     </body>
-=======
-    {% block stylesheets %}
-        {# 'app' must match the first argument to addEntry() in webpack.config.js #}
-        {{ encore_entry_link_tags('app') }}
-
-        <!-- Renders a link tag (if your module requires any CSS)
-            <link rel="stylesheet" href="/build/app.css"> -->
-    {% endblock %}
-
-    {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}
-
-        <!-- Renders app.js & a webpack runtime.js file
-            <script src="/build/runtime.js" defer></script>
-            <script src="/build/app.js" defer></script>
-            See note below about the "defer" attribute -->
-    {% endblock %}
-</head>
-<body>
-<div id="root">Rodica</div>
-<div id="blog"> blog avec react</div>
-</body>
->>>>>>> master
 </html>

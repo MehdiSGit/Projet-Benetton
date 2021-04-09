@@ -14,16 +14,10 @@ import ReactDOM from 'react-dom';
 import Blog from './components/Blog';
 import Search from './components/SearchBar';
 
-<<<<<<< HEAD
 
 
 ReactDOM.render(
         <App/>,
-=======
-ReactDOM.render(
-        <App />,
-
->>>>>>> master
         document.getElementById('blog')
 )
 

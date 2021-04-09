@@ -50,17 +50,10 @@ class HomeController extends AbstractController
         ]);
     }
 
-<<<<<<< HEAD
-     /**
-     * @Route("/{routingReact}", name="base")
-     */
-    public function react(): Response
-=======
     /**
      * @Route("/{reactRouting}", name="homepage", defaults={"reactRouting": null})
      */
     public function base(): Response
->>>>>>> master
     {
         return $this->render('base.html.twig');
     }
