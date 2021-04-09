@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Link} from "react-router-dom";
 
 
@@ -24,3 +25,19 @@ class Home extends React.Component {
 export default Home
 
 
+=======
+import { port } from "../envjs";
+
+
+class Home extends React.Component{
+
+    render(){
+        return(
+            <div>hello</div>
+        )
+    }
+
+}
+
+export default Home
+>>>>>>> master
