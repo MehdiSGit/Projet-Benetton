@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/test/home", name="home")
      */
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -44,6 +44,14 @@ class HomeController extends AbstractController
             'formulaire' => $formulaire->createView()
             
         ]);
+    }
+
+     /**
+     * @Route("/{routingReact}", name="base")
+     */
+    public function react(): Response
+    {
+        return $this->render('base.html.twig');
     }
     
 }

@@ -1,28 +1,38 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Navlink,
-    BrowserRouter
-  } from "react-router-dom";
+import {BrowserRouter, NavLink, Route} from "react-router-dom";
+import Home from "./components/Home"
+import Register from "./components/Register"
 
-  export default function App() {
+export default function App() {
+  return (
     <BrowserRouter>
 
-    <Navlink>
-    </Navlink>
-        <Route path="/home">
+      <NavLink to='/home'>
+        Accueil
+      </NavLink>
 
-        </Route>
-        <Route path="/candidat">
+      <NavLink to='/register'>
+        Register
+      </NavLink>
 
-        </Route >
+      <Route path="/home">
+        <Home/>
+      </Route>
 
-        <Route path="/recruteur">
+      <Route path="/register">
+        <Register/>
+      </Route>
 
-        </Route>
-        <Route>
-        </Route>
-    </BrowserRouter>}
+
+      <Route path="/candidat">
+      </Route>
+
+      <Route path="/recruteur">
+
+      </Route>
+      <Route>
+      </Route>
+
+    </BrowserRouter>
+  )
+}

@@ -12,9 +12,14 @@
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
+        {# ci-dessous insert les balises <link> pour le fichier app.css #}
+		{{ encore_entry_link_tags('app') }}
+		{# ci-dessous insert les balises <script> pour le fichier app.js #}
+		{{ encore_entry_script_tags('app') }}
+
     </head>
     <body>
-    
         {% block body %}{% endblock %}
+        <div id="blog"></div>
     </body>
 </html>

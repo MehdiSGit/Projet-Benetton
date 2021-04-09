@@ -1,2 +1,15 @@
 import React from 'react';
-import { port } from "../envjs";
+
+class Register extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <h2>Composant register page</h2>
+      </div>
+    )
+  }
+
+}
+
+export default Register

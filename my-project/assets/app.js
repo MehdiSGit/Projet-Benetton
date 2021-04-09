@@ -8,7 +8,7 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 
-import App from "routerApp";
+import App from "./routerApp";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Blog from './components/Blog';
@@ -16,13 +16,9 @@ import Search from './components/SearchBar';
 
 
 
-
-
 ReactDOM.render(
-   
-        <Blog/>,
- 
+        <App/>,
         document.getElementById('blog')
-);
+)
 
 
