@@ -8,6 +8,7 @@
 /public/images/
 /var/
 /vendor/
+assets/envjs.js
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
@@ -24,4 +25,7 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 composer.lock
+<<<<<<< HEAD
+=======
 /assets/envjs.js
+>>>>>>> master
