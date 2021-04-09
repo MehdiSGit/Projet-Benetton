@@ -3,8 +3,6 @@ import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import Home from "./components/Home"
 import Register from "./components/Register"
 import CreateCandidate from "./components/CreateCandidate";
-import CreateCandidate from "./components/CreateCandidate";
-
 
 export default function App() {
   return (
