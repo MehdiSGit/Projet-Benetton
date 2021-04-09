@@ -1,15 +1,10 @@
 import React from "react";
-import {BrowserRouter, NavLink, Route} from "react-router-dom";
+import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import Home from "./components/Home"
 import Register from "./components/Register"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import CreateCandidate from "./components/CreateCandidate";
->>>>>>> master
-=======
 import CreateCandidate from "./components/CreateCandidate";
->>>>>>> master
+
 
 export default function App() {
   return (
@@ -23,46 +18,29 @@ export default function App() {
         Register
       </NavLink>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> master
       <NavLink to='/createCandidate'>
         Create candidate
       </NavLink>
 
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
       <Route path="/home">
-        <Home/>
+        <Home />
       </Route>
 
       <Route path="/register">
-        <Register/>
+        <Register />
       </Route>
 
 
       <Route path="/candidat">
       </Route>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
+      <Route path="/candidat">
+      </Route >
 
-            <Route path="/candidat">
-            </Route >
+      <Route path="/register">
+        <Register></Register>
+      </Route>
 
-            <Route path="/register">
-                <Register></Register>
-            </Route>
-      </BrowserRouter>)
-    }
-=======
-=======
->>>>>>> master
       <Route path="/recruteur">
 
       </Route>
@@ -70,13 +48,10 @@ export default function App() {
       <Route>
       </Route>
       <Route path='/createCandidate'>
-        <CreateCandidate/>
+        <CreateCandidate />
       </Route>
 
     </BrowserRouter>
   )
 }
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> master
+
