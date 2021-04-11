@@ -51,6 +51,11 @@ class Recruteur implements UserInterface
      */
     private $jobs;
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     public function __construct()
     {
         $this->jobs = new ArrayCollection();
