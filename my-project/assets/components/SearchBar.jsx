@@ -11,7 +11,7 @@ class Search extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (prevState.search !== this.state.search) {
-          this.fetchJob();
+          this.fetchJobs();
         }
       }
 
@@ -41,7 +41,7 @@ class Search extends React.Component {
             this.setState({
             search: event.target.value,
             })
-
+        }
 
         fetchJobs = () => {
             // url à modifier
@@ -76,6 +76,6 @@ class Search extends React.Component {
 
 
 
-}
+
 
 export default Search;
