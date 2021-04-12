@@ -28,7 +28,7 @@ class Search extends React.Component {
                   </p>
                 )
               })}
-              <button onClick={this.fetchJob}>Fetch Job </button>
+              <button onClick={this.fetchJobs}>Fetch Job </button>
             </div>
           )
         }
