@@ -45,7 +45,7 @@ class Search extends React.Component {
 
         fetchJobs = () => {
             // url à modifier
-            fetch('http://localhost/ProjectBenetton/Projet-Benetton/my-project/public/index.php/api/job',
+            fetch('http://localhost:8889/Projet-Benetton/my-project/public',
                 {
                 headers: { // Garder toujours les mêmes headers
                     'Accept': 'application/json',
