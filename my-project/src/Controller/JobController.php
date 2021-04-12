@@ -43,11 +43,7 @@ class JobController extends AbstractController
     {
         $jobs = $entityManager->getRepository(Job::class)->findAll();
         $data = [];
-        foreach($jobs as $job){
-            $data[] = $job->formatedForView();
-        };
-
-
+        
         $content = $request->getContent();
         $jsonParameters = json_decode($content, true);
         // On vérifie ici si on a des paramètres de recherche ou non, et sinon on fait le tri.
@@ -58,21 +54,24 @@ class JobController extends AbstractController
             $search = $jsonParameters['search'];
 
             $results = array_filter(
-                $data,
-                static function ($job) use ($search) {
-                    return str_contains($job, $search);
-                    
+                $jobs,
+                static function (Job $job) use ($search) {
+                    return str_contains($job->getDescription(), $search) || str_contains($job->getName(), $search);
                 });
         }
         else {
             $results = $data;
         }
 
+        foreach($results as $job){
+            $data[] = $job->formatedForView();
+        };
+
         return new JsonResponse([
-            'data'          => $results,
+            'data'          => $data,
+            'paramaters' => $jsonParameters,
             'hasParameters' => $hasParameters
-            
-            ]);
+        ]);
 
     }
 }
