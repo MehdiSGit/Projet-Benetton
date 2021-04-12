@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
+import Home from "./components/Home"
+
 import CreateCandidate from "./components/CreateCandidate";
 
 export default function App() {
@@ -16,6 +18,11 @@ export default function App() {
       </NavLink>
 
       
+
+      <Route path="/register">
+        <Register />
+      </Route>
+
 
       <Route path="/candidat">
       </Route>
