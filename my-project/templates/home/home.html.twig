@@ -2,19 +2,81 @@
 
 {% block main %}
 
-	{% for message in app.flashes('message_success') %}
-		<div class="alert alert-success">{{ message }}</div>
-	{% endfor %}
+	{# {% for message in app.flashes('message_success') %}
+					<div class="alert alert-success">{{ message }}</div>
+				{% endfor %} #}
 
-	<a href="{{ path('app_register') }}">Register</a></br>
+	{# <a href="{{ path('app_register') }}">Register</a></br>
+						
+				<a href="{{ path('app_login') }}">Sign in</a></br>
 			
-	<a href="{{ path('app_login') }}">Sign in</a></br>
+				<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
+			
+				<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
+			
+			
+			    <div id="blog"> blog avec react</div> #}
 
-	<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
+		<div class="header_main"> 
+		<div class="title">
+			<h1>Chez
+				<span class="title_span">
+					Equaly
+				</span>,<br> votre handicap<br>est un <span class="line-through">
+					poids
+				</span>
+			</h1>
+			<a href="{{ path('offres') }}">Découvrez nos offres</a>
+		</div>
 
-	<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
+		<div class="main_img">
+		 
+		</div>
+
+	</div>
 
 
-    <div id="blog"> blog avec react</div>
+	{# Concept #}
+	<section class="section">
+		<h3>
+			Notre Concept</h3>
+		<div class="articles">
+			<article>
+				<img src="" alt="">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?
+			    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
+			</article>
+			<article>
+				<img src="" alt="">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
+			</article>
+			<article>
+				<img src="" alt="">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
+			</article>
+		</div>
+	</section>
+
+
+	{# Startups #}
+	<section class="startups">
+		<p>
+			Co-dessous quelques superbes start-ups avec qui l'on travaille depuis notre lancement
+		</p>
+		<div class="startup_logo">
+			<img src="https://img.icons8.com/wired/128/000000/starbucks.png"/>
+			<img src="https://img.icons8.com/windows/128/000000/mcdonalds.png"/>
+			<img src="https://img.icons8.com/ios-filled/150/000000/ikea.png"/>
+			<img src="https://img.icons8.com/metro/104/000000/wordpress.png"/>
+			<img src="https://img.icons8.com/wired/128/000000/disney-plus.png"/>
+			<img src="https://img.icons8.com/metro/104/000000/mac-os.png"/>
+			<img src="https://img.icons8.com/windows/128/000000/huawei-logo.png"/>
+
+
+		</div>
+	</section>
+
 
 {% endblock %}

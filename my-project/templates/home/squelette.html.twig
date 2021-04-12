@@ -4,55 +4,63 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link
+		rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 		{# ci-dessous insert les balises <link> pour le fichier app.css #}
 		{{ encore_entry_link_tags('app') }}
 		{# ci-dessous insert les balises <script> pour le fichier app.js #}
 		{{ encore_entry_script_tags('app') }}
 
-	
+
 		<title>
 			{% block title %}Equaly
 			{% endblock %}
 		</title>
 	</head>
-    <body>
+	<body>
+
 
 		<header>
-			<div class="header_nav">
-				<h4>EQUALY !</h4>
-				<nav>
-					<a href="{{ path('home') }}">Accueil</a>
-                    <a href="{{ path('app_register') }}">S'inscrire</a>
-                    <a href="{{ path('app_login') }}">Se connecter</a>
-					<a href="{{ path('app_logout') }}">Se déconnecter</a>
-				</nav>
-			</div>
+			{% block header %}
 
-			<div class="header_main">
-				<h1>Ici votre handicap est une FORCE</h1>
-				<a href="{{ path('offres') }}">Découvrez nos offres
-				</a>
-			</div>
+				<div class="header_nav">
+					<div class="icons">
+						<div>
+							<i class="far fa-eye-slash"></i>
+							<i class="fas fa-deaf"></i>
+							<i class="fas fa-search-plus"></i>
+						</div>
+
+						<div>
+							<i class="fas fa-search"></i>
+							<input class="input_search_nav" type="text">
+						</div>
+					</div>
+					<h4>EQUALY</h4>
+
+					<nav class="nav">
+						<a href="{{ path('home') }}">Accueil</a>
+						<a href="{{ path('app_register') }}">S'inscrire</a>
+						<a href="{{ path('app_login') }}">Se connecter</a>
+						<a href="{{ path('app_logout') }}">Se déconnecter</a>
+					</nav>
+				</div>
+
+			{% endblock %}
 		</header>
 
-        <main>
-            {% block main %}{% endblock %}
-			
-        </main>
-        
-        <footer>
-            <div class="container">
-				<p>
-					<a href="#">Back to top</a>
-				</p>
-				<p class="mb-0">
-					<a href="/">Visit the homepage</a>
-					or read our
-					<a href="/docs/5.0/getting-started/introduction/">getting started guide</a>.
-                </p>
-            </div>
-        </footer
+		<main>
+			{% block main %}{% endblock %}
+		</main>
 
-    </body>
+		<footer>
+			<div class="container">
+				<p>
+					Footer
+				</p>
+				
+			</div>
+		</footer</body>
+	</body>
 </html>

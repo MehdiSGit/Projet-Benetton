@@ -1,33 +1,148 @@
-body {
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgb(138, 251, 63) 0%, rgba(252,70,107,1) 100%);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+h3 {
+    font-size: 41px;
+}
+/*******HEADER*************/
+.icons {
+    display: flex;
+    justify-content:space-between;
+    padding: .3rem 2rem;
+}
+.input_search_nav {
+    border-radius: 20px;
+    margin: 0;
+    border: 0;
+    padding: .3rem;
+}
 .header_nav {
-    background-color: rgb(28, 9, 136);
+    background-color: #5B5771;
+   
+    padding: 1rem;
+    color: white;
+}
+.header_nav h4 {
+    color: white;
+    text-align: center;
+    font-size: 35px;
+   
+}
+.nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-    color:rgba(252,70,107,1)
+    margin: auto;
+    width: 60%;
+    padding: 1.5rem 0 .5rem 0; 
 }
-.header_nav a {
-    color:rgba(252,70,107,1)
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*******MAIN*******/
+
+body {
+    background: #F9F6F6;
 }
 .header_main {
-    margin-left: 8rem;
-    padding-top: 10rem;
+    padding: 8rem 12rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+.main_img{
+    background-image: url('../imgs/main.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 24.5rem;
+    height: auto;
 }
 .header_main h1 {
-    font-size: 57px;
-    width: 40%;
+    font-size: 65px;
     padding-bottom: 2rem;
+    line-height: 1.4;
+    color: #5B5771;
+    margin-bottom: 1rem;
+    color: #5B5771;
+    line-height: 1.4;  
 }
+.header_main .title {
+    width: 50%;
+}
+
+.header_main h1::before{
+    width: 13rem;
+    height: 3rem;
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #FFD115;
+    left: 23rem;
+    bottom: 20.5rem;
+    z-index: -10;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.title_span{
+    color: black;
+}
+
+.header_main a {
+    background-color: #FFD115;
+    padding: 1rem 4rem;
+    /* width: 44% !important; */
+    font-size: 22px;
+    text-decoration: none;
+    color: #5B5771;
+    border-radius: 7px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+}
+
+/* NOTRE CONCEPT  */
+.section {
+    margin-top: 8rem;
+    padding: 2rem 10rem;
+}
+.articles {
+    display: flex;
+    justify-content: space-between;
+    background-color: teal;
+}
+.articles article {
+    padding: 1rem 1.5rem;
+    text-align: justify;
+}
+
+
+/* STARTUPS  */
+.startups p  {
+text-align: center;
+font-size: 21px;
+font-weight: bold;
+margin-top: 3rem;
+margin-bottom: 3rem;
+}
+.startup_logo {
+    margin: auto;
+    text-align: center;
+}
+.startup_logo img {
+    padding: 0 2rem;
+    opacity: .3;
+    width: 150px;
+    height: auto;
+
+}
+
+
+
 .choice {
     width: 50%;
     background-color: indianred;
