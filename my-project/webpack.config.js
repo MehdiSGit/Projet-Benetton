@@ -12,9 +12,9 @@ Encore
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
-    .setPublicPath('/'+web_pack_public_path+'/build')
+    .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
-    .setManifestKeyPrefix(web_pack_public_path+'/build/')
+    .setManifestKeyPrefix('/build/')
 
     /*
      * ENTRY CONFIG

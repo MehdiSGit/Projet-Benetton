@@ -16,6 +16,7 @@ class Search extends React.Component {
       }
 
     render() {
+      console.log(this.state.jobs)
         return (
             <div>
               <label htmlFor="">
@@ -23,13 +24,19 @@ class Search extends React.Component {
               </label>
               {this.state.jobs.map(function(job) {
                 return (
-                  <p>
-                    {job}
-                  </p>
+                  <>
+                    <p>
+                      {job.name}
+                    </p>
+                    <p>
+                      {job.description}
+                    </p>
+                  </>
                 )
               })}
               <button onClick={this.fetchJobs}>Search </button>
             </div>
+            
           )
         }
 
@@ -45,7 +52,7 @@ class Search extends React.Component {
 
         fetchJobs = () => {
             // url à modifier
-            fetch('http://localhost/ProjectBenetton/Projet-Benetton/my-project/public/index.php/api/job',
+            fetch('http://127.0.0.1:8000/api/job',
                 {
                 headers: { // Garder toujours les mêmes headers
                     'Accept': 'application/json',
