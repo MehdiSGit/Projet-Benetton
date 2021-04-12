@@ -28,7 +28,7 @@ class Search extends React.Component {
                   </p>
                 )
               })}
-              <button onClick={this.fetchJobs}>Fetch Job </button>
+              <button onClick={this.fetchJobs}>Search </button>
             </div>
           )
         }
@@ -64,6 +64,7 @@ class Search extends React.Component {
                 if (!Array.isArray(response.data)) {
                     updatedJobsList = Object.entries(response.data).map((jobInResult) => {
                     // On récupère la valeur de mielInResults
+                    
                     return jobInResult[1];
                     })
                 }

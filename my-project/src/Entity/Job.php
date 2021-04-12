@@ -123,4 +123,14 @@ class Job
 
         return $this;
     }
+
+    public function formatedForView()
+    {
+        return[
+            "name" => $this->getName(),
+            "description" =>$this->getDescription(),
+            "job-start-date" => $this->getJobStartDate(),
+            "date-published"=>$this->getDatePublished(),
+        ];
+    }
 }
