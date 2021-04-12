@@ -15,10 +15,7 @@ import Blog from './components/Blog';
 import Search from './components/SearchBar';
 
 
-
 ReactDOM.render(
-        <App/>,
-        document.getElementById('blog')
-)
+        <App />,
 
-
+        document.getElementById('blog'))

@@ -42,6 +42,11 @@ class Job
      */
     private $jobStartDate;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Recruteur::class, inversedBy="jobs")
+     */
+    private $RecruteurId;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Job
     public function setJobStartDate(\DateTimeInterface $jobStartDate): self
     {
         $this->jobStartDate = $jobStartDate;
+
+        return $this;
+    }
+
+    public function getRecruteurId(): ?Recruteur
+    {
+        return $this->RecruteurId;
+    }
+
+    public function setRecruteurId(?Recruteur $RecruteurId): self
+    {
+        $this->RecruteurId = $RecruteurId;
 
         return $this;
     }

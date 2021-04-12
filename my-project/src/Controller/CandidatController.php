@@ -33,40 +33,39 @@ class CandidatController extends AbstractController
     //     ]);
     // }
 
-    /**
-     * @Route("/api/candidat/create", name="create_candidat")
-     *
-     * @param Request $request
-     * @param EntityManagerInterface $entityManager
-     * @param CandidatRepository $repository
-     * @return JsonResponse
-     */
-    public function create(Request $request, EntityManagerInterface $entityManager, CandidatRepository $repository) {
-        $content = $request->getContent();
-        $jsonParameters = json_decode($content, true);
+//     /**
+//      * @Route("candidat/create", name="create_candidat")
+//      *
+//      * @param Request $request
+//      * @param EntityManagerInterface $entityManager
+//      * @param CandidatRepository $repository
+//      * @return JsonResponse
+//      */
+//     public function create(Request $request, EntityManagerInterface $entityManager, CandidatRepository $repository) {
+//         $content = $request->getContent();
+//         $jsonParameters = json_decode($content, true);
 
-        $errorMessage = '';
+//         $errorMessage = '';
 
-        $email = $jsonParameters['email'];
-        $firstname = $jsonParameters['firstname'];
-        $lastname = $jsonParameters['lastname'];
+//         $email = $jsonParameters['email'];
+//         $firstname = $jsonParameters['firstname'];
+//         $lastname = $jsonParameters['lastname'];
 
-        $candidat = new Candidat;
+//         $candidat = new Candidat;
 
-        $candidat->setEmail($email)
-            ->setFirstName($firstname)
-            ->setLastName($lastname);
+//         $candidat->setEmail($email)
+//             ->setFirstName($firstname)
+//             ->setLastName($lastname);
 
-//        $entityManager->persist($candidat);
-//        $entityManager->flush();
+// //        $entityManager->persist($candidat);
+// //        $entityManager->flush();
 
-        return new JsonResponse([
-            'parameters' => $jsonParameters,
-            'message' => "Boubou",
-            'created entity' => $candidat,
-        ]);
-    }
-
+//         return new JsonResponse([
+//             'parameters' => $jsonParameters,
+//             'message' => "Boubou",
+//             'created entity' => $candidat,
+//         ]);
+//     }
 
     /**
      * @Route("/candidat", name="candidat")

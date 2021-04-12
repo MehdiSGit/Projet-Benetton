@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, NavLink, Route} from "react-router-dom";
+import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import Home from "./components/Home"
 import Register from "./components/Register"
 import CreateCandidate from "./components/CreateCandidate";
@@ -21,15 +21,22 @@ export default function App() {
       </NavLink>
 
       <Route path="/home">
-        <Home/>
+        <Home />
       </Route>
 
       <Route path="/register">
-        <Register/>
+        <Register />
       </Route>
 
 
       <Route path="/candidat">
+      </Route>
+
+      <Route path="/candidat">
+      </Route >
+
+      <Route path="/register">
+        <Register></Register>
       </Route>
 
       <Route path="/recruteur">
@@ -39,9 +46,10 @@ export default function App() {
       <Route>
       </Route>
       <Route path='/createCandidate'>
-        <CreateCandidate/>
+        <CreateCandidate />
       </Route>
 
     </BrowserRouter>
   )
 }
+
