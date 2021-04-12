@@ -36,11 +36,12 @@ export default class CreateCandidate extends React.Component {
     console.log(this.state);
 
     const firstname = this.state.firstname;
+    
 
     // Destructuring : https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-    // const {lastname, email} = this.state;
+    const {lastname, email} = this.state;
 
-    fetch('http://localhost:8000/api/candidat/create', {
+    fetch('http://localhost:8888/Projet-Benetton/my-project/public', {
       headers: { // Garder toujours les mêmes headers
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -52,11 +53,12 @@ export default class CreateCandidate extends React.Component {
         email: this.state.email,
       })
     })
+    .then(res => res.json())
   }
 
   updateFirstname = (event) => {
     this.setState({
-      firstname: event.target.value,
+      firstname: event.target.value,      
     })
   }
 
