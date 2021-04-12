@@ -56,7 +56,7 @@ class JobController extends AbstractController
             $results = array_filter(
                 $jobs,
                 static function (Job $job) use ($search) {
-                    return str_contains($job->getDescription(), $search) || str_contains($job->getName(), $search);
+                    return str_contains(strtolower($job->getDescription()), strtolower($search)) || str_contains(strtolower($job->getName()), strtolower($search));
                 });
         }
         else {
@@ -68,7 +68,7 @@ class JobController extends AbstractController
         };
 
         return new JsonResponse([
-            'data'          => $data,
+            'data'        => $data,
             'paramaters' => $jsonParameters,
             'hasParameters' => $hasParameters
         ]);
