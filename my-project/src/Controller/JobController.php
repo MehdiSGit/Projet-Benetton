@@ -41,7 +41,7 @@ class JobController extends AbstractController
      */
     public function fetchJob(HttpFoundationRequest $request, EntityManagerInterface $entityManager): Response
     {
-        $jobs = $entityManager->getRepository(Job::class)->findAll();
+        $jobs = $entityManager->getRepository(Job::class)->findBy([],['name'=>'DESC']);
 
         $content = $request->getContent();
         $jsonParameters = json_decode($content, true);
@@ -64,7 +64,11 @@ class JobController extends AbstractController
             $results = $jobs;
         }
 
-        return new JsonResponse($jobs);
+        return new JsonResponse([
+            'data'          => $results,
+            'hasParameters' => $hasParameters
+            
+            ]);
 
     }
 }
