@@ -335,3 +335,34 @@ position: relative;
 .number p:hover{
     margin-right: 1rem;
 }
+
+/******************PAGE REGISTER********************/
+.register_container{
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.candidat, .recruteur{
+    width: 40%;
+    height: 12rem;
+    background-color: #FFD115;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    font-size: 30px;
+    font-weight: bolder;
+    border-radius: 10px;
+    color: white;
+}
+.candidat a, .recruteur a{
+    text-decoration: none;
+  
+}
+.candidat:hover{
+    border: 1px solid black;
+
+}
+
