@@ -3,6 +3,7 @@
 namespace App\Security;
 
 use App\Entity\Candidat;
+use App\Entity\Recruteur;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,7 +21,7 @@ use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticato
 use Symfony\Component\Security\Guard\PasswordAuthenticatedInterface;
 use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
-class CandidatAuthenticator extends AbstractFormLoginAuthenticator implements PasswordAuthenticatedInterface
+class CandidatRecruteurAuthenticator extends AbstractFormLoginAuthenticator implements PasswordAuthenticatedInterface
 {
     use TargetPathTrait;
 
@@ -67,14 +68,19 @@ class CandidatAuthenticator extends AbstractFormLoginAuthenticator implements Pa
             throw new InvalidCsrfTokenException();
         }
 
+        // On essaye de trouver un candidat
         $user = $this->entityManager->getRepository(Candidat::class)->findOneBy(['email' => $credentials['email']]);
-
-        if (!$user) {
-            // fail authentication with a custom error
-            throw new CustomUserMessageAuthenticationException('Email could not be found.');
+        if ($user) {
+            return $user;
         }
 
-        return $user;
+        // On essaye de trouver un recruteur
+        $user = $this->entityManager->getRepository(Recruteur::class)->findOneBy(['email' => $credentials['email']]);
+        if ($user) {
+            return $user;
+        }
+
+        throw new CustomUserMessageAuthenticationException('Email could not be found.');
     }
 
     public function checkCredentials($credentials, UserInterface $user)

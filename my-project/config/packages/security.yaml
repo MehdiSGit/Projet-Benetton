@@ -18,6 +18,10 @@ security:
             entity:
                 class: App\Entity\Recruteur
                 property: email
+        
+        candidat_recruteur_provider:
+            chain:
+                providers: [candidat_provider, recruteur_provider]
         # used to reload user from session & other features (e.g. switch_user)
     firewalls:
         dev:
@@ -26,10 +30,11 @@ security:
         main:
             anonymous: true
             #lazy: true
-            provider: candidat_provider
+            provider: candidat_recruteur_provider
+            # guard permet d'avoir un pouvoir d'action sur la façon de connecter les utilisateurs
             guard:
                 authenticators:
-                    - App\Security\CandidatAuthenticator
+                    - App\Security\CandidatRecruteurAuthenticator
             logout:
                 path: app_logout
                 # where to redirect after logout
