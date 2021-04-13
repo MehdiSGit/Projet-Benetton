@@ -111,4 +111,6 @@ class CandidatController extends AbstractController
             'formulaire2' => $formulaire2->createView()
         ]);
     }
+
+    
 }
