@@ -25,27 +25,34 @@
 			{% block header %}
 
 				<div class="header_nav">
-					<div class="icons">
-						<div>
-							<i class="far fa-eye-slash"></i>
-							<i class="fas fa-deaf"></i>
-							<i class="fas fa-search-plus"></i>
-						</div>
+					
+				
+					<h4><a href="{{ path('home') }}">EQUALY</a></h4>
+					
 
-						<div>
+
+						{# <div>
 							<i class="fas fa-search"></i>
 							<input class="input_search_nav" type="text">
-						</div>
-					</div>
-					<h4>EQUALY</h4>
+						</div> #}
+				
+					
 
 					<nav class="nav">
-						<a href="{{ path('home') }}">Accueil</a>
-						<a href="{{ path('app_register') }}">S'inscrire</a>
+					    <a href="#nous">A propos </a>
+						<a href="#nous">Blog </a>
+						{# <a href="{{ path('home') }}">Accueil</a> #}
+						<a href="{{ path('app_register') }}">Demarrer</a>
 						<a href="{{ path('app_login') }}">Se connecter</a>
-						<a href="{{ path('app_logout') }}">Se déconnecter</a>
+						{# <a href="{{ path('app_logout') }}">Se déconnecter</a> #}
 					</nav>
+
+						<div class="icons">
+							<i class="far fa-eye-slash"></i>
+							<i class="fas fa-deaf"></i>
+						</div>
 				</div>
+				
 
 			{% endblock %}
 		</header>

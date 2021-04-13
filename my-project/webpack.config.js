@@ -1,7 +1,7 @@
 const Encore = require('@symfony/webpack-encore');
-var dotenv = require('dotenv');
-const env = dotenv.config({ path: './.env.local' });
-const web_pack_public_path = env.parsed.WEBPACK_PUBLIC_PATH;
+// var dotenv = require('dotenv');
+// const env = dotenv.config({ path: './.env.local' });
+//const web_pack_public_path = env.parsed.WEBPACK_PUBLIC_PATH;
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {

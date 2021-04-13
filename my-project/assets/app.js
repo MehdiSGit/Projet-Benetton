@@ -14,3 +14,8 @@ import Search from './components/SearchBar';
 ReactDOM.render(
         <Search/>,
         document.getElementById('search-bar'))
+
+
+ReactDOM.render(
+        <Blog/>,
+        document.getElementById('search-bar'))
