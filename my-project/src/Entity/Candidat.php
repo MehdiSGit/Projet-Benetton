@@ -78,10 +78,16 @@ class Candidat implements UserInterface, \Serializable
      */
     private $descriptionCandidat;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Job::class, inversedBy="candidats")
+     */
+    private $candidature;
+
     public function __construct()
     {
         $this->documents = new ArrayCollection();
         $this->createAt = new \DateTime();
+        $this->candidature = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -301,5 +307,29 @@ class Candidat implements UserInterface, \Serializable
             // see section on salt below
             // $this->salt
         ) = unserialize($serialized);
+    }
+
+    /**
+     * @return Collection|Job[]
+     */
+    public function getCandidature(): Collection
+    {
+        return $this->candidature;
+    }
+
+    public function addCandidature(Job $candidature): self
+    {
+        if (!$this->candidature->contains($candidature)) {
+            $this->candidature[] = $candidature;
+        }
+
+        return $this;
+    }
+
+    public function removeCandidature(Job $candidature): self
+    {
+        $this->candidature->removeElement($candidature);
+
+        return $this;
     }
 }

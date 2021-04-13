@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\JobRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -47,9 +49,15 @@ class Job
      */
     private $RecruteurId;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Candidat::class, mappedBy="candidature")
+     */
+    private $candidats;
+
     public function __construct()
     {
        $this->datePublished = new \DateTime();
+       $this->candidats = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -137,5 +145,32 @@ class Job
             "job-start-date" => $this->getJobStartDate(),
             "date-published"=>$this->getDatePublished(),
         ];
+    }
+
+    /**
+     * @return Collection|Candidat[]
+     */
+    public function getCandidats(): Collection
+    {
+        return $this->candidats;
+    }
+
+    public function addCandidat(Candidat $candidat): self
+    {
+        if (!$this->candidats->contains($candidat)) {
+            $this->candidats[] = $candidat;
+            $candidat->addCandidature($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCandidat(Candidat $candidat): self
+    {
+        if ($this->candidats->removeElement($candidat)) {
+            $candidat->removeCandidature($this);
+        }
+
+        return $this;
     }
 }
