@@ -10,6 +10,7 @@ import './styles/app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Search from './components/SearchBar';
+import Blog from './components/Blog'
 
 ReactDOM.render(
         <Search/>,
@@ -18,4 +19,4 @@ ReactDOM.render(
 
 ReactDOM.render(
         <Blog/>,
-        document.getElementById('search-bar'))
+        document.getElementById('blog'))

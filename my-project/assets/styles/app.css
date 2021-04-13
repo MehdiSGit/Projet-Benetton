@@ -9,6 +9,24 @@ h3 {
     margin-left: 9rem;
 }
 /*******HEADER*************/
+.social {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+   position: fixed;
+   left: 4rem;
+   bottom: 6rem;
+   
+}
+.social img{
+    margin-bottom: 10px;
+}
+.force{
+    position: absolute;
+    bottom: 11rem;
+    left: 34rem;
+    width: 20rem;
+}
 .icons {
     display: flex;
     align-items: center;
@@ -84,6 +102,8 @@ h3 {
 
 body {
     background: #F9F6F6;
+    width: 1366px;
+    margin: auto;
     
 }
 .header_main {
@@ -97,7 +117,7 @@ body {
     height: auto;
 }
 .header_main h1 {
-    font-size: 65px;
+    font-size: 57px;
     padding-bottom: 2rem;
     line-height: 1.4;
     color: #5B5771;
@@ -127,7 +147,7 @@ body {
     color: black;
 }
 
-.header_main a {
+.main_btn {
     background-color: #FFD115;
     padding: 1rem 4rem;
     /* width: 44% !important; */
@@ -220,7 +240,8 @@ margin-bottom: 3rem;
     font-weight: bold;
 }
 .articles_blog_aside p:first-child::before{
-    width: 13rem;
+   
+    min-width: 11rem;
     height: 10px;
     display: block;
     content: '';
