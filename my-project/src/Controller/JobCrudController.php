@@ -18,10 +18,12 @@ class JobCrudController extends AbstractController
     /**
      * @Route("/", name="job_crud_index", methods={"GET"})
      */
-    public function index(JobRepository $jobRepository): Response
+    public function index(): Response
     {
+        $recruteur = $this->getUser();
+
         return $this->render('job_crud/index.html.twig', [
-            'jobs' => $jobRepository->findAll(),
+            'jobs' => $recruteur->getJobs(),
         ]);
     }
 

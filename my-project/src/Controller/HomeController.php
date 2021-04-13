@@ -19,26 +19,6 @@ class HomeController extends AbstractController
         // Création du formulaire d'upload d'image pour le candidat
         $formulaire = $this->createForm(DocumentType::class)->handleRequest($request);
 
-        // On vérifie si le formulaire est soumis ET s'il est valide
-        if ($formulaire->isSubmitted() && $formulaire->isValid()){
-            // $formulaire->getData() permet de récupérer l'objet Document (cf. Entity\Document.php)
-            $document = $formulaire->getData();
-            $document->setCandidat($this->getUser());
-            
-            // $entityManager = Doctrine = BDD
-            // Informe doctrine qu'un nouveau document doit être inséré en BDD (PDO = prepare)
-            $entityManager->persist($document);
-
-            // flush correspond à la fonction execute de PDO
-            $entityManager->flush();
-
-            // Création d'un message "flash" afin d'informer l'utilisateur
-            $this->addFlash('message_success', 'Votre image a bien été ajoutée');
-
-            // Redirection sur la page d'accueil en GET
-            return $this->redirectToRoute('candidat');
-        }
-
         return $this->render('home/home.html.twig', [
             'controller_name' => 'CandidatController',
             'formulaire' => $formulaire->createView()

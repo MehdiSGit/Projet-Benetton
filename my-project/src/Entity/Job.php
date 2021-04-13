@@ -47,6 +47,11 @@ class Job
      */
     private $RecruteurId;
 
+    public function __construct()
+    {
+       $this->datePublished = new \DateTime();
+    }
+
     public function getId(): ?int
     {
         return $this->id;

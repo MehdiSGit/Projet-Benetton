@@ -17,7 +17,7 @@ class JobController extends AbstractController
     
 
     /**
-     * @Route("/job", name="job")
+     * @Route("/offres", name="offres")
      */
     public function index(HttpFoundationRequest $request, EntityManagerInterface $entityManager): Response
     {
