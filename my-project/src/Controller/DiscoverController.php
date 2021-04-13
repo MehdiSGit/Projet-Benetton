@@ -10,7 +10,7 @@ class DiscoverController extends AbstractController
 {
     
     /**
-     * @Route("/lesoffres", name="offres")
+     * @Route("/lesoffres", name="")
      */
     public function index(): Response
     {

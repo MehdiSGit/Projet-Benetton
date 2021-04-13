@@ -41,9 +41,17 @@
 
 					<nav class="nav">
 						<a href="{{ path('home') }}">Accueil</a>
-						<a href="{{ path('app_register') }}">S'inscrire</a>
-						<a href="{{ path('app_login') }}">Se connecter</a>
+						
+
+						{% if app.user %}
+						
 						<a href="{{ path('app_logout') }}">Se déconnecter</a>
+						{% else %}
+							 {# user is not logged in #}
+							<a href="{{ path('app_login') }}">Se connecter</a>
+							<a href="{{ path('choice_register') }}">S'inscrire</a>
+						{% endif %}
+				
 					</nav>
 				</div>
 
