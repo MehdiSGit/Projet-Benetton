@@ -3,19 +3,19 @@
 {% block main %}
 
 	{# {% for message in app.flashes('message_success') %}
-									<div class="alert alert-success">{{ message }}</div>
-								{% endfor %} #}
+										<div class="alert alert-success">{{ message }}</div>
+									{% endfor %} #}
 
 	{# <a href="{{ path('app_register') }}">Register</a></br>
-										
-								<a href="{{ path('app_login') }}">Sign in</a></br>
-							
-								<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
-							
-								<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
-							
-							
-							    <div id="blog"> blog avec react</div> #}
+											
+									<a href="{{ path('app_login') }}">Sign in</a></br>
+								
+									<a href="{{ path('candidat') }}">Mon espace candidat</a></br>
+								
+									<a href="{{ path('recruteur') }}">Mon espace recruteur</a>
+								
+								
+								    <div id="blog"> blog avec react</div> #}
 
 		<div class="header_main"> <div class="title">
 			<h1>Chez
@@ -27,7 +27,20 @@
 					poids
 				</span>
 			</h1>
-			<a href="{{ path('offres') }}">Découvrez nos offres</a>
+			<img class="force" src="./imgs/votre_force.svg" alt="">
+			<a class="main_btn" href="{{ path('offres') }}">Découvrez nos offres</a>
+
+			<div class="social">
+				<a href="www.twitter.com">
+					<img src="https://img.icons8.com/android/24/000000/twitter.png"/></a>
+
+				<a href="www.facebook.com">
+					<img src="https://img.icons8.com/material-sharp/24/000000/facebook-new.png"/></a>
+
+				<a href="www.instagram.com">
+					<img src="https://img.icons8.com/material-rounded/24/000000/instagram-new.png"/></a>
+
+			</div>
 		</div>
 
 		<div class="main_img">
@@ -44,17 +57,17 @@
 			<article>
 				<img src="./imgs/article1.svg" alt="">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?
-																							    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
 			</article>
 			<article>
 				<img src="./imgs/article2.svg" alt="">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?
-																								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
 			</article>
 			<article>
 				<img src="./imgs/article3.svg" alt="">
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?
-																								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas assumenda sed ipsum, optio quos quod repellat sunt nobis nam commodi?</p>
 			</article>
 		</div>
 	</section>
@@ -80,12 +93,11 @@
 
 	{####################### BLOG ####################}
 	<section class="blog">
-			<h3>La vie au travail</h3>
+		<h3>La vie au travail</h3>
 		<div class="articles_blog">
 			<div class="articles_blog_first">
 
-		
-                 
+
 				<article class="img_articles_blog_first">
 					<img src="./imgs/r1.png" alt="">
 					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -93,88 +105,91 @@
 
 				<section class="articles_blog_imgs">
 					<article>
-					  <img src="./imgs/r2.png" alt="">
-					  <p>Lorem ipsum dolor sit.</p>
+						<img src="./imgs/r2.png" alt="">
+						<p>Lorem ipsum dolor sit.</p>
 					</article>
 
 					<article>
-					  <img src="./imgs/r3.png" alt="">
-					  <p>Lorem ipsum dolor sit.</p>
+						<img src="./imgs/r3.png" alt="">
+						<p>Lorem ipsum dolor sit.</p>
 					</article>
 
 					<article>
-					  <img src="./imgs/r4.png" alt="">
-					  <p>Lorem ipsum dolor sit.</p>
+						<img src="./imgs/r4.png" alt="">
+						<p>Lorem ipsum dolor sit.</p>
 					</article>
 				</section>
 
 
-				<button class="blog_btn" >
-				Decouvrez plus d'articles</button>
+				<button class="blog_btn">
+					Decouvrez plus d'articles</button>
 			</div>
 
 			<div class="articles_blog_aside">
-			
-					
-					<div class="a">
-					    <span class="blog_span">1</span>
-						<div>
-						   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-						   <p class="fig">18 Mars 2021</p>
-						</div>
-					</div>
-                  
-					<div class="a">
-					    <span class="blog_span">2</span>
-						<div>
-						   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-						   <p class="fig">18 Mars 2021</p>
-						</div>
-					</div>
-
-					<div class="a">
-					    <span class="blog_span">3</span>
-						<div>
-						   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-						   <p class="fig">18 Mars 2021</p>
-						</div>
-					</div>
-
-					<div class="a">
-					    <span class="blog_span">4</span>
-						<div>
-						   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-						   <p class="fig">18 Mars 2021</p>
-						</div>
-					</div>
 
 
-					<div class="a">
-					    <span class="blog_span">5</span>
-						<div>
-						   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-						   <p class="fig">18 Mars 2021</p>
-						</div>
+				<div class="a">
+					<span class="blog_span">1</span>
+					<div>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						</p>
+						<p class="fig">18 Mars 2021</p>
 					</div>
+				</div>
+
+				<div class="a">
+					<span class="blog_span">2</span>
+					<div>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="fig">18 Mars 2021</p>
+					</div>
+				</div>
+
+				<div class="a">
+					<span class="blog_span">3</span>
+					<div>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						</p>
+						<p class="fig">18 Mars 2021</p>
+					</div>
+				</div>
+
+				<div class="a">
+					<span class="blog_span">4</span>
+					<div>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="fig">18 Mars 2021</p>
+					</div>
+				</div>
+
+
+				<div class="a">
+					<span class="blog_span">5</span>
+					<div>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						</p>
+						<p class="fig">18 Mars 2021</p>
+					</div>
+				</div>
 
 			</div>
-			</section>
+		</section>
 
-	{####################### Etapes ##################}
+		{####################### Etapes ##################}
 
-<section class="etapes_section">
-    <div class="number"> 
-	  <h3>Notre fonctionnement en 3 étapes</h3> 
-    </div>
+		<section class="etapes_section">
+			<div class="number">
+				<h3>Notre fonctionnement en 3 étapes</h3>
+			</div>
 
-     <div class="etapes_text">
-	   <article>1</article>
-	   <article>2</article>
-	   <article>3</article>
-	 </div>
-
-
-</section>
+			<div class="etapes_text">
+				<article>1</article>
+				<article>2</article>
+				<article>3</article>
+			</div>
 
 
-		{% endblock %}
+		</section>
+
+
+	{% endblock %}
