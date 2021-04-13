@@ -23,7 +23,7 @@ h3 {
 }
 .force{
     position: absolute;
-    bottom: 11rem;
+    bottom: 15rem;
     left: 34rem;
     width: 20rem;
 }
@@ -104,6 +104,7 @@ body {
     background: #F9F6F6;
     width: 1366px;
     margin: auto;
+    color: #5B5771;
     
 }
 .header_main {
@@ -123,21 +124,22 @@ body {
     color: #5B5771;
     margin-bottom: 1rem;
     color: #5B5771;
-    line-height: 1.4;  
+    line-height: 1.4; 
+    position: relative; 
 }
 .header_main .title {
     width: 50%;
 }
 
-.header_main h1::before{
+.header_main h1::after{
     width: 13rem;
     height: 3rem;
     display: block;
     content: '';
     position: absolute;
     background-color: #FFD115;
-    left: 23rem;
-    bottom: 20.5rem;
+    left: 10rem;
+    bottom: 13rem;
     z-index: -10;
 }
 .line-through {
@@ -192,6 +194,7 @@ font-size: 28px;
 font-weight: bold;
 margin-top: 3rem;
 margin-bottom: 3rem;
+position: relative;
 }
 .startups p::before{
     width: 13rem;
@@ -238,16 +241,17 @@ margin-bottom: 3rem;
 .articles_blog_aside p {
     padding-bottom: 10px;
     font-weight: bold;
+    position: relative;
 }
 .articles_blog_aside p:first-child::before{
    
-    min-width: 11rem;
+    width: 11rem;
     height: 10px;
     display: block;
     content: '';
     position: absolute;
     background-color: #FFD115;
-    right: 15rem;
+    
     /* bottom: 2rem; */
     z-index: -10;
 }
@@ -289,4 +293,45 @@ margin-bottom: 3rem;
 .fig {
     color: gray;
     font-style: italic;
+}
+
+/* ETAPES  */
+.etapes_section{
+    width: 80%;
+    margin: auto;
+}
+.etapes_title h3{
+    width: 100%;
+    margin-top: 7rem;
+    margin-left: 0;
+}
+.etapes_articles{
+    display: flex;
+}
+.number {
+    width: 20%;
+}
+.contact_img img{
+    width: 31rem;
+    height: 27rem;
+    padding: 1rem;
+    margin-left: 2rem;
+}
+.etapes_text article h5{
+    font-size: 24px;
+    padding: 2rem 0 1rem 0;
+    margin-top: 2rem;
+}
+.number p {
+    font-size: 46px;
+    font-weight: 800;
+    margin-top: 4rem;
+    margin-bottom: 5.5rem;
+    margin-left: 9rem;
+    border-bottom: 2px solid #FFD115;
+    margin-right: 3rem;
+    
+}
+.number p:hover{
+    margin-right: 1rem;
 }
