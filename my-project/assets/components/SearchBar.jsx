@@ -25,7 +25,7 @@ class Search extends React.Component {
                 return (
                   <ul>
                     <li>{job.name}</li>
-                    <li>{job.description}</li>
+                    {/* <li>{job.description}</li> */}
                   </ul>
                     
                   
