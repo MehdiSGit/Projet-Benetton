@@ -86,7 +86,8 @@ class JobController extends AbstractController
 
         // fetch le job avec id
         $job = $entityManager->getRepository(Job::class)->findOneBy(['id'=>$id]);
-        dump($job);die;
+        
+        //dump($job);die;
 
         
         return $this->render('displayJob.html.twig',[
