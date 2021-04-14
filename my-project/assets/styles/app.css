@@ -659,7 +659,59 @@ position: relative;
     border: none;
     border-radius: 20px;
     box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+}
 
+/************OFFRES PAGE************/
+/* .container_search_bar{
+   width: 60%;
+   margin: auto;
+   margin-top: 3rem;
+  */
+  .container_search_bar{
+      width: 100%;
+      margin: auto;
+  }
+
+.container_search_bar input{
+    width: 60%;
+    padding: 2rem;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-left: 17rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+
+}
+.jobs{
+    display: flex;
+}
+.card{
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    background-color: #FFD115;
+    width: 30%;
+    height: auto;
+    padding: 2rem;
+    margin: 1rem;
+}
+.card-title{
+    font-size: 25px;
+}
+.card-text{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+     
+    
+}
+.card-body a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.card-body a:hover{
+    background-color: rgba(255, 255, 255, 0.795);
 }
 
 

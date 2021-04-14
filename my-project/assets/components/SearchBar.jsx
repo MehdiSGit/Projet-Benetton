@@ -16,23 +16,29 @@ class Search extends React.Component {
       }
 
     render() {
+      
         return (
-            <div>
+            <div className ="container_search_bar">
               <label htmlFor="">
                 <input type="text" onChange={this.updateSearch} value={this.state.search}/>
               </label>
+
+              <div className="jobs"> 
               {this.state.jobs.map(function(job) {
                 return (
                   <div className="card">
                     <div className="card-body">
                       <h5  className="card-title">{job.name}</h5>
                       <p className="card-text">{job.description}</p>
-                      <a href={'/showJob/' + job.id}>Plus d'information</a>
+                      <a href={'/showJob/' + job.id}>
+                      <img src="https://img.icons8.com/windows/32/000000/arrow.png"/>                      </a>
                     </div>
                   </div>                  
                 )
               })}
-              <button onClick={this.fetchJobs}>Search </button>
+              
+              </div>
+              {/* <button onClick={this.fetchJobs}>Search </button> */}
             </div>
           )
         }
