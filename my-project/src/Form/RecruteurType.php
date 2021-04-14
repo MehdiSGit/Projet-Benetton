@@ -12,10 +12,9 @@ class RecruteurType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email')
-            // ->add('roles')
-            ->add('password')
-        ;
+        ->add('name')
+        ->add('description')
+        ->add('email');
     }
 
     public function configureOptions(OptionsResolver $resolver)

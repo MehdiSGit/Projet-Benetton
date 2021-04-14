@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
-
 /** 
  *@IsGranted("ROLE_RECRUTEUR")
  */
@@ -23,7 +22,7 @@ class RecruteurController extends AbstractController
     {
         $recruteur = $this->getUser();
         // dd($recruteur);
-        $formulaire3 = $this->createForm(RecruteurType::class)->handleRequest($request);
+        $formulaire3 = $this->createForm(RecruteurType::class,$recruteur)->handleRequest($request);
 
         if ($formulaire3->isSubmitted() && $formulaire3->isValid()){
             // $formulaire3->getData() permet de récupérer l'objet Document (cf. Entity\Document.php)
@@ -44,7 +43,8 @@ class RecruteurController extends AbstractController
 
         return $this->render('recruteur/recruteur.html.twig', [
             'controller_name' => 'RecruteurController',
-            'formulaire3' => $formulaire3->createView()
+            'formulaire3' => $formulaire3->createView(),
+            'recruteur' => $recruteur
         ]);
     }
 }

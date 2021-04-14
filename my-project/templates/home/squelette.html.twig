@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link
 		rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;400;600&display=swap" rel="stylesheet">
 
 		{# ci-dessous insert les balises <link> pour le fichier app.css #}
 		{{ encore_entry_link_tags('app') }}
@@ -41,7 +43,7 @@
 					<nav class="nav">
 						{# <a href="{{ path('home') }}">Accueil</a> #}
 						<a href="#">A propos</a>
-						<a href="#">Blog</a>
+						<a href="{{path ('blog')}}">Blog</a>
 						
 
 						{% if app.user %}
@@ -82,10 +84,19 @@
 		</main>
 
 		<footer>
-			<div class="container">
-				<p>
-					Footer
-				</p>
+			<div class="container_footer">
+				<div class="newsleter">
+			      	<h3> On reste en contact ?</h3>
+					<input type="text">
+					<button> > </button>
+				</div>
+
+				<section class="footer_text">
+				    <div> 1 </div>
+					<div> 2 </div>
+					<div> 3 </div>
+				</section>
+				
 				
 			</div>
 		</footer</body>
