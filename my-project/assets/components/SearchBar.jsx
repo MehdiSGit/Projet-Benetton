@@ -27,10 +27,9 @@ class Search extends React.Component {
                     <div className="card-body">
                       <h5  className="card-title">{job.name}</h5>
                       <p className="card-text">{job.description}</p>
+                      <a href={'/showJob/' + job.id}>Plus d'information</a>
                     </div>
-                  </div>
-                    
-                  
+                  </div>                  
                 )
               })}
               <button onClick={this.fetchJobs}>Search </button>

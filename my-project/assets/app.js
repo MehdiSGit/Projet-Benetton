@@ -17,6 +17,6 @@ ReactDOM.render(
         document.getElementById('search-bar'))
 
 
-ReactDOM.render(
-        <Blog/>,
-        document.getElementById('blog'))
+// ReactDOM.render(
+//         <Blog/>,
+//         document.getElementById('blog'))

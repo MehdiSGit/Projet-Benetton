@@ -45,7 +45,19 @@
 						
 
 						{% if app.user %}
-						<a href="{{path ('')}}"> Mon espace personnel</a>
+
+
+						{% if is_granted('ROLE_RECRUTEUR') %} 
+							<a href="{{path ('recruteur')}}"> Mon espace personnel</a>
+						{% endif %}
+
+						{% if is_granted('ROLE_CANDIDAT') %} 
+							<a href="{{path ('candidat')}}"> Mon espace personnel</a>
+						{% endif %}
+						
+
+
+
 						<a href="{{ path('app_logout') }}">Se déconnecter</a>
 						{% else %}
 							 {# user is not logged in #}

@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\JobType;
+use App\Repository\JobRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 
 class JobController extends AbstractController
@@ -56,7 +56,7 @@ class JobController extends AbstractController
             $results = array_filter(
                 $jobs,
                 static function (Job $job) use ($search) {
-                    return str_contains(strtolower($job->getDescription()), strtolower($search)) || str_contains(strtolower($job->getName()), strtolower($search));
+                    return str_contains(strtolower($job->getDescription()), strtolower($search)) || str_contains(strtolower($job->getName()), strtolower($search)) ;
                 });
         }
         else {
@@ -68,10 +68,32 @@ class JobController extends AbstractController
         };
 
         return new JsonResponse([
-            'data'        => $data,
+            'data'       => $data,
             'paramaters' => $jsonParameters,
             'hasParameters' => $hasParameters
         ]);
 
     }
+
+    /**
+     * @Route("/showJob/{id}", name="displayJob")
+     */
+    public function displayJob(EntityManagerInterface $entityManager,HttpFoundationRequest $request, $id){
+
+        //chercher id dans l'url
+        
+        //dump($id);die;
+
+        // fetch le job avec id
+        $job = $entityManager->getRepository(Job::class)->findOneBy(['id'=>$id]);
+        dump($job);die;
+
+        
+        return $this->render('displayJob.html.twig',[
+            'job'   => $job,
+            
+        ]);
+    }
+
+
 }

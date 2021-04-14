@@ -144,6 +144,7 @@ class Job
             "description" =>$this->getDescription(),
             "job-start-date" => $this->getJobStartDate(),
             "date-published"=>$this->getDatePublished(),
+            "id" => $this->getId(),
         ];
     }
 
