@@ -16,7 +16,8 @@ const blogSelector =  document.getElementById('blog');
 
 if(searchBar){
   ReactDOM.render(
-        <Search/>, searchBar)}
+        <Search/>, searchBar
+)}
 
 
 if(blogSelector){
