@@ -27,7 +27,8 @@ class CandidatsFixtures extends Fixture
                         ->setEmail('Rodica@gmail.fr')
                         ->setPassword($password)
                         ->setFirstName('Rodica')
-                        ->setLastName('Equaly');
+                        ->setLastName('Equaly')
+                        ->setRoles(['ROLE_CANDIDAT']);
         $manager->persist($candidat1);
 
         $manager->flush();
@@ -37,7 +38,8 @@ class CandidatsFixtures extends Fixture
                         ->setEmail('Jacques@gmail.fr')
                         ->setPassword($password)
                         ->setFirstName('Jacques')
-                        ->setLastName('Equaly');
+                        ->setLastName('Equaly')
+                        ->setRoles(['ROLE_CANDIDAT']);
         $manager->persist($candidat2);
 
         $manager->flush();
@@ -47,7 +49,8 @@ class CandidatsFixtures extends Fixture
                         ->setEmail('Mehdi@gmail.fr')
                         ->setPassword($password)
                         ->setFirstName('Mehdi')
-                        ->setLastName('Equaly');
+                        ->setLastName('Equaly')
+                        ->setRoles(['ROLE_CANDIDAT']);
         $manager->persist($candidat3);
 
         $manager->flush();
