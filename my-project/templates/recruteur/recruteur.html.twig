@@ -5,6 +5,13 @@
 	<div class="container">
 		<h1>Page Recruteur</h1>
 
+		<section class="displayRecruteur">
+			<h2>Vos informations personnelles</h2></br>
+			<p>Prénom : {{recruteur.Name}}</p></br>
+			<p>Nom : {{recruteur.Description}}</p></br>
+			<p>Education : {{recruteur.Email}}</p></br>
+		</section>
+
 		{{ form_start(formulaire3) }}
 		{{ form_rest(formulaire3) }}
 		<button>Valider</button>
