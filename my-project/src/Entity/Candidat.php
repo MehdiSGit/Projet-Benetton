@@ -87,7 +87,7 @@ class Candidat implements UserInterface, \Serializable
      * @ORM\OneToMany(targetEntity=JobPostuler::class, mappedBy="candidat")
      */
     private $postulers;
-    
+
     /** 
      * @ORM\Column(type="string", length=255, nullable=true)
      */
@@ -344,7 +344,6 @@ class Candidat implements UserInterface, \Serializable
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return Collection|JobPostuler[]
      */
@@ -371,7 +370,8 @@ class Candidat implements UserInterface, \Serializable
                 $postuler->setCandidat(null);
             }
         }
-=======
+    }
+
     public function getForgottenPassword(): ?string
     {
         return $this->forgottenPassword;
@@ -380,7 +380,6 @@ class Candidat implements UserInterface, \Serializable
     public function setForgottenPassword(?string $forgottenPassword): self
     {
         $this->forgottenPassword = $forgottenPassword;
->>>>>>> master
 
         return $this;
     }
