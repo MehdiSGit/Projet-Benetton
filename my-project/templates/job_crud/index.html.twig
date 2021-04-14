@@ -3,32 +3,30 @@
 {% block title %}Job index{% endblock %}
 
 {% block main %}
-    <h1>Job index</h1>
+    <h1>Vos annonces</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Code</th>
-                <th>Name</th>
+                <th>Domaine</th>
+                <th>Intitulé du poste</th>
                 <th>Description</th>
-                <th>DatePublished</th>
-                <th>JobStartDate</th>
-                <th>actions</th>
+                <th>Date de publication</th>
+                <th>Date de prise de fonction</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for job in jobs %}
             <tr>
-                <td>{{ job.id }}</td>
                 <td>{{ job.code }}</td>
                 <td>{{ job.name }}</td>
                 <td>{{ job.description }}</td>
                 <td>{{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</td>
                 <td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</td>
                 <td>
-                    <a href="{{ path('job_crud_show', {'id': job.id}) }}">show</a>
-                    <a href="{{ path('job_crud_edit', {'id': job.id}) }}">edit</a>
+                    <a href="{{ path('job_crud_show', {'id': job.id}) }}">voir /</a>
+                    <a href="{{ path('job_crud_edit', {'id': job.id}) }}">éditer</a>
                 </td>
             </tr>
         {% else %}
@@ -39,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('job_crud_new') }}">Create new</a>
+    <a href="{{ path('job_crud_new') }}">Création d'un nouveau poste</a>
 {% endblock %}
