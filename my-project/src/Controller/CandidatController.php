@@ -125,6 +125,28 @@ class CandidatController extends AbstractController
         ]);
     }
     /**
+     * @Route("/candidat/favoris", name="favoris")
+     */
+    public function favoris(SessionSessionInterface $session,JobRepository $jobRepository){
+        
+        $favoris = $session->get('favoris',[]);
+        
+        $favorisWithData = [];
+        
+        foreach( $favoris as $id=>$id){
+            $favorisWithData[] = [
+                'job' => $jobRepository->find($id),
+                'id' => $id   
+            ];
+        }
+        //dd($favorisWithData);
+        return $this->render('favoris.html.twig',[
+            'items' => $favorisWithData
+        ]);
+    }
+
+
+    /**
      * @Route("/candidat/ajouterAuxFavoris/{id}", name="ajouter_favoris")
      */
     public function ajouterFavoris($id, SessionSessionInterface $session ){
@@ -132,11 +154,37 @@ class CandidatController extends AbstractController
         
         //creer un 'favoris' vide en forme tableau associatif
         $favoris = $session->get('favoris',[]);
+        
+        // verifier si l'annonce n'est pas deja sur la liste
+        if(!empty($favoris[$id])){
+            // return message " Vous avez deja ajouté cette annonce" 
+
+        } else {
+            $favoris[$id] = 1;
+        }
 
         //remplir la session avec  le favoris
         $session->set('favoris',$favoris);
+        //dd($session->get('favoris'));
 
+        return $this->redirectToRoute('favoris');
+    }
 
+    /**
+     * @Route("/candidat/favoris/remove/{id}", name="remove_favoris")
+     */
+    public function supprimerFavoris($id, SessionSessionInterface $session ){
+        //recuperer la liste des favoris
+        $favoris = $session->get('favoris',[]);
+
+        //vider si il contient des elements
+        if(!empty($favoris[$id])){
+            unset($favoris[$id]);
+        }
+
+        $session->set('favoris',$favoris);
+
+        return $this->redirectToRoute("favoris"); 
     }
 
     

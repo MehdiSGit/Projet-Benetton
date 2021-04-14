@@ -2,4 +2,25 @@
 
 {% block main %}
     
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{job.name}}</h5>
+            </div>
+            <div class="modal-body">
+                <p>{{job.description}}</p>
+                <small>{{job.id}}</small>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><a href="{{path('ajouter_favoris',{'id': job.id}) }}" >Ajoutez aux favoris </a></button>
+                <button type="button" class="btn btn-primary">Postulez </button>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+
 {% endblock %}
