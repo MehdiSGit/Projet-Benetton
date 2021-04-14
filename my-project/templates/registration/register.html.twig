@@ -13,23 +13,39 @@
 		<h1>Création de compte</h1>
 
 		{{ form_start(registrationForm) }}
+
+        <div class="c1">
+
+        {{ form_row(registrationForm.lastName, {
+            label: 'Nom '
+        }) }}
+
+        </div>
+        <div class="c2">
+        {{ form_row(registrationForm.firstName, {
+            label: 'Prénom '
+        }) }}
+        </div>
+
+        <div class="c3">
+
 		{{ form_row(registrationForm.email, {
-            label: 'Votre adresse email : '
+            label: 'Email '
         }) }}
+        </div>
+        <div class="c4">
+
 		{{ form_row(registrationForm.plainPassword, {
-            label: 'Votre mot de pass : '
+            label: 'Mot de passe '
         }) }}
+        </div>
+        <div class="c5">
+
 		{{ form_row(registrationForm.agreeTerms, {
             label: 'Conditions'
         }) }}
-		{{ form_row(registrationForm.firstName, {
-            label: 'Prénom : '
-        }
-        ) }}
-		{{ form_row(registrationForm.lastName, {
-            label: 'Nom : '
-        }
-        ) }}
+        </div>
+
 
 		<button type="submit" class="btn">Enregistrez vous</button>
 		{{ form_end(registrationForm) }}

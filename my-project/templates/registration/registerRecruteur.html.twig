@@ -7,23 +7,41 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
+	<section class="form_create_recruteur">
     <h1>Création de compte</h1>
 
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email, {
-            label: 'Email : '
-        }) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Votre mot de pass : '
-        }) }}
-        {{ form_row(registrationForm.agreeTerms, {
-            label: 'Conditions'
-        }) }}
+
+
+    <div class="r1">
         {{ form_row(registrationForm.name, {
-            label: 'Nom : '
+            label: 'Entreprise '
         }
         ) }}
 
+    <div class="r2">
+        {{ form_row(registrationForm.email, {
+            label: 'Email '
+        }) }}
+     </div>
+
+     <div class="r3">
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Mot de passe '
+        }) }}
+    </div>
+
+    <div class="r4">
+        {{ form_row(registrationForm.agreeTerms, {
+            label: 'Conditions'
+        }) }}
+    </div>
+   
+
+    </div>
+
         <button type="submit" class="btn">Enregistrez vous</button>
     {{ form_end(registrationForm) }}
+
+    </section>
 {% endblock %}

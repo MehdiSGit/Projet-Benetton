@@ -14,6 +14,7 @@ body {
     width: 1366px;
     margin: auto;
     color: #5B5771;
+
     
 }
 /*******HEADER*************/
@@ -113,6 +114,7 @@ body {
     padding: 8rem 12rem;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
 }
 .main_img img{ 
@@ -481,11 +483,112 @@ position: relative;
   padding: 1rem
 }
 
-/******************FORM CREATE CANDIDATE**********/
+/******************FORM CREATE CANDIDATE & RECRUTEUR**********/
 
-.form_create_candidat{
-    width: 40%;
+.form_create_candidat, .form_create_recruteur{
+    width: 50%;
     background-color: white;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 10%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.form_create_candidat h1, .form_create_recruteur h1{ 
+    margin-bottom: 2rem !important;
+    width: 41%;
+    margin: auto;
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+}
+.form_create_candidat h1::before,
+.form_create_recruteur h1::before{
+    width: 13rem;
+    height: 21px;
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #FFD115;
+    z-index: -1;
+    top: 1rem;
+}
+.form_create_candidat div, 
+.form_create_recruteur div {
+    margin-bottom: 1rem;
+}
+.form_create_candidat div input {
+    border-radius: 3px;
+    border: none;
+    width: 60%;
+    padding: 8px;
+}
+.form_create_candidat div label, 
+.form_create_recruteur div label {
+    margin-left: 3rem;
+    font-weight: bolder;
+}
+.c1 input{
+    margin-left: 4rem;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.r1 input{
+    border-radius: 3px;
+    border: none;
+    width: 60%;
+    padding: 8px;
+    margin-left: 2rem;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.c2 input{
+    margin-left: 42px;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.r2 input{
+    margin-left: 63px;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.c3 input{
+    margin-left: 56px;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.r3 input{
+    margin-left: 15px;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.c4 input{
+    margin-left: 10px;
+    width: 47% !important;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+}
+.r4 input{
+   
+}
+.c5 input{
+   margin: 0;
+   padding: 0;
+   border: none;
+   margin-left: -11rem;
+   padding: 1.5rem !important;
+
+}
+.form_create_candidat div input:nth-child(3){
+    padding-left: 3rem;
+}
+.form_create_candidat .btn, 
+.form_create_recruteur .btn {
+    background-color: #FFD115;
+    padding: 1rem 4rem;
+    /* width: 44% !important; */
+    font-size: 22px;
+    text-decoration: none;
+    color: #5B5771;
+    border-radius: 7px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    border: none;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
