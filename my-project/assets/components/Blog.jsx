@@ -47,10 +47,11 @@ class Blog extends React.Component {
 
         return (
 
-            <div>
+            <div className="r">
+                <section className="display">
                 {this.state.events.map(event => (
-                    <div>
-                        <img style={{ width: "20%" }} src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt="" />
+                    <div className="blog_article">
+                        <img src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt="" />
                         <h4>  {event.title}</h4>
                         <p>{event.body} </p>
                     </div>
@@ -58,6 +59,7 @@ class Blog extends React.Component {
 
                 {/* <button onClick={this.fetchEvents}>Fetch</button> */}
                 {/* <button>More articles</button> */}
+                </section>
             </div>
 
 
