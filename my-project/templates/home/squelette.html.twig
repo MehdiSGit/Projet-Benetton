@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link
-		rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;400;600&display=swap" rel="stylesheet">
+		<link
+		href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;400;600&display=swap" rel="stylesheet">
 
 		{# ci-dessous insert les balises <link> pour le fichier app.css #}
 		{{ encore_entry_link_tags('app') }}
@@ -27,54 +27,55 @@
 			{% block header %}
 
 				<div class="header_nav">
-					
-				
-					<h4><a href="{{ path('home') }}">EQUALY</a></h4>
-					
 
 
-						{# <div>
-							<i class="fas fa-search"></i>
-							<input class="input_search_nav" type="text">
-						</div> #}
-				
-					
+					<h4>
+						<a href="{{ path('home') }}">EQUALY</a>
+					</h4>
 
-					<nav class="nav">
+
+					{# <div>
+																	<i class="fas fa-search"></i>
+																	<input class="input_search_nav" type="text">
+																</div> #}
+
+
+					<nav
+						class="nav">
 						{# <a href="{{ path('home') }}">Accueil</a> #}
 						<a href="#">A propos</a>
 						<a href="{{path ('blog')}}">Blog</a>
-						
+
 
 						{% if app.user %}
 
 
-						{% if is_granted('ROLE_RECRUTEUR') %} 
-							<a href="{{path ('recruteur')}}"> Mon espace personnel</a>
-						{% endif %}
+							{% if is_granted('ROLE_RECRUTEUR') %}
+								<a href="{{path ('recruteur')}}">
+									Mon espace personnel</a>
+							{% endif %}
 
-						{% if is_granted('ROLE_CANDIDAT') %} 
-							<a href="{{path ('candidat')}}"> Mon espace personnel</a>
-						{% endif %}
-						
+							{% if is_granted('ROLE_CANDIDAT') %}
+								<a href="{{path ('candidat')}}">
+									Mon espace personnel</a>
+							{% endif %}
 
 
-
-						<a href="{{ path('app_logout') }}">Se déconnecter</a>
+							<a href="{{ path('app_logout') }}">Se déconnecter</a>
 						{% else %}
-							 {# user is not logged in #}
+							{# user is not logged in #}
 							<a href="{{ path('app_login') }}">Se connecter</a>
 							<a href="{{ path('choice_register') }}">S'inscrire</a>
 						{% endif %}
-				
+
 					</nav>
 
-						<div class="icons">
-							<i class="far fa-eye-slash"></i>
-							<i class="fas fa-deaf"></i>
-						</div>
+					<div class="icons">
+						<i class="far fa-eye-slash"></i>
+						<i class="fas fa-deaf"></i>
+					</div>
 				</div>
-				
+
 
 			{% endblock %}
 		</header>
@@ -85,20 +86,45 @@
 
 		<footer>
 			<div class="container_footer">
-				<div class="newsleter">
-			      	<h3> On reste en contact ?</h3>
-					<input type="text">
-					<button> > </button>
+
+				<div class="newsletter">
+					<h4> On reste en contact ?</h4>
+					<input placeholder="mail@mail.com" type="text">
 				</div>
 
 				<section class="footer_text">
-				    <div> 1 </div>
-					<div> 2 </div>
-					<div> 3 </div>
+					<div>
+						<p>
+							 <b> Ou nous trouver ? </b></p>
+						<p>
+							7 rue de la liberte,
+							<br>
+							75010 Paris</p>
+					</div>
+
+					<div>
+						<p>
+							Mentions légales
+						</p>
+						<p>
+							CGU
+						</p>
+					</div>
+
+					<div>
+						<p>
+							mail: contact@equaly.fr</p>
+						<p>
+							+33 01677543890</p>
+					</div>
 				</section>
-				
-				
+
+
 			</div>
-		</footer</body>
+
+			<div class="copyright">
+			<p> 2021 Equaly- Team Benetton</p>
+			</div>
+		</footer>
 	</body>
-</html>
+</html></body></html>
