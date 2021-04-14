@@ -1,7 +1,11 @@
 {% extends 'home/squelette.html.twig' %}
 
 {% block main %}
-    
+
+
+    {% for flashError in app.flashes('message-error-add') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
     <div class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -9,14 +13,20 @@
                 <h5 class="modal-title">{{job.name}}</h5>
             </div>
             <div class="modal-body">
-                <p>{{job.description}}</p>
-                <small>{{job.id}}</small>
+                <p>{{ job.description }}</p>
+                <small>{{ job.jobStartDate }}</small>
+                <small>Publié le</small>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"><a href="{{path('ajouter_favoris',{'id': job.id}) }}" >Ajoutez aux favoris </a></button>
-                <button type="button" class="btn btn-primary">Postulez </button>
+                <a href="{{path('ajouter_favoris',{'id': job.id}) }}" class="btn btn-primary" >Ajoutez aux favoris </a>
                 
+                {# Verifier si l'utilisateur a deja postulé #}
+                {% if app.user and job.estPostuleParCandidat(app.user)  %}
+
+                {% else %}
+                <a href="" class="btn btn-link"> Postulez </a>  
+                {% endif %}
             </div>
             </div>
         </div>

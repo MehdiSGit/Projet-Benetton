@@ -62,17 +62,14 @@ class JobController extends AbstractController
         else {
             $results = $data;
         }
-
         foreach($results as $job){
             $data[] = $job->formatedForView();
         };
-
         return new JsonResponse([
             'data'       => $data,
             'paramaters' => $jsonParameters,
             'hasParameters' => $hasParameters
         ]);
-
     }
 
     /**
@@ -81,20 +78,17 @@ class JobController extends AbstractController
     public function displayJob(EntityManagerInterface $entityManager,HttpFoundationRequest $request, $id){
 
         //chercher id dans l'url
-        
         //dump($id);die;
-
         // fetch le job avec id
         $job = $entityManager->getRepository(Job::class)->findOneBy(['id'=>$id]);
         
         //dump($job);die;
-
-        
         return $this->render('displayJob.html.twig',[
             'job'   => $job,
             
         ]);
     }
+
 
 
 }

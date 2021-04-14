@@ -83,11 +83,17 @@ class Candidat implements UserInterface, \Serializable
      */
     private $candidature;
 
+    /**
+     * @ORM\OneToMany(targetEntity=JobPostuler::class, mappedBy="candidat")
+     */
+    private $postulers;
+
     public function __construct()
     {
         $this->documents = new ArrayCollection();
         $this->createAt = new \DateTime();
         $this->candidature = new ArrayCollection();
+        $this->postulers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -329,6 +335,36 @@ class Candidat implements UserInterface, \Serializable
     public function removeCandidature(Job $candidature): self
     {
         $this->candidature->removeElement($candidature);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|JobPostuler[]
+     */
+    public function getPostulers(): Collection
+    {
+        return $this->postulers;
+    }
+
+    public function addPostuler(JobPostuler $postuler): self
+    {
+        if (!$this->postulers->contains($postuler)) {
+            $this->postulers[] = $postuler;
+            $postuler->setCandidat($this);
+        }
+
+        return $this;
+    }
+
+    public function removePostuler(JobPostuler $postuler): self
+    {
+        if ($this->postulers->removeElement($postuler)) {
+            // set the owning side to null (unless already changed)
+            if ($postuler->getCandidat() === $this) {
+                $postuler->setCandidat(null);
+            }
+        }
 
         return $this;
     }

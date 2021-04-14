@@ -10,6 +10,7 @@ use App\Form\DocumentType;
 use App\Form\CandidatProfilType;
 use App\Repository\CandidatRepository;
 use App\Repository\JobRepository;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -124,6 +125,9 @@ class CandidatController extends AbstractController
             'formulaire2' => $formulaire2->createView()
         ]);
     }
+
+    /// FUNCTION AddToFavorite//////////////////////////////////
+
     /**
      * @Route("/candidat/favoris", name="favoris")
      */
@@ -132,6 +136,7 @@ class CandidatController extends AbstractController
         $favoris = $session->get('favoris',[]);
         
         $favorisWithData = [];
+        
         
         foreach( $favoris as $id=>$id){
             $favorisWithData[] = [
@@ -149,7 +154,7 @@ class CandidatController extends AbstractController
     /**
      * @Route("/candidat/ajouterAuxFavoris/{id}", name="ajouter_favoris")
      */
-    public function ajouterFavoris($id, SessionSessionInterface $session ){
+    public function ajouterFavoris($id, SessionSessionInterface $session,EntityManagerInterface $entityManager){
         //access au SESSION
         
         //creer un 'favoris' vide en forme tableau associatif
@@ -157,12 +162,16 @@ class CandidatController extends AbstractController
         
         // verifier si l'annonce n'est pas deja sur la liste
         if(!empty($favoris[$id])){
-            // return message " Vous avez deja ajouté cette annonce" 
-
+            // return message " Vous avez deja ajouté cette annonce"
+            $this->addFlash('message-error-add', 'Vous avez deja ajouté cette annonce');
+            return $this->redirectToRoute('displayJob',[
+                'id' => $id,
+            ]); 
         } else {
             $favoris[$id] = 1;
         }
 
+        
         //remplir la session avec  le favoris
         $session->set('favoris',$favoris);
         //dd($session->get('favoris'));
@@ -187,5 +196,8 @@ class CandidatController extends AbstractController
         return $this->redirectToRoute("favoris"); 
     }
 
+    // FUNCTION Postulez /////////////////////////////
+
+    
     
 }

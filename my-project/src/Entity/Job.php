@@ -64,10 +64,16 @@ class Job
      */
     private $TypeContrat;
 
+    /**
+     * @ORM\OneToMany(targetEntity=JobPostuler::class, mappedBy="job")
+     */
+    private $postulers;
+
     public function __construct()
     {
        $this->datePublished = new \DateTime();
        $this->candidats = new ArrayCollection();
+       $this->postulers = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -208,4 +214,48 @@ class Job
 
         return $this;
     }
+
+    /**
+     * @return Collection|JobPostuler[]
+     */
+    public function getPostulers(): Collection
+    {
+        return $this->postulers;
+    }
+
+    public function addPostuler(JobPostuler $postuler): self
+    {
+        if (!$this->postulers->contains($postuler)) {
+            $this->postulers[] = $postuler;
+            $postuler->setJob($this);
+        }
+
+        return $this;
+    }
+
+    public function removePostuler(JobPostuler $postuler): self
+    {
+        if ($this->postulers->removeElement($postuler)) {
+            // set the owning side to null (unless already changed)
+            if ($postuler->getJob() === $this) {
+                $postuler->setJob(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /// FUNCTION POSTULEZ
+    
+    // tracker
+    public function estPostuleParCandidat(Candidat $candidat): bool
+    {
+        foreach($this->postulers as $postule){
+            if ($postule->getCandidat() === $candidat) return true;
+        }
+
+        return false;
+    }
+
+
 }
