@@ -1,8 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/squelette.html.twig' %}
 
 {% block title %}Job index{% endblock %}
 
-{% block body %}
+{% block main %}
     <h1>Job index</h1>
 
     <table class="table">
@@ -24,8 +24,8 @@
                 <td>{{ job.code }}</td>
                 <td>{{ job.name }}</td>
                 <td>{{ job.description }}</td>
-                <td>{{ job.datePublished ? job.datePublished|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</td>
+                <td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</td>
                 <td>
                     <a href="{{ path('job_crud_show', {'id': job.id}) }}">show</a>
                     <a href="{{ path('job_crud_edit', {'id': job.id}) }}">edit</a>

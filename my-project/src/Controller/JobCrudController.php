@@ -21,7 +21,7 @@ class JobCrudController extends AbstractController
     public function index(): Response
     {
         $recruteur = $this->getUser();
-
+            // dd($recruteur->getJobs()->count());
         return $this->render('job_crud/index.html.twig', [
             'jobs' => $recruteur->getJobs(),
         ]);
@@ -32,7 +32,9 @@ class JobCrudController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $recruteur = $this->getUser();
         $job = new Job();
+        $job->setRecruteurId($recruteur);
         $form = $this->createForm(Job1Type::class, $job);
         $form->handleRequest($request);
 
@@ -66,6 +68,8 @@ class JobCrudController extends AbstractController
      */
     public function edit(Request $request, Job $job): Response
     {
+        $recruteur = $this->getUser();
+        $job->setRecruteurId($recruteur);
         $form = $this->createForm(Job1Type::class, $job);
         $form->handleRequest($request);
 

@@ -12,10 +12,14 @@
 			<p>Adresse email : {{recruteur.Email}}</p></br>
 		</section>
 
+		<h1>Editer vos données</h1>
+
 		{{ form_start(formulaire3) }}
 		{{ form_rest(formulaire3) }}
 		<button>Valider</button>
-		{{ form_end(formulaire3) }}
+		{{ form_end(formulaire3) }} <br>
+
+			<a href="{{ path('job_crud_index')}}"><h1>Voir vos annonces</h1></a>
 	</div>
 
 {% endblock %}

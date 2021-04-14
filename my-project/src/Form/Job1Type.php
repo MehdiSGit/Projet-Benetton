@@ -17,7 +17,6 @@ class Job1Type extends AbstractType
             ->add('name')
             ->add('description')
             ->add('jobStartDate', DateType::class)
-            ->add('RecruteurId')
             ->add('city')
             ->add('TypeContrat')
         ;

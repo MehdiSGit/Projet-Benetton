@@ -1,0 +1,7 @@
+{
+    "launch": {
+        "emmet.includeLanguages": {"twig": "html"},
+        "configurations": [],
+        "compounds": []
+    }
+}
