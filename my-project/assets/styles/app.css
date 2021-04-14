@@ -299,12 +299,13 @@ position: relative;
 
 /* ETAPES  */
 .etapes_section{
+    margin-top: 3rem;
     width: 80%;
     margin: auto;
 }
 .etapes_title h3{
     width: 100%;
-    margin-top: 7rem;
+    margin-top: 10rem;
     margin-left: 0;
 }
 .etapes_articles{
@@ -426,7 +427,7 @@ position: relative;
 
 /******FOOTER*****/
 .container_footer {
-    margin-top: 15rem;
+    margin-top: 6rem;
     background-color: #5B5771;
     color: white;
     padding-top: 2rem;
@@ -478,4 +479,13 @@ position: relative;
   width: 20%;
   margin: auto;
   padding: 1rem
+}
+
+/******************FORM CREATE CANDIDATE**********/
+
+.form_create_candidat{
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    margin-top: 7%;
 }
