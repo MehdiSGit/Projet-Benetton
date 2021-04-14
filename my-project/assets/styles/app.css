@@ -224,7 +224,7 @@ position: relative;
 
 }
 /* BLOG */
-.blog{
+.blog_section{
     margin-top: 6rem;
 }
 .articles_blog {
@@ -600,3 +600,6 @@ position: relative;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+
+
