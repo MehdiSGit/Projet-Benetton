@@ -601,5 +601,117 @@ position: relative;
     margin-bottom: 2rem;
 }
 
+/******PAGE BLOGS*******/
+.r{
+    width: 90%;
+    margin: auto;
+   
+    
+}
+.display{
+    display: grid;
+    grid-template-columns: 23rem 23rem 23rem;
+    grid-template-rows: 28rem 28rem 28rem;
+ 
+}
+.blog_article{
+    width: 100%;
+    margin-left: 1rem;
+    margin-left: 4rem !important;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;  
+}
+.blog_article:last-child{
+    border-right: none;
+}
+.blog_article img {
+    width: 100%; 
+}
+.blog_article h4{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.blog_bar h1::before{
+    width: 12rem;
+    height: 25px;
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #FFD115;
+    top: 12rem;
+    left: 42rem;
+    z-index: -9;
+    
+}
+.blog_bar{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 4rem;
+}
+.blog_bar input{
+    width: 50%;
+    margin: auto;
+    margin: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+}
+
+/************OFFRES PAGE************/
+/* .container_search_bar{
+   width: 60%;
+   margin: auto;
+   margin-top: 3rem;
+  */
+  .container_search_bar{
+      width: 100%;
+      margin: auto;
+  }
+
+.container_search_bar input{
+    width: 60%;
+    padding: 2rem;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-left: 17rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+
+}
+.jobs{
+    display: flex;
+}
+.card{
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    background-color: #FFD115;
+    width: 30%;
+    height: auto;
+    padding: 2rem;
+    margin: 1rem;
+}
+.card-title{
+    font-size: 25px;
+}
+.card-text{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+     
+    
+}
+.card-body a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.card-body a:hover{
+    background-color: rgba(255, 255, 255, 0.795);
+}
 
 
