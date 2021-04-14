@@ -83,6 +83,11 @@ class Candidat implements UserInterface, \Serializable
      */
     private $candidature;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $forgottenPassword;
+
     public function __construct()
     {
         $this->documents = new ArrayCollection();
@@ -329,6 +334,18 @@ class Candidat implements UserInterface, \Serializable
     public function removeCandidature(Job $candidature): self
     {
         $this->candidature->removeElement($candidature);
+
+        return $this;
+    }
+
+    public function getForgottenPassword(): ?string
+    {
+        return $this->forgottenPassword;
+    }
+
+    public function setForgottenPassword(?string $forgottenPassword): self
+    {
+        $this->forgottenPassword = $forgottenPassword;
 
         return $this;
     }
