@@ -1,33 +1,40 @@
 {% extends 'home/squelette.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Register
+{% endblock %}
 
 {% block main %}
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
+	{% for flashError in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flashError }}</div>
+	{% endfor %}
 
-    <h1>Création de compte</h1>
+	<section class="form_create_candidat">
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email, {
+		<h1>Création de compte</h1>
+
+		{{ form_start(registrationForm) }}
+		{{ form_row(registrationForm.email, {
             label: 'Votre adresse email : '
         }) }}
-        {{ form_row(registrationForm.plainPassword, {
+		{{ form_row(registrationForm.plainPassword, {
             label: 'Votre mot de pass : '
         }) }}
-        {{ form_row(registrationForm.agreeTerms, {
+		{{ form_row(registrationForm.agreeTerms, {
             label: 'Conditions'
         }) }}
-        {{ form_row(registrationForm.firstName, {
+		{{ form_row(registrationForm.firstName, {
             label: 'Prénom : '
         }
         ) }}
-        {{ form_row(registrationForm.lastName, {
+		{{ form_row(registrationForm.lastName, {
             label: 'Nom : '
         }
         ) }}
 
-        <button type="submit" class="btn">Enregistrez vous</button>
-    {{ form_end(registrationForm) }}
+		<button type="submit" class="btn">Enregistrez vous</button>
+		{{ form_end(registrationForm) }}
+
+
+	</section>
+
 {% endblock %}
