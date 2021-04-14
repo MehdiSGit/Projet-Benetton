@@ -11,12 +11,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Search from './components/SearchBar';
 import Blog from './components/Blog'
+const searchBar = document.getElementById('search-bar');
+const blogSelector =  document.getElementById('blog');
 
-ReactDOM.render(
-        <Search/>,
-        document.getElementById('search-bar'))
+if(searchBar){
+  ReactDOM.render(
+        <Search/>, searchBar)}
 
 
-ReactDOM.render(
-        <Blog/>,
-        document.getElementById('blog'))
+if(blogSelector){
+        ReactDOM.render(
+                <Blog/>,
+                blogSelector)
+}
+
