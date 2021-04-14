@@ -361,8 +361,8 @@ position: relative;
     text-decoration: none;
   
 }
-.candidat:hover{
-    border: 1px solid black;
 
+
+.candidat:hover {
+    border: 1px black solid;
 }
-

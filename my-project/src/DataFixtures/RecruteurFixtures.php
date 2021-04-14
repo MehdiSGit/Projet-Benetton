@@ -24,7 +24,8 @@ class RecruteurFixtures extends Fixture
                         ->setEmail('Orange@gmail.fr')
                         ->setPassword($password)
                         ->setName('Orange')
-                        ->setDescription('Téléphonie mobile');
+                        ->setDescription('Téléphonie mobile')
+                        ->setRoles(['ROLE_RECRUTEUR']);
         $manager->persist($recruteur1);
 
         $manager->flush();
@@ -34,7 +35,8 @@ class RecruteurFixtures extends Fixture
                         ->setEmail('Bleu@gmail.fr')
                         ->setPassword($password)
                         ->setName('Bleu')
-                        ->setDescription('Start-up');
+                        ->setDescription('Start-up')
+                        ->setRoles(['ROLE_RECRUTEUR']);
         $manager->persist($recruteur2);
 
         $manager->flush();

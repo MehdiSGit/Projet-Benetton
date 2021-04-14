@@ -54,6 +54,16 @@ class Job
      */
     private $candidats;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $City;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $TypeContrat;
+
     public function __construct()
     {
        $this->datePublished = new \DateTime();
@@ -171,6 +181,30 @@ class Job
         if ($this->candidats->removeElement($candidat)) {
             $candidat->removeCandidature($this);
         }
+
+        return $this;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->City;
+    }
+
+    public function setCity(string $City): self
+    {
+        $this->City = $City;
+
+        return $this;
+    }
+
+    public function getTypeContrat(): ?string
+    {
+        return $this->TypeContrat;
+    }
+
+    public function setTypeContrat(string $TypeContrat): self
+    {
+        $this->TypeContrat = $TypeContrat;
 
         return $this;
     }

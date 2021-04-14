@@ -4,7 +4,7 @@ import React from 'react';
 
 const url = "https://jsonplaceholder.typicode.com/posts"
 
- class Blog extends React.Component {
+class Blog extends React.Component {
     constructor() {
         super();
 
@@ -16,21 +16,20 @@ const url = "https://jsonplaceholder.typicode.com/posts"
         // this.fetchEvents = this.fetchEvents.bind(this);
     }
 
-//  /**
-//    * Cette componentDidUpdate qui se déclenche à chaque fois qu'on fait un setState quelque part
-//    * ça sert à gérer les effets de bord.
-//    * @param prevProps
-//    * @param prevState
-//    */
-//   componentDidUpdate(prevProps, prevState) {
+    //  /**
+    //    * Cette componentDidUpdate qui se déclenche à chaque fois qu'on fait un setState quelque part
+    //    * ça sert à gérer les effets de bord.
+    //    * @param prevProps
+    //    * @param prevState
+    //    */
+    //   componentDidUpdate(prevProps, prevState) {
 
-//     // On ne veut relancer la requête que si l'ancienne page est différente de la nouvelle.
-//     if (prevState.currentPage !== this.state.currentPage) {
-//       this.fetchEvents();
-//     }
-//   }
-
-    render() {
+    //     // On ne veut relancer la requête que si l'ancienne page est différente de la nouvelle.
+    //     if (prevState.currentPage !== this.state.currentPage) {
+    //       this.fetchEvents();
+    //     }
+    //   }
+    componentDidMount() {
 
         fetch(url).then(response => response.json()).then(response => {
             console.log(response.records);
@@ -39,12 +38,19 @@ const url = "https://jsonplaceholder.typicode.com/posts"
             })
         });
 
+    }
+
+    render() {
+
+
+
+
         return (
-        
+
             <div>
                 {this.state.events.map(event => (
                     <div>
-                        <img style={{width: "20%" }}src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt=""/>
+                        <img style={{ width: "20%" }} src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt="" />
                         <h4>  {event.title}</h4>
                         <p>{event.body} </p>
                     </div>
@@ -54,8 +60,8 @@ const url = "https://jsonplaceholder.typicode.com/posts"
                 {/* <button>More articles</button> */}
             </div>
 
-           
-    
+
+
         );
     }
 
