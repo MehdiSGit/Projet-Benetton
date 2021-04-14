@@ -23,12 +23,10 @@ class Search extends React.Component {
               </label>
               {this.state.jobs.map(function(job) {
                 return (
-                  <div className="card">
-                    <div className="card-body">
-                      <h5  className="card-title">{job.name}</h5>
-                      <p className="card-text">{job.description}</p>
-                    </div>
-                  </div>
+                  <ul>
+                    <li>{job.name}</li>
+                    {/* <li>{job.description}</li> */}
+                  </ul>
                     
                   
                 )
