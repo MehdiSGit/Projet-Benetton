@@ -687,7 +687,6 @@ position: relative;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: auto;
-    background-color: teal;
     justify-content: space-between;
     width: 95%;
     margin: auto;
@@ -717,3 +716,207 @@ position: relative;
 }
 
 
+/******************FORM LOGIN CANDIDATE & RECRUTEUR**********/
+.form_login {
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    margin-top: 8%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form_login h1{ 
+    margin-bottom: 2rem !important;
+    width: 41%;
+    margin: auto;
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+    margin-top: 2rem;
+}
+.form_login h1::before{
+    width: 10rem;
+    height: 20px;
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #FFD115;
+    z-index: -1;
+    top: 1rem;
+    right: 1rem;
+}
+.form_login div{
+    margin-bottom: 1rem;
+}
+.form_login div input {
+    border-radius: 3px;
+    border: none;
+    width: 60%;
+    padding: 8px;
+}
+.form_login div label {
+    margin-left: 3rem;
+    font-weight: bolder;
+}
+#inputEmail, #inputPassword{ 
+    border-radius: 3px;
+    border: none;
+    width: 60%;
+    padding: 8px;
+    margin-left: 15px;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+}
+#inputEmail{
+    margin-left: 42px;
+}
+.form_login .btn1, 
+.form_login .btn2 {
+    background-color: #FFD115;
+    padding: 1rem 3rem;
+    font-size: 16px;
+    text-decoration: none;
+    color: #5B5771;
+    border-radius: 7px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.btns {
+    width: 100%;
+    margin: auto;
+}
+.btn2 a {
+    text-decoration: none;
+    color: #5B5771;
+}
+
+
+
+/******************RESET CANDIDATE & RECRUTEUR**********/
+.reset_password {
+    width: 40%;
+    background-color: white;
+    margin: auto;
+    margin-top: 8%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.reset_password  h1{ 
+    width: 93%;
+    margin: auto;
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.reset_password  h1::before{
+    width: 10rem;
+    height: 20px;
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: #FFD115;
+    z-index: -1;
+    top: 1rem;
+    right: 4rem;
+    margin-bottom: 2rem;
+}
+.reset_password  div{
+    margin-bottom: 1rem;
+}
+#reset_password_request_form_email {
+    border-radius: 3px;
+    border: none;
+    width: 60%;
+    padding: 8px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-left: 1rem;
+
+
+}
+.required {
+    margin-left: 3rem;
+    font-weight: bolder;
+}
+
+.btn_reset {
+    background-color: #FFD115;
+    padding: 1rem 3rem;
+    font-size: 16px;
+    text-decoration: none;
+    color: #5B5771;
+    border-radius: 7px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/************POSTULER************/
+.send {
+    
+}
+.modal-content{
+    
+    width: 60%;
+    margin: auto;
+}
+.modal-header{
+  
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    padding-bottom: 5rem;
+
+}
+.modal-header h5 {
+    font-size: 44px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.modal-header img {
+    width: 30px;
+}
+.btn_job{
+    border: none;
+    background-color: #FFD115;
+    margin-left: 14rem;
+    margin-top: 4rem;
+}
+.modal-body p {
+    margin-top: 2rem;
+    padding: 3rem;
+    text-align: justify;
+}
+.btn_send{
+    background-color:#FFD115;
+    border: 1px solid grey;
+    padding: 2rem;
+    border-radius: 11px;
+    color: white;
+}
+.btn_send_container{
+    background-color: tomato;
+    width: 14%;
+    margin: auto;
+    margin-top: 1rem;
+}
+.btn_send_container a {
+    text-decoration: none;
+    color: #5B5771;
+}
