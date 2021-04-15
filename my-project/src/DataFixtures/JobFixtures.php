@@ -85,5 +85,38 @@ class JobFixtures extends Fixture
                 $manager->persist($annonce6);
 
                 $manager->flush();
+
+                $annonce7 = new Job();
+                $annonce7
+                        ->setName('Data Analyst junior')
+                        ->setDescription('Mauris mattis at nisi sit amet condimentum. Phasellus ut luctus urna, non lacinia purus. Mauris ac ex in odio efficitur tempus. Mauris at magna non tellus blandit consequat. Donec lorem eros, blandit in nulla eget, dignissim eleifend nisl. Suspendisse pharetra ultrices mi, ornare rhoncus nisl vestibulum eu. Morbi dignissim nisl sit amet pulvinar pharetra. Pellentesque aliquam, nulla ac consectetur condimentum, purus turpis pretium magna, ac tincidunt augue urna et eros. Curabitur in vulputate risus. Quisque massa lectus, congue ac justo id, blandit auctor felis.   ')
+                        ->setCode('Data Analyst')
+                        ->setCity('Paris')
+                        ->setTypeContrat('CDI');
+
+                $manager->persist($annonce7);
+
+                $manager->flush();
+
+                $annonce8 = new Job();
+                $annonce8
+                        ->setName('Data Analyst senior')
+                        ->setDescription('Mauris mattis at nisi sit amet condimentum. Phasellus ut luctus urna, non lacinia purus. Mauris ac ex in odio efficitur tempus. Mauris at magna non tellus blandit consequat. Donec lorem eros, blandit in nulla eget, dignissim eleifend nisl. Suspendisse pharetra ultrices mi, ornare rhoncus nisl vestibulum eu. Morbi dignissim nisl sit amet pulvinar pharetra. Pellentesque aliquam, nulla ac consectetur condimentum, purus turpis pretium magna, ac tincidunt augue urna et eros. Curabitur in vulputate risus. Quisque massa lectus, congue ac justo id, blandit auctor felis.   ')
+                        ->setCode('Data Analyst')
+                        ->setCity('Paris')
+                        ->setTypeContrat('CDD');
+
+                $manager->persist($annonce8);
+
+                $manager->flush();
+
+                $this->setReference('annonce1',$annonce1);
+                $this->setReference('annonce2',$annonce2);
+                $this->setReference('annonce3',$annonce3);
+                $this->setReference('annonce4',$annonce4);
+                $this->setReference('annonce5',$annonce5);
+                $this->setReference('annonce6',$annonce6);
+                $this->setReference('annonce7',$annonce7);
+                $this->setReference('annonce8',$annonce8);
         }
 }

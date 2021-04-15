@@ -3,6 +3,10 @@
 {# {% block title %}Log in!{% endblock %} #}
 
 {% block main %}
+
+    <section class="form_login">
+
+
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -14,6 +18,9 @@
         </div>
     {% endif %}
 
+
+  
+<div>
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail">Email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
@@ -35,12 +42,18 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
+    <div class="btns">
+
+    <button class="btn1 btn-lg btn-primary" type="submit">
         Sign in
     </button>
-    <button class="btn btn-lg btn-primary" type="submit">
+    <button class="btn2 btn-lg btn-primary" type="submit">
         <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a>
     </button>
 
+    </div>
+</div>
 </form>
+
+</section>
 {% endblock %}

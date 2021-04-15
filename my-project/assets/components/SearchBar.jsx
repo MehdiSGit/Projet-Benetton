@@ -31,7 +31,7 @@ class Search extends React.Component {
                       <h5  className="card-title">{job.name}</h5>
                       <p className="card-text">{job.description}</p>
                       <a href={'/showJob/' + job.id}>
-                      <img src="https://img.icons8.com/windows/32/000000/arrow.png"/>                      </a>
+                      <img src="https://img.icons8.com/android/24/000000/long-arrow-right.png"/></a>
                     </div>
                   </div>                  
                 )

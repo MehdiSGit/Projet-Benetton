@@ -78,7 +78,7 @@ class CandidatController extends AbstractController
 //     }
 
     /**
-     * @Route("/candidat", name="candidat")
+     * @Route("/candidats", name="candidat")
      * 
      */
     public function profil(Request $request, EntityManagerInterface $entityManager, JobRepository $jobRepository): Response
