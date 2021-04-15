@@ -41,13 +41,19 @@
             <div class="modal-body">
 
                 <p>{{ job.description }}</p>
-
-                <small>{{ job.jobStartDate }}</small>
-                <small>Publié le</small>
+                <p>Date de prise de poste {{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</p>
+                <small>Publié le {{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</small>
             </div>
+            <div class="modal-footer">
+                <a href="{{path('ajouter_favoris',{'id': job.id}) }}" class="btn btn-primary" >Ajoutez aux favoris </a>
+                
+                {# Verifier si l'utilisateur a deja postulé #}
+                {% if app.user and job.estPostuleParCandidat(app.user)  %}
 
-         </section>
-
+                {% else %}
+                <a href="{{path('job_postuler',{'id': job.id}) }}" class="btn btn-link"> Postulez </a>  
+                {% endif %}
+            </div>
             </div>
         </div>
     </div>
