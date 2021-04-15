@@ -55,6 +55,6 @@ function appear(){
 
 window.onload = appear();
 
-setInterval(appear, 2000)
+setInterval(appear, 2000);
 
   
