@@ -16,7 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 class RecruteurController extends AbstractController
 {
     /**
-     * @Route("/recruteur", name="recruteur")
+     * @Route("/recruteurs", name="recruteur")
      */
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {

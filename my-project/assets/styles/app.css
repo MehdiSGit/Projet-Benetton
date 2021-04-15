@@ -221,7 +221,6 @@ position: relative;
     opacity: .3;
     width: 150px;
     height: auto;
-
 }
 /* BLOG */
 .blog_section{
@@ -919,4 +918,15 @@ position: relative;
 .btn_send_container a {
     text-decoration: none;
     color: #5B5771;
+}
+
+/*******JS**********/
+.startup_logo {
+    transition: 2s ease all;
+   
+}
+.red{
+    opacity: 0;
+    
+    
 }

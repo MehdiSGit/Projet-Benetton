@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recruteur index{% endblock %}
+
+{% block body %}
+    <h1>Recruteur index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {# {% for recruteur in recruteurs %} #}
+            <tr>
+               
+                <td>{{ recruteur.email }}</td>
+                <td>{{ recruteur.name }}</td>
+                <td>{{ recruteur.description }}</td>
+                <td>
+                    {# <a href="{{ path('crud_recruteur_show', {'id': recruteur.id}) }}">show</a> #}
+                    <a href="{{ path('crud_recruteur_edit')}}">edit</a>
+                </td>
+            </tr>
+        {# {% else %} #}
+            {# <tr>
+                <td colspan="7">no records found</td>
+            </tr> #}
+        {# {% endfor %} #}
+        </tbody>
+    </table>
+
+    {# <a href="{{ path('crud_recruteur_new') }}">Create new</a> #}
+{% endblock %}

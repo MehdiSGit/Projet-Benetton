@@ -26,3 +26,35 @@ if(blogSelector){
                 blogSelector)
 }
 
+
+
+// function appear(){
+
+//         let logos  = document.querySelectorAll('.startup_logo img');
+//         for(i=0; i<logos.length; i++){
+//             let logo = logos[i];
+//             logo.classList.toggle('hide'); 
+//         }
+//     }
+    
+//     window.onload = appear();
+    
+//     setInterval(logo, 1000)
+
+
+
+function appear(){
+
+        let logos  = document.querySelector('.startup_logo');
+        logos.classList.toggle('red');
+     
+            
+        console.log(logos)
+     
+}
+
+window.onload = appear();
+
+setInterval(appear, 2000)
+
+  
