@@ -35,6 +35,10 @@ body {
     bottom: 15rem;
     left: 34rem;
     width: 20rem;
+    position: absolute;
+    bottom: 17rem;
+    left: 32rem;
+    width: 20rem;
 }
 .icons {
     display: flex;
@@ -75,7 +79,7 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 50%;
 }
 .nav a:nth-child(3) {
     border: 1px solid white;
@@ -115,6 +119,7 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
+    padding-bottom: 8rem;
 
 }
 .main_img img{ 
@@ -130,6 +135,9 @@ body {
     color: #5B5771;
     line-height: 1.4; 
     position: relative; 
+    transition: all 1s ease-out;
+    margin-left: -30px;
+   
 }
 .header_main .title {
     width: 50%;
@@ -166,7 +174,7 @@ body {
 
 /* NOTRE CONCEPT  */
 .section {
-    margin-top: 4rem;
+  
     padding: 2rem 10rem;
 }
 .section h3 {
@@ -175,10 +183,14 @@ body {
 .articles {
     display: flex;
     justify-content: space-between;
+    position: relative; 
+    opacity: 0;
+    transition: all 1s ease-out;
 }
 .articles article {
     padding: 1rem 1.5rem;
     text-align: justify;
+   
 }
 .articles article img {
     width: 16rem;
@@ -192,6 +204,7 @@ body {
 }
 
 /* STARTUPS  */
+
 .startups p  {
 text-align: center;
 font-size: 28px;
@@ -215,6 +228,8 @@ position: relative;
 .startup_logo {
     margin: auto;
     text-align: center;
+    width: 100%;
+    opacity: 0;
 }
 .startup_logo img {
     padding: 0 2rem;
@@ -224,7 +239,8 @@ position: relative;
 }
 /* BLOG */
 .blog_section{
-    margin-top: 6rem;
+    margin-top: 13rem;
+  
 }
 .articles_blog {
     display: flex;
@@ -232,14 +248,27 @@ position: relative;
     margin: auto;
 }
 .img_articles_blog_first img{
-
     width: 50rem;
+    position: relative;
+    z-index: -1000;
 }
 .articles_blog_aside{
     width: 30%;
     display: flex; 
     flex-direction: column;
-   
+}
+.articles_blog_imgs article p,
+.img_articles_blog_first p {
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+.img_articles_blog_first p {
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 133rem;
+    left: 11rem;
+    color: white;
+  
 }
 .articles_blog_aside p {
     padding-bottom: 10px;
@@ -286,6 +315,10 @@ position: relative;
     border-radius: 7px;
     box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
     width: 100%;
+}
+.blog_btn a {
+    text-decoration: none;
+    color: white;
 }
 .blog_span{
     font-size: 15px;
@@ -921,12 +954,34 @@ position: relative;
 }
 
 /*******JS**********/
-.startup_logo {
+.logo_animation {
     transition: 2s ease all;
-   
+    opacity: 1;
+    left: 10%;
+    position: absolute;
+    animation: animation 20s linear infinite backwards;
+    margin-bottom: 3rem;
 }
-.red{
-    opacity: 0;
-    
-    
+
+@keyframes animation {
+    from {
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(1000px);
+    }
+  }
+
+.activee {
+    transform: translateX(20px);
+    transition: 1s;
+   
+    /* transition: opacity .15s ease-in-out; */
+}
+.activeConcept {
+    opacity: 1;
+    transform: translateY(20px);
+    transition: 1s;
+    opacity: 1;
+    /* transition: opacity .15s ease-in-out; */
 }

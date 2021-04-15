@@ -43,18 +43,63 @@ if(blogSelector){
 
 
 
-function appear(){
+// function appear(){
 
-        let logos  = document.querySelector('.startup_logo');
-        logos.classList.toggle('red');
+//         let logos  = document.querySelector('.startup_logo');
+//         logos.classList.toggle('red');
      
             
-        console.log(logos)
+//         console.log(logos)
      
-}
+// }
 
-window.onload = appear();
+// window.onload = appear();
 
-setInterval(appear, 2000);
+// setInterval(appear, 2000);
 
-  
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+    let element = document.querySelector('.startup_logo');
+
+    let position = element.getBoundingClientRect();
+
+    if(position.top >= 0 && position.bottom <= window.innerHeight){
+        element.classList.add('logo_animation')
+    }else {
+        element.classList.remove('logo_animation')
+    }
+    }
+
+
+window.addEventListener('scroll', active);
+
+function active(){
+    let h1 = document.querySelector('.header_main h1');
+
+    let pos = h1.getBoundingClientRect();
+
+    if(pos.top >= 0 && pos.bottom <= window.innerHeight){
+        h1.classList.add('activee')
+    }else {
+        h1.classList.remove('activee')
+    }
+    }
+
+
+window.addEventListener('scroll', appearConcept);
+
+    function appearConcept(){
+        let concept = document.querySelector('.articles');
+    
+        let p = concept.getBoundingClientRect();
+    
+        if(p.top >= 0 && p.bottom <= window.innerHeight){
+            concept.classList.add('activeConcept')
+        }else {
+            concept.classList.remove('activeConcept')
+        }
+        }
+
+
+   

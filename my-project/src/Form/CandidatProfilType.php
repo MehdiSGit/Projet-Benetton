@@ -14,6 +14,9 @@ class CandidatProfilType extends AbstractType
     {
         $builder
             ->add('firstName')
+            // ->add('firstName', null,[
+            //     'attr'=>[ 'class'=>'input']
+            // ])
             ->add('lastName')
             ->add('createAt')
             ->add('education')
