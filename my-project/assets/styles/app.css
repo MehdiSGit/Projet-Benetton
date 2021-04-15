@@ -28,8 +28,9 @@ body {
    
 }
 .social img{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
+
 .force{
     position: absolute;
     bottom: 15rem;
@@ -702,6 +703,17 @@ position: relative;
   .container_search_bar{
       width: 100%;
       margin: auto;
+      margin-top: 0;
+      padding-top: 2rem;
+  }
+  .container_search_bar h1 {
+
+    width: 20%;
+    margin: auto;
+    font-size: 49px;
+    text-align: center;
+    margin-top: 6rem;
+   
   }
 
 .container_search_bar input{
@@ -711,8 +723,9 @@ position: relative;
     border: none;
     box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
     margin-left: 17rem;
-    margin-top: 8rem;
+    margin-top: 0rem;
     margin-bottom: 2rem;
+    outline: 0;
 
 }
 .jobs{
@@ -984,4 +997,16 @@ position: relative;
     transition: 1s;
     opacity: 1;
     /* transition: opacity .15s ease-in-out; */
+}
+.element{
+  
+    width: 70%;
+    margin: auto;
+    padding: 4rem 4rem 2rem 4rem;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+#typed{
+    background-color: #FFD115 ;
 }

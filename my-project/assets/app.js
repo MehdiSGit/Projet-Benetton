@@ -13,6 +13,8 @@ import Search from './components/SearchBar';
 import Blog from './components/Blog'
 const searchBar = document.getElementById('search-bar');
 const blogSelector =  document.getElementById('blog');
+// Can also be included with a regular script tag
+import Typed from 'typed.js';
 
 if(searchBar){
   ReactDOM.render(
@@ -66,8 +68,6 @@ function reveal(){
 
     if(position.top >= 0 && position.bottom <= window.innerHeight){
         element.classList.add('logo_animation')
-    }else {
-        element.classList.remove('logo_animation')
     }
     }
 
@@ -81,8 +81,6 @@ function active(){
 
     if(pos.top >= 0 && pos.bottom <= window.innerHeight){
         h1.classList.add('activee')
-    }else {
-        h1.classList.remove('activee')
     }
     }
 
@@ -96,10 +94,15 @@ window.addEventListener('scroll', appearConcept);
     
         if(p.top >= 0 && p.bottom <= window.innerHeight){
             concept.classList.add('activeConcept')
-        }else {
-            concept.classList.remove('activeConcept')
         }
         }
 
 
-   
+
+        let typed = new Typed('#typed', {
+                strings: ['UX Design', 'UI Design', 'Developpeur', 'Web', 'Dev', 'Front', 'Data'],
+                typeSpeed: 0,
+                backSpeed: 0,
+                smartBackspace: true, // c'est par defaut
+                loop: true
+              });
