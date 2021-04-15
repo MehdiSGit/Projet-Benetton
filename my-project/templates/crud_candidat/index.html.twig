@@ -1,16 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/squelette.html.twig' %}
 
 {% block title %}Candidat index{% endblock %}
 
-{% block body %}
+{% block main %}
     <h1>Candidat index</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Email</th>
-                <th>IsVerified</th>
                 <th>FirstName</th>
                 <th>LastName</th>
                 <th>CreateAt</th>
@@ -23,9 +21,7 @@
         <tbody>
 
             <tr>
-                <td>{{ candidat.id }}</td>
                 <td>{{ candidat.email }}</td>
-                <td>{{ candidat.isVerified ? 'Yes' : 'No' }}</td>
                 <td>{{ candidat.firstName }}</td>
                 <td>{{ candidat.lastName }}</td>
                 <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d') : '' }}</td>
@@ -46,7 +42,7 @@
                             {% endif %}
 
                         {% endif %}
-                        
+
                     {% endfor %}
                 </td>
 
