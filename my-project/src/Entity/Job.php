@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\JobRepository;
+use App\Entity\Candidat;
+use App\Entity\JobPostuler;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -247,7 +249,11 @@ class Job
 
     /// FUNCTION POSTULEZ
     
-    // tracker
+    /**
+     * tracker permet de savoir si cette annonce est "postulé" par un candidat
+     * 
+     * 
+     */
     public function estPostuleParCandidat(Candidat $candidat): bool
     {
         foreach($this->postulers as $postule){

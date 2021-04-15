@@ -3,13 +3,19 @@
 namespace App\Controller;
 
 use App\Entity\Job;
+use App\Entity\Candidat;
+use App\Entity\JobPostuler;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\JobType;
+use App\Repository\JobPostulerRepository;
 use App\Repository\JobRepository;
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
+
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 
 class JobController extends AbstractController
@@ -89,6 +95,34 @@ class JobController extends AbstractController
         ]);
     }
 
+     // FUNCTION Postulez /////////////////////////////
 
+     /**
+      * Permet de postuler une annonce
+      *@Route("/postulers/{id}", name="job_postuler")
+      *   
+      */
+    public function postuler(Job $job,EntityManagerInterface $entityManager,JobPostulerRepository $jobPostulerRepository): 
+    Response {
+        ///
+        $candidat = $this->getUser();
 
+        if(!$candidat){
+
+            // PERMET L'UTILISATEUR QUI A PAS DE COMPTE, A ENVOYER SON CV PAR MAIL
+            //return $this->redirectToRoute('') ;
+        }
+        
+
+        $postuler = new JobPostuler();
+        $postuler
+            ->setJob($job)
+            ->setCandidat($candidat);
+
+        $entityManager->persist($postuler);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('home');
+
+    }
 }
