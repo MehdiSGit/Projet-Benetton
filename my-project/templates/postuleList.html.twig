@@ -1,0 +1,32 @@
+{% extends 'home/squelette.html.twig' %}
+
+{% block main%}
+{% if posts | length > 0 %}
+<div class="container">
+    <h1> Liste des offres postulés </h1>
+    {% for post in posts %}
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{post.job.name}}</h5>
+                </div>
+                <div class="modal-body">
+                    <p>{{ post.job.description}}</p>
+                    <small>{{post.job.jobStartDate ? post.job.jobStartDate|date('Y-m-d') : '' }}</small>
+                </div>          
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+  </div>  
+
+    {% else %}
+    <p> Vous n'avez pas encore postulez</p>
+    <p> <a href="{path:'offres'}">Allez voir plus d'offres</a> </p>
+
+    {% endif %}
+
+
+
+{% endblock %}

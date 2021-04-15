@@ -26,12 +26,18 @@
 
             <div class="modal-header">
                 <h5 class="modal-title">{{job.name}}</h5>
-                 <a href="{{path('ajouter_favoris',{'id': job.id}) }}" class="btn btn-primary" >
-                 <img src="https://img.icons8.com/ios/24/000000/like--v1.png"/> </a>
+                {# Verifier si l'utilisateur a deja postulé #}
+                {% if app.user and job.estPostuleParCandidat(app.user)  %}
+
+                {% else %}
+                    <a href="{{path('ajouter_favoris',{'id': job.id}) }}" class="btn btn-primary" >
+                    <img src="https://img.icons8.com/ios/24/000000/like--v1.png"/> </a>
+                 {% endif %}
             </div>
 
-<div class="btn_send_container">
-  {% if app.user and job.estPostuleParCandidat(app.user)  %}
+            <div class="btn_send_container">
+            {# Verifier si l'utilisateur a deja postulé #}
+             {% if app.user and job.estPostuleParCandidat(app.user)  %}
 
                 {% else %}
                 <a href="" class="btn_send btn-link"> Postulez </a>  
@@ -45,14 +51,10 @@
                 <small>Publié le {{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</small>
             </div>
             <div class="modal-footer">
-                <a href="{{path('ajouter_favoris',{'id': job.id}) }}" class="btn btn-primary" >Ajoutez aux favoris </a>
                 
-                {# Verifier si l'utilisateur a deja postulé #}
-                {% if app.user and job.estPostuleParCandidat(app.user)  %}
-
-                {% else %}
-                <a href="{{path('job_postuler',{'id': job.id}) }}" class="btn btn-link"> Postulez </a>  
-                {% endif %}
+                
+                
+                
             </div>
             </div>
         </div>
