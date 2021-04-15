@@ -15,6 +15,17 @@ class RecruteurFixtures extends Fixture
     }
     public function load(ObjectManager $manager)
     {
+        $annonce1 = $this->getReference('annonce1');
+        $annonce2 = $this->getReference('annonce2');
+        $annonce3 = $this->getReference('annonce3');
+        $annonce4 = $this->getReference('annonce4');
+        $annonce5 = $this->getReference('annonce5');
+        $annonce6 = $this->getReference('annonce6');
+        $annonce7 = $this->getReference('annonce7');
+        $annonce8 = $this->getReference('annonce8');
+
+        
+
         $recruteur1 = new Recruteur;
         $password = $this->passwordEncoder->encodePassword(
             $recruteur1,
@@ -25,7 +36,9 @@ class RecruteurFixtures extends Fixture
                         ->setPassword($password)
                         ->setName('Orange')
                         ->setDescription('Téléphonie mobile')
-                        ->setRoles(['ROLE_RECRUTEUR']);
+                        ->setRoles(['ROLE_RECRUTEUR'])
+                        ->addJob($annonce1)
+                        ->addJob($annonce2);
         $manager->persist($recruteur1);
 
         $manager->flush();
@@ -36,7 +49,9 @@ class RecruteurFixtures extends Fixture
                         ->setPassword($password)
                         ->setName('Bleu')
                         ->setDescription('Start-up')
-                        ->setRoles(['ROLE_RECRUTEUR']);
+                        ->setRoles(['ROLE_RECRUTEUR'])
+                        ->addJob($annonce3)
+                        ->addJob($annonce4);
         $manager->persist($recruteur2);
 
         $manager->flush();
@@ -51,7 +66,9 @@ class RecruteurFixtures extends Fixture
                         ->setPassword($password)
                         ->setName('Rosé')
                         ->setDescription('Jacques&Co')
-                        ->setRoles(['ROLE_RECRUTEUR']);
+                        ->setRoles(['ROLE_RECRUTEUR'])
+                        ->addJob($annonce5)
+                        ->addJob($annonce6);
         $manager->persist($recruteur3);
 
         $manager->flush();
@@ -66,7 +83,9 @@ class RecruteurFixtures extends Fixture
                         ->setPassword($password)
                         ->setName('Black')
                         ->setDescription('RodicaForEver')
-                        ->setRoles(['ROLE_RECRUTEUR']);
+                        ->setRoles(['ROLE_RECRUTEUR'])
+                        ->addJob($annonce7)
+                        ->addJob($annonce8);
         $manager->persist($recruteur4);
 
         $manager->flush();
