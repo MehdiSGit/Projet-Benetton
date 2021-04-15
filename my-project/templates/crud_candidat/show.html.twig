@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidat{% endblock %}
+
+{% block body %}
+    <h1>Candidat</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ candidat.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ candidat.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ candidat.roles ? candidat.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ candidat.password }}</td>
+            </tr>
+            <tr>
+                <th>IsVerified</th>
+                <td>{{ candidat.isVerified ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td>{{ candidat.firstName }}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{{ candidat.lastName }}</td>
+            </tr>
+            <tr>
+                <th>CreateAt</th>
+                <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Education</th>
+                <td>{{ candidat.education }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ candidat.experience }}</td>
+            </tr>
+            <tr>
+                <th>DescriptionCandidat</th>
+                <td>{{ candidat.descriptionCandidat }}</td>
+            </tr>
+            <tr>
+                <th>ForgottenPassword</th>
+                <td>{{ candidat.forgottenPassword }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('crud_candidat_index') }}">back to list</a>
+
+    <a href="{{ path('crud_candidat_edit', {'id': candidat.id}) }}">edit</a>
+
+    {{ include('crud_candidat/_delete_form.html.twig') }}
+{% endblock %}

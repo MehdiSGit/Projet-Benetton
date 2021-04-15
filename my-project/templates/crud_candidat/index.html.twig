@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidat index{% endblock %}
+
+{% block body %}
+    <h1>Candidat index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>IsVerified</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>CreateAt</th>
+                <th>Education</th>
+                <th>Experience</th>
+                <th>DescriptionCandidat</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>{{ candidat.id }}</td>
+                <td>{{ candidat.email }}</td>
+                <td>{{ candidat.isVerified ? 'Yes' : 'No' }}</td>
+                <td>{{ candidat.firstName }}</td>
+                <td>{{ candidat.lastName }}</td>
+                <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d') : '' }}</td>
+                <td>{{ candidat.education }}</td>
+                <td>{{ candidat.experience }}</td>
+                <td>{{ candidat.descriptionCandidat }}</td>
+                <td>
+                    {% for document in candidat.documents %}
+
+                        {% if document.pieceJointe is not null %}
+                            {{ document.name }}
+
+                            {% if document.name == 'photo' %}
+                                <img src="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}"/>
+                            {% else %}
+                                <a download href="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}">Télécharger</a>
+                                <embed src="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}" width="500" height="375" type="application/pdf"/>
+                            {% endif %}
+
+                        {% endif %}
+                        
+                    {% endfor %}
+                </td>
+
+                <td>
+                    <a href="{{ path('crud_candidat_edit') }}">edit</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+{% endblock %}

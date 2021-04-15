@@ -109,5 +109,14 @@ class JobFixtures extends Fixture
                 $manager->persist($annonce8);
 
                 $manager->flush();
+
+                $this->setReference('annonce1',$annonce1);
+                $this->setReference('annonce2',$annonce2);
+                $this->setReference('annonce3',$annonce3);
+                $this->setReference('annonce4',$annonce4);
+                $this->setReference('annonce5',$annonce5);
+                $this->setReference('annonce6',$annonce6);
+                $this->setReference('annonce7',$annonce7);
+                $this->setReference('annonce8',$annonce8);
         }
 }
