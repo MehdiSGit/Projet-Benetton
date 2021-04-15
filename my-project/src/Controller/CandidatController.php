@@ -5,10 +5,12 @@ namespace App\Controller;
 use App\Entity\Candidat;
 use App\Entity\Document;
 use App\Entity\Job;
+use App\Entity\JobPostuler;
 use App\Entity\CandidatProfil;
 use App\Form\DocumentType;
 use App\Form\CandidatProfilType;
 use App\Repository\CandidatRepository;
+use App\Repository\JobPostulerRepository;
 use App\Repository\JobRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -28,60 +30,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
  */
 class CandidatController extends AbstractController
 {
-    
-    // /**
-    //  * @Route("/candidat", name="candidat")
-    //  */
-    // public function index(Request $request): Response
-    // {   
-    //     $formulaire = $this->createForm(DocumentType::class)->handleRequest($request);
-
-    //     return $this->render('candidat.html.twig', [
-    //         'controller_name' => 'CandidatController',
-    //         'formulaire' => $formulaire->createView()
-            
-    //     ]);
-    // }
-
-//     /**
-//      * @Route("candidat/create", name="create_candidat")
-//      *
-//      * @param Request $request
-//      * @param EntityManagerInterface $entityManager
-//      * @param CandidatRepository $repository
-//      * @return JsonResponse
-//      */
-//     public function create(Request $request, EntityManagerInterface $entityManager, CandidatRepository $repository) {
-//         $content = $request->getContent();
-//         $jsonParameters = json_decode($content, true);
-
-//         $errorMessage = '';
-
-//         $email = $jsonParameters['email'];
-//         $firstname = $jsonParameters['firstname'];
-//         $lastname = $jsonParameters['lastname'];
-
-//         $candidat = new Candidat;
-
-//         $candidat->setEmail($email)
-//             ->setFirstName($firstname)
-//             ->setLastName($lastname);
-
-// //        $entityManager->persist($candidat);
-// //        $entityManager->flush();
-
-//         return new JsonResponse([
-//             'parameters' => $jsonParameters,
-//             'message' => "Boubou",
-//             'created entity' => $candidat,
-//         ]);
-//     }
-
     /**
      * @Route("/candidats", name="candidat")
      * 
      */
-    public function profil(Request $request, EntityManagerInterface $entityManager, JobRepository $jobRepository): Response
+    public function profil(Request $request, EntityManagerInterface $entityManager): Response
     {   
         // TODO : Cette page est accessible UNIQUEMENT si on est connecté ET qu'on est un candidat
         // $this->getUser() récupère l'utilisateur connecté
@@ -198,6 +151,20 @@ class CandidatController extends AbstractController
 
     // FUNCTION Postulez /////////////////////////////
 
-    
+    /**
+     * @Route("/candidat/postuler", name="postuler")
+     */
+    public function showPostuleList() : Response
+    {
+        
+        $candidat = $this->getUser();
+        //dd($candidat);   
+        $posts = $candidat->getPostulers();
+        return $this->render('postuleList.html.twig',[
+            'posts' => $posts
+            
+        ]);
+        
+    }
     
 }
