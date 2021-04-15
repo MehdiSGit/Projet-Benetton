@@ -40,5 +40,35 @@ class RecruteurFixtures extends Fixture
         $manager->persist($recruteur2);
 
         $manager->flush();
+
+        $recruteur3 = new Recruteur;
+        $password = $this->passwordEncoder->encodePassword(
+            $recruteur3,
+            '123456'
+        );
+        $recruteur3
+                        ->setEmail('Rosé@gmail.fr')
+                        ->setPassword($password)
+                        ->setName('Rosé')
+                        ->setDescription('Jacques&Co')
+                        ->setRoles(['ROLE_RECRUTEUR']);
+        $manager->persist($recruteur3);
+
+        $manager->flush();
+
+        $recruteur4 = new Recruteur;
+        $password = $this->passwordEncoder->encodePassword(
+            $recruteur4,
+            '123456'
+        );
+        $recruteur4
+                        ->setEmail('Black@gmail.fr')
+                        ->setPassword($password)
+                        ->setName('Black')
+                        ->setDescription('RodicaForEver')
+                        ->setRoles(['ROLE_RECRUTEUR']);
+        $manager->persist($recruteur4);
+
+        $manager->flush();
     }
 }
