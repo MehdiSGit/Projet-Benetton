@@ -3,28 +3,31 @@
 {% block title %}Candidat index{% endblock %}
 
 {% block main %}
-    <h1>Candidat index</h1>
 
+<section class="espace_candidat">
+    <h1>Mon Espace Candidat</h1>
+
+<div class="espace_candidat_liens">
     <a href="{{path ('favoris')}}" >Annonces coups de coeur &#9829;</a>
     <a href="{{path ('postuler')}}" >Liste des offres postulés</a>
-    
-
+ </div>   
     <table class="table">
-        <thead>
-            <tr>
-                <th>Email</th>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>CreateAt</th>
-                <th>Education</th>
-                <th>Experience</th>
-                <th>DescriptionCandidat</th>
-                <th>actions</th>
+        <thead class="thead-dark">
+            <tr class="candidat_tr">
+                <th scope="col">Email</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">CreateAt</th>
+                <th scope="col">Education</th>
+                <th scope="col">Experience</th>
+                <th scope="col">DescriptionCandidat</th>
+                <th scope="col">actions</th>
             </tr>
         </thead>
-        <tbody>
 
-            <tr>
+        
+        <tbody class="candidat_body">
+            
                 <td>{{ candidat.email }}</td>
                 <td>{{ candidat.firstName }}</td>
                 <td>{{ candidat.lastName }}</td>
@@ -32,7 +35,9 @@
                 <td>{{ candidat.education }}</td>
                 <td>{{ candidat.experience }}</td>
                 <td>{{ candidat.descriptionCandidat }}</td>
-                <td>
+          
+
+            <td>
                     {% for document in candidat.documents %}
 
                         {% if document.pieceJointe is not null %}
@@ -51,10 +56,12 @@
                 </td>
 
                 <td>
-                    <a href="{{ path('crud_candidat_edit') }}">edit</a>
+                    <a href="{{ path('crud_candidat_edit') }}">Edit</a>
                 </td>
             </tr>
 
         </tbody>
     </table>
+
+    </section>
 {% endblock %}

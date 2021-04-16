@@ -13,9 +13,10 @@ body {
     background: #F9F6F6;
     width: 1366px;
     margin: auto;
-    color: #5B5771;
-
-    
+    color: #5B5771;  
+}
+input, a, button {
+    outline: 0;
 }
 /*******HEADER*************/
 .social {
@@ -1021,5 +1022,48 @@ position: relative;
 }
 .search_elements{
     display: flex;
-    background-color: hotpink;
+   
+}
+
+/********ESPACE CANDIDAT*****/
+.espace_candidat{
+  
+}
+.espace_candidat h1{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 35px;
+}
+.espace_candidat_liens{
+    text-align: center;
+    margin-top: 3rem;
+}
+.espace_candidat_liens a {
+    background-color: #FFD115;
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: #5B5771;
+    border-radius: 7px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-right: 1rem;
+}
+.candidat_body {
+ background-color: white;
+ color: #5B5771;
+
+}
+.candidat_body td {
+    padding: 1rem;
+}
+.table {
+    background-color: #5B5771;
+    margin-top: 6rem !important;
+    color: white;
+    width: 95%;
+    margin: auto;
+}
+.candidat_tr th{
+    padding: 1rem;
 }
