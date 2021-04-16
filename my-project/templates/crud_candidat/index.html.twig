@@ -1,76 +1,78 @@
 {% extends 'home/squelette.html.twig' %}
 
-{% block title %}Mon profil{% endblock %}
+{% block title %}Mon profil
+{% endblock %}
 
 {% block main %}
-<div class="path_home">
-	 <a href="{{ path('home') }}"> 
-	 <img src="https://img.icons8.com/material-sharp/24/000000/long-arrow-left.png"/>
-	 accueil </a>
-</div>
+	<div class="path_home">
+		<a href="{{ path('home') }}">
+			<img src="https://img.icons8.com/material-sharp/24/000000/long-arrow-left.png"/>
+			accueil
+		</a>
+	</div>
 
-<section class="espace_candidat">
-    <h1>Mon Espace Candidat</h1>
+	<section class="espace_candidat">
+		<h1>Mon Espace Candidat</h1>
 
-<div class="espace_candidat_liens">
-    <a href="{{path ('favoris')}}" >Annonces coups de coeur &#9829;</a>
-    <a href="{{path ('postuler')}}" >Liste des offres postulés</a>
- </div>   
-    <table class="table">
-        <thead class="thead-dark">
-            <tr class="candidat_tr">
-                <th scope="col">Email</th>
-                <th scope="col">FirstName</th>
-                <th scope="col">LastName</th>
-                {# <th scope="col">CreateAt</th> #}
-                <th scope="col">Education</th>
-                <th scope="col">Experience</th>
-                <th scope="col">DescriptionCandidat</th>
-                <th scope="col">actions</th>
-            </tr>
-        </thead>
+		<div class="espace_candidat_liens">
+			<a href="{{path ('favoris')}}">Annonces coups de coeur &#9829;</a>
+			<a href="{{path ('postuler')}}">Liste des offres postulés</a>
+		</div>
+		<table class="table">
 
-        
-        <tbody class="candidat_body">
-            
-                <td>{{ candidat.email }}</td>
-                <td>{{ candidat.firstName }}</td>
-                <td>{{ candidat.lastName }}</td>
-                {# <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d') : '' }}</td> #}
-                <td>{{ candidat.education }}</td>
-                <td>{{ candidat.experience }}</td>
-                <td>{{ candidat.descriptionCandidat }}</td>
-          
+			<thead class="thead-dark">
+				<tr class="candidat_tr">
+					<th scope="col">Email</th>
+					<th scope="col">FirstName</th>
+					<th scope="col">LastName</th>
+					{# <th scope="col">CreateAt</th> #}
+					<th scope="col">Education</th>
+					<th scope="col">Experience</th>
+					<th scope="col">DescriptionCandidat</th>
+					<th scope="col">actions</th>
+				</tr>
+			</thead>
 
-            <td>
-                   
-                </td>
 
-                <td>
-                    <a href="{{ path('crud_candidat_edit') }}"><i class="fas fa-pencil-alt"></i></a>
-                </td>
-            </tr>
+			<tbody class="candidat_body">
 
-        </tbody>
-    </table>
-    <div class="center_documents">
-     {% for document in candidat.documents %}
+				<td>{{ candidat.email }}</td>
+				<td>{{ candidat.firstName }}</td>
+				<td>{{ candidat.lastName }}</td>
+				{# <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d') : '' }}</td> #}
+				<td>{{ candidat.education }}</td>
+				<td>{{ candidat.experience }}</td>
+				<td>{{ candidat.descriptionCandidat }}</td>
 
-                        {% if document.pieceJointe is not null %}
-                            {{ document.name }}
 
-                            {% if document.name == 'photo' %}
-                                <img src="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}"/>
-                            {% else %}
-                                <a download href="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}">Télécharger</a>
-                                <embed src="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}" width="500" height="375" type="application/pdf"/>
-                            {% endif %}
+				<td></td>
 
-                        {% endif %}
+				<td>
+					<a href="{{ path('crud_candidat_edit') }}">
+						<i class="fas fa-pencil-alt"></i>
+					</a>
+				</td>
+			</tbody>
+		</tr>
 
-                    {% endfor %}
+	</tbody>
+</table>
+<div class="center_documents">
+	{% for document in candidat.documents %}
 
-    </div>
+		{% if document.pieceJointe is not null %}
+			{{ document.name }}
 
-    </section>
-{% endblock %}
+			{% if document.name == 'photo' %}
+				<img src="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}"/>
+			{% else %}
+				<a download href="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}">Télécharger</a>
+				<embed src="{{ (vich_uploader_asset (document, 'pieceJointeFile' ) ) }}" alt="{{ document.name }}" width="500" height="375" type="application/pdf"/>
+			{% endif %}
+
+		{% endif %}
+
+	{% endfor %}
+
+</div></section>{% endblock %}
+
