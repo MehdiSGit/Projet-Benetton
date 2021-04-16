@@ -122,7 +122,7 @@ class JobController extends AbstractController
         $entityManager->persist($postuler);
         $entityManager->flush();
 
-        return $this->redirectToRoute('home');
+        return $this->redirectToRoute('postuler');
 
     }
 
