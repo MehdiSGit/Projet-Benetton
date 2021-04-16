@@ -12,9 +12,9 @@ import ReactDOM from 'react-dom';
 import Search from './components/SearchBar';
 import Blog from './components/Blog'
 const searchBar = document.getElementById('search-bar');
-const blogSelector =  document.getElementById('blog');
+const blogSelector =  document.getElementById('blog-pricipal');
 // Can also be included with a regular script tag
-import Typed from 'typed.js';
+//import Typed from 'typed.js';
 
 if(searchBar){
   ReactDOM.render(

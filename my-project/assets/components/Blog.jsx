@@ -1,79 +1,76 @@
 import React from 'react';
-
-
-
 const url = "https://jsonplaceholder.typicode.com/posts"
 
 class Blog extends React.Component {
     constructor() {
         super();
-
+        let info;
         this.state = {
             events: [],
-            // currentPage: 1,
-
+            search:'',
+           
         };
-        // this.fetchEvents = this.fetchEvents.bind(this);
     }
 
-    //  /**
-    //    * Cette componentDidUpdate qui se déclenche à chaque fois qu'on fait un setState quelque part
-    //    * ça sert à gérer les effets de bord.
-    //    * @param prevProps
-    //    * @param prevState
-    //    */
-    //   componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps, prevState){
+      if(prevState.search !== this.state.search) {
+        
+      }
 
-    //     // On ne veut relancer la requête que si l'ancienne page est différente de la nouvelle.
-    //     if (prevState.currentPage !== this.state.currentPage) {
-    //       this.fetchEvents();
-    //     }
-    //   }
+    }
     componentDidMount() {
 
-        fetch(url).then(response => response.json()).then(response => {
-            console.log(response.records);
+        fetch(url)
+        .then(response => response.json())
+        .then(response => {
             this.setState({
                 events: response,
             })
+           
+            
         });
-
     }
 
     render() {
 
+        let searchItem = this.state.events.filter((data)=>{
+            if(this.state.search == null)
+                return data
+            else if(data.title.toLowerCase().includes(this.state.search.toLowerCase())){
+                return data
+                }
+        }).map(event => (
 
-
-
-        return (
-
-            <div className="r">
-                <section className="display">
-                {this.state.events.map(event => (
-                    <div className="blog_article">
-                        <img src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt="" />
-                        <h4>  {event.title}</h4>
-                        <p>{event.body} </p>
-                    </div>
-                ))}
-
-                {/* <button onClick={this.fetchEvents}>Fetch</button> */}
-                {/* <button>More articles</button> */}
-                </section>
+            <div className="blog_article">
+                 <img src="https://image.freepik.com/vecteurs-libre/journee-internationale-personnes-handicapees-au-design-plat_23-2148723226.jpg" alt="" />
+                <h4>{event.title}</h4>
+                <p>{event.body} </p>
             </div>
 
+        ))
 
-
+        return (
+            <>
+                <div class="blog_bar">
+                <h1>Tous nos articles</h1>
+                  <input type='text'onChange={this.updateSearch} value={this.state.search} placeholder="Search"/>
+                </div>
+                <div className="r">
+                <section className="display">
+                {searchItem}
+                </section>
+                </div>  
+            </>
         );
     }
 
-    // updatePage(number) {
-    //     this.setState({
-    //         currentPage: number
-    //     });
-    // }
-
-
+    updateSearch = (e) => {
+      const keyWord = e.target.value
+      this.setState({
+        search: keyWord,
+      })
+    }
+   
 }
 
 export default Blog;

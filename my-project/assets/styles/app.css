@@ -1176,3 +1176,130 @@ position: relative;
     padding: 1rem;
     margin-top: 3rem;
 }
+
+/********ESPACE RECRUTEUR*****/
+
+.espace_recruteur{
+  
+}
+.espace_recruteur h1{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 35px;
+}
+.espace_recruteur_liens{
+    text-align: center;
+    margin-top: 3rem;
+}
+.espace_recruteur_liens a {
+    background-color: #FFD115;
+    padding: 1rem;
+    font-size: 20px;
+    text-decoration: none;
+    color: #5B5771;
+    border-radius: 7px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-right: 1rem;
+}
+.recruteur_body {
+ background-color: white;
+ color: #5B5771;
+
+}
+.recruteur_body td {
+    padding: 1rem;
+}
+.table {
+    background-color: #5B5771;
+    margin-top: 6rem !important;
+    color: white;
+    width: 95%;
+    margin: auto;
+}
+.recruteur_tr th{
+    padding: 1rem;
+}
+
+/*********EDIT RECRUTEUR*************************/
+
+.edit_recruteur{
+    width: 50%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+}
+.edit_recruteur h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.edit_profile_form{
+    padding: 1rem;
+    
+}
+.required{
+    font-weight: bold;
+}
+.edit_profile_form label {
+    font-weight: bold;
+}
+.edit_profile_form input,
+.edit_profile_form textarea {
+    width: 60%;
+    margin: auto;
+    border: none;
+    padding: .5rem;
+    margin: .5rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    
+}
+.edit_profile_form textarea {
+    height: 2rem;
+}
+
+#recruteur_profil_education{
+    margin-left: 49px;
+}
+.label_recruteur{
+    margin-left: 3rem;
+}
+.label_name{
+    margin-left: 4rem;
+}
+.label_description{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+.label_email{
+    margin-left: 4rem;
+}
+#recruteur_profil_descriptionrecruteur{
+    margin-left: 25px;
+}
+#recruteur_profil_experience{
+    margin-left: 43px;
+}
+.edit_recruteur a {
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}
+.edit_recruteur .btn{
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+.link{
+    text-decoration: none;
+}
+
