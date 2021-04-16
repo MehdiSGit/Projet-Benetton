@@ -1130,8 +1130,10 @@ position: relative;
     
 }
 .edit_profile_form textarea {
-    height: 10rem;
+    height: 15rem;
     vertical-align: middle;
+    width: 60%;
+    margin-left: 20px !important;
 }
 #candidat_profil_documents_0_pieceJointeFile_file, 
 #candidat_profil_documents_0_pieceJointeFile_delete,
@@ -1599,4 +1601,7 @@ input#job1_TypeContrat{
     margin-left: 143px !important;
     margin-bottom: 1rem;
     width: 70% !important;
+}
+#recruteur1_name{
+    margin-left: 37px !important;
 }
