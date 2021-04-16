@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/job/crud")
+ * @Route("/offres/modifier")
  */
 class JobCrudController extends AbstractController
 {

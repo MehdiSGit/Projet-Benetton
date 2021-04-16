@@ -26,8 +26,8 @@
                 <td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</td>
                 <td><span class="postuler-js"><a href="{{path('candidat_postuler',{'id': job.id})}}">{{ job.postulers | length }}</a></span> <p>profils</p></td>
                 <td>
-                    <a href="{{ path('job_crud_show', {'id': job.id}) }}">voir /</a>
-                    <a href="{{ path('job_crud_edit', {'id': job.id}) }}">éditer</a>
+                    <a href="{{ path('job_crud_show', {'id': job.id}) }}"><i class="far fa-eye"></i></a> <span>/</span>
+                    <a href="{{ path('job_crud_edit', {'id': job.id}) }}"><i class="fas fa-pencil-alt"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -35,10 +35,13 @@
                 <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
+            <tr>
+            <a href="{{ path('job_crud_new') }}">Nouveau poste <i class="fas fa-plus"></i></a>
+            </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('job_crud_new') }}">Création d'un nouveau poste</a>
+    
 {% endblock %}
 
 
