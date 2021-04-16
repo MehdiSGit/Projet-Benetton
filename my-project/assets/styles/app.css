@@ -701,11 +701,13 @@ position: relative;
    margin-top: 3rem;
   */
   .container_search_bar{
-      width: 100%;
+      width: 95%;
       margin: auto;
       margin-top: 0;
       padding-top: 2rem;
+   
   }
+ 
   .container_search_bar h1 {
 
     width: 20%;
@@ -978,7 +980,7 @@ position: relative;
 
 @keyframes animation {
     from {
-        transform: translateX(-1000px);
+        transform: translateX(-1500px);
     }
     to {
         transform: translateX(1000px);
@@ -1009,4 +1011,15 @@ position: relative;
 }
 #typed{
     background-color: #FFD115 ;
+}
+.search_img {
+    width: 40%;
+    margin-left: 7rem;
+    position: absolute;
+    z-index: -100;
+    opacity: 0.5;
+}
+.search_elements{
+    display: flex;
+    background-color: hotpink;
 }
