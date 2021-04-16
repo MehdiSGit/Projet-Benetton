@@ -1446,9 +1446,9 @@ position: relative;
     
 }
 .edit_profile_form textarea {
-    height: 2rem;
+    height: 15rem;
     vertical-align: middle;
-    width:58%;
+    width:60%;
     margin-left: 2rem;
 }
 
@@ -1459,19 +1459,17 @@ position: relative;
     margin-left: 3rem;
 }
 .label_name{
-    margin-left: 4rem;
+    margin-left: 4.5rem;
 }
 .label_description{
     margin-left: 3rem;
     margin-bottom: 1rem;
 }
-.label_JobStartDate{
+.label_jobStartDate{
     margin-left: 3rem;
-    margin-bottom: 1rem;
 }
-.label_City{
+.label_city{
     margin-left: 3rem;
-    margin-bottom: 1rem;
 }
 .label_TypeContrat{
     margin-left: 3rem;
@@ -1498,11 +1496,20 @@ position: relative;
     text-decoration: none;
 }
 input#job1_code{
-    margin-left:1rem;
+    margin-left:5rem;
 }
 input#job1_name{
-    margin-left:1rem;
+    margin-left:3.5rem;
 }
 input#job1_description{
+    margin-left:1rem;
+}
+input#job1_city{
+    margin-left:5.5rem;
+}
+input#job1_TypeContrat{
+    margin-left:1.5rem;
+}
+#job1_jobStartDate_date{
     margin-left:1rem;
 }
