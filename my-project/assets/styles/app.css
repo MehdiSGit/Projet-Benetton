@@ -1513,3 +1513,90 @@ input#job1_TypeContrat{
 #job1_jobStartDate_date{
     margin-left:1rem;
 }
+.create_new_job{
+    width: 50%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+    position: relative;
+}
+.create_new_job h1{
+    margin-bottom: 2rem !important;
+    width: 41%;
+    margin: auto;
+    font-size: 30px;
+    position: relative;
+    z-index: 100;
+}
+.create_new_job .btn{
+    width: 15%;
+    height: 3rem;
+    background-color: #FFD115;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    font-size: 17px;
+    font-weight: bolder;
+    border-radius: 9px;
+    color: white;
+    border: none;
+    margin-bottom: 2rem;
+}
+.create_new_job .label_description{
+    margin-top: 1rem;
+    position: relative;
+    top: -4rem;
+}
+.input{
+    width: 60%;
+    padding: 2rem;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-left: 17rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    outline: 0;
+}
+.create_new_job input, 
+.create_new_job textarea {
+    width: 60%;
+    padding: 1rem;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-left: 34px;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    outline: 0;
+    
+}
+.create_new_job label{
+    vertical-align: middle;
+    width: 50%;
+    margin-top: 1rem;
+    position: relative;
+
+}
+.create_new_job label .label_jobStartDate{
+   
+    position: relative;
+    
+}
+.create_new_job label {
+    margin-left: 2rem;
+    font-weight: bolder;
+}
+#job1_name{
+    margin-left: 75px !important;
+}
+#job1_jobStartDate{
+    margin-left: 143px !important;
+    margin-bottom: 1rem;
+    width: 70% !important;
+}
