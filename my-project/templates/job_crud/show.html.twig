@@ -1,6 +1,6 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/squelette.html.twig' %}
 
-{% block title %}Job{% endblock %}
+{% block title %}Mes offres{% endblock %}
 
 {% block body %}
     <h1>Job</h1>
@@ -34,9 +34,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('job_crud_index') }}">back to list</a>
+    <a href="{{ path('job_crud_index') }}"><i class="fas fa-arrow-left"></i>Retour</a>
 
-    <a href="{{ path('job_crud_edit', {'id': job.id}) }}">edit</a>
+    <a href="{{ path('job_crud_edit', {'id': job.id}) }}"><i class="fas fa-pencil-alt"></i></a>
 
     {{ include('job_crud/_delete_form.html.twig') }}
 {% endblock %}
