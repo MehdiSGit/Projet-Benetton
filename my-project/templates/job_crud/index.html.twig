@@ -3,45 +3,61 @@
 {% block title %}Modifier des offres{% endblock %}
 
 {% block main %}
-    <h1>Vos annonces</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Domaine</th>
-                <th>Intitulé du poste</th>
-                <th>Description</th>
-                <th>Date de publication</th>
-                <th>Date de prise de fonction</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for job in jobs %}
-            <tr>
-                <td>{{ job.code }}</td>
-                <td>{{ job.name }}</td>
-                <td>{{ job.description }}</td>
-                <td>{{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</td>
-                <td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</td>
-                <td><span class="postuler-js"><a href="{{path('candidat_postuler',{'id': job.id})}}">{{ job.postulers | length }}</a></span> <p>profils</p></td>
-                <td>
-                    <a href="{{ path('job_crud_show', {'id': job.id}) }}"><i class="far fa-eye"></i></a> <span>/</span>
-                    <a href="{{ path('job_crud_edit', {'id': job.id}) }}"><i class="fas fa-pencil-alt"></i></a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-            <tr>
-            <a href="{{ path('job_crud_new') }}">Nouveau poste <i class="fas fa-plus"></i></a>
-            </tr>
-        </tbody>
-    </table>
+	<section class="espace_offres">
+		<h1>Vos annonces</h1>
 
-    
+		<div class="espace_offres_liens">
+			<a href="{{ path('job_crud_new') }}">Nouveau poste
+				<i class="fas fa-plus"></i>
+			</a>
+		</div>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr class="offres_tr">
+					<th scope="col">Domaine</th>
+					<th scope="col">Intitulé du poste</th>
+					<th scope="col">Description</th>
+					{# <th scope="col">CreateAt</th> #}
+					<th scope="col">Date de publication</th>
+					<th scope="col">Date de prise de fonction</th>
+				</tr>
+			</thead>
+			<tbody class="offres_body">
+				{% for job in jobs %}
+					<tr>
+						<td>{{ job.code }}</td>
+						<td>{{ job.name }}</td>
+						<td>{{ job.description }}</td>
+						<td>{{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</td>
+						<td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</td>
+						<td>
+							<span class="postuler-js">
+								<a href="{{path('candidat_postuler',{'id': job.id})}}">{{ job.postulers | length }}</a>
+							</span>
+							<p>profils</p>
+						</td>
+						<td>
+							<a href="{{ path('job_crud_show', {'id': job.id}) }}">
+								<i class="far fa-eye"></i>
+							</a>
+							<span>ou</span>
+							<a href="{{ path('job_crud_edit', {'id': job.id}) }}">
+								<i class="fas fa-pencil-alt"></i>
+							</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="7">no records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
+
+
 {% endblock %}
+
 
 

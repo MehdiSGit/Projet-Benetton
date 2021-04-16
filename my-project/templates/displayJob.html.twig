@@ -40,7 +40,7 @@
              {% if app.user and job.estPostuleParCandidat(app.user)  %}
 
                 {% else %}
-                <a href="" class="btn_send btn-link"> Postulez </a>  
+                <a href="{{ path('job_postuler',{'id':job.id})  }}" class="btn_send btn-link"> Postulez </a>  
                 {% endif %}
             </div>
 

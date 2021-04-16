@@ -14,7 +14,7 @@
             <div class="modal-header">
             
                 <h5>{{ item.job.name }}</h5>
-                 <button type="button" class="btn_send  btn-primary">Postulez </button>
+                 <button type="button" class="btn_send  btn-primary"> <a href="{{path('job_postuler',  {'id':item.job.id} )}}">Postulez</a>  </button>
 
             </div>
 
