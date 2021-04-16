@@ -24,7 +24,7 @@
                 <td>{{ job.description }}</td>
                 <td>{{ job.datePublished ? job.datePublished|date('Y-m-d') : '' }}</td>
                 <td>{{ job.jobStartDate ? job.jobStartDate|date('Y-m-d') : '' }}</td>
-                <td><span class="postuler-js">{{job.postulers | length}}</span> <p>profils</p></td>
+                <td><span class="postuler-js"><a href="{{path('candidat_postuler',{'id': job.id})}}">{{ job.postulers | length }}</a></span> <p>profils</p></td>
                 <td>
                     <a href="{{ path('job_crud_show', {'id': job.id}) }}">voir /</a>
                     <a href="{{ path('job_crud_edit', {'id': job.id}) }}">éditer</a>

@@ -1,0 +1,32 @@
+{% extends 'home/squelette.html.twig' %}
+
+{% block main%}
+{% if posts | length > 0 %}
+<div class="container">
+    <h1> Liste des offres postulés </h1>
+    {% for post in posts %}
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span>{{ post.candidat.firstName }}</span> <span>{{ post.candidat.lastName }}</span></h5>
+                </div>
+                <div class="modal-body">
+                    <p>{{ post.candidat.descriptionCandidat}}</p>
+                    <small>{{ post.candidat.experience }}</small>
+                </div>          
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+  </div>  
+
+    {% else %}
+    <p> Il n'y a aucun profil pour le moment</p>
+    
+
+    {% endif %}
+
+
+
+{% endblock %}

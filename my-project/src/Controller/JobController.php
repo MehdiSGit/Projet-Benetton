@@ -125,4 +125,28 @@ class JobController extends AbstractController
         return $this->redirectToRoute('home');
 
     }
-}
+
+    /**
+     * 
+     * @Route("recruter/postule/{id}", name="candidat_postuler")
+     * 
+     */
+        public function showCandidatPostuler($id, EntityManagerInterface $entityManager): Response 
+        {
+            $offre = $entityManager->getRepository(Job::class)->findOneBy(['id'=>$id]);;
+            $posts = $offre->getPostulers();
+            
+            foreach($posts as $post){
+                //dd($post);
+                //dd($post->getCandidat()->getFirstName());
+            }
+
+            return $this->render('postuleCandidat.html.twig',[
+                'posts' => $posts
+                
+            ]);
+        }
+    }
+
+
+
