@@ -20,8 +20,9 @@ class Search extends React.Component {
         return (
             <div className ="container_search_bar">
               <label htmlFor="">
-                <input type="text" onChange={this.updateSearch} value={this.state.search}/>
-              </label>
+                <input type="text" onChange={this.updateSearch} placeholder="Recherchez..." value={this.state.search}/>
+                </label>
+
 
               <div className="jobs"> 
               {this.state.jobs.map(function(job) {
