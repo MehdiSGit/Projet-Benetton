@@ -252,7 +252,7 @@ position: relative;
 .startup_logo {
     margin: auto;
     text-align: center;
-    width: 300%;
+    width: 1366px;
     opacity: 0;
 }
 .startup_logo img {
