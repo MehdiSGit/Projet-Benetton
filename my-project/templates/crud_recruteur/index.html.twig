@@ -4,37 +4,34 @@
 {% endblock %}
 
 {% block main %}
-	<h1>Recruteur index</h1>
+	<section class='espace_recruteur'>
+		<h1>Mon espace Recruteur</h1>
 
-	<h2>
-		<a href="{{ path('job_crud_index')}}">Voir mes annonces</a>
-	</h2>
+		<div class="espace_recruteur_liens">
+			<a href="{{ path('job_crud_index')}}">Voir mes annonces</a>
+		</div>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Email</th>
-				<th>Name</th>
-				<th>Description</th>
-			</tr>
-		</thead>
-		<tbody>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr class="recruteur_tr">
+					<th>Email</th>
+					<th>Name</th>
+					<th>Description</th>
+				</tr>
+			</thead>
 
-			<tr>
-
+			<tbody class="candidat_body">
 				<td>{{ recruteur.email }}</td>
 				<td>{{ recruteur.name }}</td>
 				<td>{{ recruteur.description }}</td>
 				<td>
-					{# <a href="{{ path('crud_recruteur_show', {'id': recruteur.id}) }}">show</a> #}
-					<a href="{{ path('crud_recruteur_edit')}}">edit</a>
+					<a href="{{ path('crud_recruteur_edit')}}">modifier</a>
 				</td>
-			</tr>
+			</tbody>
+		</table>
 
-		</tbody>
-	</table>
-
-	{# <a href="{{ path('crud_recruteur_new') }}">Create new</a> #}
+	</section>
 {% endblock %}
+
 
 
