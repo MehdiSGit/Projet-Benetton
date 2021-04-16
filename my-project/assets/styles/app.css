@@ -1067,3 +1067,89 @@ position: relative;
 .candidat_tr th{
     padding: 1rem;
 }
+
+/*********EDIT CANDIDAT*************************/
+.edit_candidat{
+    width: 50%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+}
+.edit_candidat h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.edit_profile_form{
+    padding: 1rem;
+    
+}
+.required{
+    font-weight: bold;
+}
+.edit_profile_form label {
+    font-weight: bold;
+}
+.edit_profile_form input,
+.edit_profile_form textarea {
+    width: 60%;
+    margin: auto;
+    border: none;
+    padding: .5rem;
+    margin: .5rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    
+}
+.edit_profile_form textarea {
+    height: 10rem;
+}
+#candidat_profil_documents_0_pieceJointeFile_file, 
+#candidat_profil_documents_0_pieceJointeFile_delete,
+#candidat_profil_documents_1_pieceJointeFile_file, 
+#candidat_profil_documents_2_pieceJointeFile_file, 
+#candidat_profil_documents_0_pieceJointeFile_file
+{
+    box-shadow: none;
+}
+.vich-image input #file-upload-button{
+    border: none;
+}
+#candidat_profil_education{
+    margin-left: 49px;
+}
+.label_candidat{
+    margin-left: 3rem;
+}
+.label_experience{
+    margin-left: 3rem;
+}
+#candidat_profil_descriptionCandidat{
+    margin-left: 25px;
+}
+#candidat_profil_experience{
+    margin-left: 43px;
+}
+.edit_candidat .btn,
+.edit_candidat a {
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+
+}
+.link{
+    text-decoration: none;
+}
+
+.center_documents{
+   
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 3rem;
+}

@@ -17,7 +17,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">FirstName</th>
                 <th scope="col">LastName</th>
-                <th scope="col">CreateAt</th>
+                {# <th scope="col">CreateAt</th> #}
                 <th scope="col">Education</th>
                 <th scope="col">Experience</th>
                 <th scope="col">DescriptionCandidat</th>
@@ -31,14 +31,25 @@
                 <td>{{ candidat.email }}</td>
                 <td>{{ candidat.firstName }}</td>
                 <td>{{ candidat.lastName }}</td>
-                <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d') : '' }}</td>
+                {# <td>{{ candidat.createAt ? candidat.createAt|date('Y-m-d') : '' }}</td> #}
                 <td>{{ candidat.education }}</td>
                 <td>{{ candidat.experience }}</td>
                 <td>{{ candidat.descriptionCandidat }}</td>
           
 
             <td>
-                    {% for document in candidat.documents %}
+                   
+                </td>
+
+                <td>
+                    <a href="{{ path('crud_candidat_edit') }}">Edit</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="center_documents">
+     {% for document in candidat.documents %}
 
                         {% if document.pieceJointe is not null %}
                             {{ document.name }}
@@ -53,15 +64,8 @@
                         {% endif %}
 
                     {% endfor %}
-                </td>
 
-                <td>
-                    <a href="{{ path('crud_candidat_edit') }}">Edit</a>
-                </td>
-            </tr>
-
-        </tbody>
-    </table>
+    </div>
 
     </section>
 {% endblock %}
