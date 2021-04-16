@@ -75,7 +75,7 @@ function reveal(){
 window.addEventListener('scroll', active);
 
 function active(){
-    let h1 = document.querySelector('.header_main h1');
+    let h1 = document.querySelector('.force');
 
     let pos = h1.getBoundingClientRect();
 
@@ -99,7 +99,7 @@ window.addEventListener('scroll', appearConcept);
 
 
 
-        let typed = new Typed('#typed', {
+     let typed = new Typed('#typed', {
                 strings: ['UX Design', 'UI Design', 'Developpeur', 'Web', 'Dev', 'Front', 'Data'],
                 typeSpeed: 0,
                 backSpeed: 0,
