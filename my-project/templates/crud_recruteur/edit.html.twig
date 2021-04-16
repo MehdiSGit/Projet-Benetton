@@ -1,16 +1,24 @@
 {% extends 'home/squelette.html.twig' %}
 
 {% block title %}
-    Changer mon profil
+	Changer mon profil
 {% endblock %}
 
 {% block main %}
-	<h1>Editer</h1>
+	<section class='edit_recruteur'>
+		<h1>Editer mon profil</h1>
 
-	{{ include('crud_recruteur/_form.html.twig', {'button_label': 'Update'}) }}
+		<section class='edit_profile_form'>
 
-	<a href="{{ path('crud_recruteur_index') }}">back to list</a>
+			{{ include('crud_recruteur/_form.html.twig', {'button_label': 'Update'}) }}
 
-	{{ include('crud_recruteur/_delete_form.html.twig') }}
+			{{ include('crud_recruteur/_delete_form.html.twig') }}
+
+		</section>
+
+		<a href="{{ path('crud_recruteur_index') }}">Retour à la liste</a>
+
+	</section>
 {% endblock %}
+
 
