@@ -1,13 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/squelette.html.twig' %}
 
-{% block title %}Edit Candidat{% endblock %}
 
-{% block body %}
-    <h1>Edit Candidat</h1>
+{% block title %}Edit Candidat
+{% endblock %}
 
-    {{ include('crud_candidat/_form.html.twig', {'button_label': 'Update'}) }}
+{% block main %}
+	<section class="edit_candidat">
+		<h1>Editer mon profile</h1>
 
-    <a href="{{ path('crud_candidat_index') }}">back to list</a>
+<section class="edit_profile_form">
 
-    {{ include('crud_candidat/_delete_form.html.twig') }}
+
+		{{ include('crud_candidat/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+		{{ include('crud_candidat/_delete_form.html.twig') }}
+
+    
+</section>
+
+		<a class="link" href="{{ path('crud_candidat_index') }}">Retour à la liste</a>
+
+	</section>
 {% endblock %}

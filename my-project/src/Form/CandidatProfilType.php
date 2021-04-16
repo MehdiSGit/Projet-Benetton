@@ -18,9 +18,14 @@ class CandidatProfilType extends AbstractType
             //     'attr'=>[ 'class'=>'input']
             // ])
             ->add('lastName')
-            ->add('createAt')
-            ->add('education')
-            ->add('experience')
+            ->add('education', null, [
+                'attr' =>['class' =>''],
+                'label_attr' =>['class' => 'label_candidat']
+            ])
+            ->add('experience', null, [
+                'label_attr' =>['class' => 'label_experience']
+            ])
+
             ->add('descriptionCandidat')
             ->add('documents', CollectionType::class, [
                 'entry_type' => DocumentType::class,
