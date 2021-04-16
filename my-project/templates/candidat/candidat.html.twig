@@ -8,10 +8,9 @@
 	 <img src="https://img.icons8.com/material-sharp/24/000000/long-arrow-left.png"/>
 	 accueil </a>
 </div>
-		<h1>Page Candidat</h1>
 
 		<section class="displayCandidat">
-			<h2>Vos informations personnelles</h2></br>
+			<h2></h2></br>
 			<p>Prénom : {{candidat.FirstName}}</p></br>
 			<p>Nom : {{candidat.LastName}}</p></br>
 			<p>Education : {{candidat.Education}}</p></br>
@@ -19,27 +18,6 @@
 			<p>Votre description : {{candidat.DescriptionCandidat}}</p></br>
 			{% dump candidat.documents %}
 		</section>
-
-		{# <a href="{{path ('favoris')}}" /> #}
-		
-
-		<section class="editCandidat">
-			<h2>Editer votre profil</h2>
-			{{ form_start(formulaire2) }}
-			{{ form_rest(formulaire2) }}
-			<button>Valider</button>
-			{{ form_end(formulaire2) }}
-		</section>
-		
-		{% for message in app.flashes('message_success') %}
-			<div class="alert alert-success">{{ message }}</div>
-		{% endfor %}
-
-		{# {% dump candidat %}
-		{% for document in candidat.documents %}
-		{{ document.name }}
-		<img src="{{ vich_uploader_asset(document.pieceJointe, 'image') }}" alt="{{ document.name }}" />
-		{% endfor %}  #}
 
 	</div>
 	

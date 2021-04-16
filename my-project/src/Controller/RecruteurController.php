@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Candidat;
 use App\Form\RecruteurType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -45,6 +46,19 @@ class RecruteurController extends AbstractController
             'controller_name' => 'RecruteurController',
             'formulaire3' => $formulaire3->createView(),
             'recruteur' => $recruteur
+        ]);
+    }
+    /**
+     * @Route("/recruteurs/candidature/{id}", name="recruteur_candidature")
+     */
+    public function showCandidat(Request $request, EntityManagerInterface $entityManager,$id): Response
+    {
+        
+        $candidat = $entityManager->getRepository(Candidat::class)->find($id);
+    
+        return $this->render('candidat/candidat.html.twig', [
+    
+            'candidat' => $candidat
         ]);
     }
 }
