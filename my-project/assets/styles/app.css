@@ -252,7 +252,7 @@ position: relative;
 .startup_logo {
     margin: auto;
     text-align: center;
-    width: 100%;
+    width: 300%;
     opacity: 0;
 }
 .startup_logo img {
@@ -998,13 +998,13 @@ position: relative;
     opacity: 1;
     left: 10%;
     position: absolute;
-    animation: animation 20s linear infinite backwards;
+    animation: animation 40s linear infinite backwards;
     margin-bottom: 3rem;
 }
 
 @keyframes animation {
     from {
-        transform: translateX(-1500px);
+        transform: translateX(-1200px);
     }
     to {
         transform: translateX(1000px);
