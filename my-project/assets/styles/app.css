@@ -1131,6 +1131,7 @@ position: relative;
 }
 .edit_profile_form textarea {
     height: 10rem;
+    vertical-align: middle;
 }
 #candidat_profil_documents_0_pieceJointeFile_file, 
 #candidat_profil_documents_0_pieceJointeFile_delete,
@@ -1262,6 +1263,9 @@ position: relative;
 }
 .edit_profile_form textarea {
     height: 2rem;
+    vertical-align: middle;
+    width:58%;
+    margin-left: 2rem;
 }
 
 #recruteur_profil_education{

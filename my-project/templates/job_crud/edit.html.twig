@@ -1,13 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/squelette.html.twig' %}
 
-{% block title %}Edit Job{% endblock %}
+{% block title %}Modifier d'offres{% endblock %}
 
 {% block body %}
     <h1>Edit Job</h1>
 
     {{ include('job_crud/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('job_crud_index') }}">back to list</a>
+    <a href="{{ path('job_crud_index') }}"><i class="fas fa-arrow-left"></i>Retour</a>
 
     {{ include('job_crud/_delete_form.html.twig') }}
 {% endblock %}

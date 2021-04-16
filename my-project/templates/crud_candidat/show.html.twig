@@ -58,9 +58,9 @@
         </tbody>
     </table>
 
-    <a href="{{ path('crud_candidat_index') }}">back to list</a>
+    <a href="{{ path('crud_candidat_index') }}">Retour</a>
 
-    <a href="{{ path('crud_candidat_edit', {'id': candidat.id}) }}">edit</a>
+    <a href="{{ path('crud_candidat_edit', {'id': candidat.id}) }}">Modifier</a>
 
     {{ include('crud_candidat/_delete_form.html.twig') }}
 {% endblock %}
