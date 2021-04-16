@@ -1346,6 +1346,25 @@ position: relative;
     padding: 1rem 4rem;
     /* width: 44% !important; */
     font-size: 22px;
+}
+/********ESPACE offres*****/
+.espace_offres{
+  
+}
+.espace_offres h1{
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 35px;
+}
+.espace_offres_liens{
+    text-align: center;
+    margin-top: 3rem;
+}
+.espace_offres_liens a {
+    background-color: #FFD115;
+    padding: 1rem;
+    font-size: 20px;
     text-decoration: none;
     color: #5B5771;
     border-radius: 7px;
@@ -1367,4 +1386,123 @@ position: relative;
     color: #5B5771;
     border-radius: 7px;
     box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-right: 1rem;
+}
+.offres_body {
+ background-color: white;
+ color: #5B5771;
+
+}
+.offres_body td {
+    padding: 1rem;
+}
+.table {
+    background-color: #5B5771;
+    margin-top: 6rem !important;
+    color: white;
+    width: 95%;
+    margin: auto;
+}
+.offres_tr th{
+    padding: 1rem;
+}
+
+/*********EDIT offres*************************/
+
+.edit_offres{
+    width: 50%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow:  2px 5px 8px 0px rgb(0 0 0 / 32%);
+    margin-bottom: 2rem;
+}
+.edit_offres h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.edit_profile_form{
+    padding: 1rem;
+    
+}
+.required{
+    font-weight: bold;
+}
+.edit_profile_form label {
+    font-weight: bold;
+}
+.edit_profile_form input,
+.edit_profile_form textarea {
+    width: 60%;
+    margin: auto;
+    border: none;
+    padding: .5rem;
+    margin: .5rem;
+    margin-left: 3rem;
+    border-radius: 10px;
+    box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
+    
+}
+.edit_profile_form textarea {
+    height: 2rem;
+    vertical-align: middle;
+    width:58%;
+    margin-left: 2rem;
+}
+
+#offres_profil_education{
+    margin-left: 49px;
+}
+.label_code{
+    margin-left: 3rem;
+}
+.label_name{
+    margin-left: 4rem;
+}
+.label_description{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+.label_JobStartDate{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+.label_City{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+.label_TypeContrat{
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+#offres_profil_TypeContrat{
+    margin-left: 43px;
+}
+.edit_offres a {
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+}
+.edit_offres .btn{
+    border: none;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+}
+.link{
+    text-decoration: none;
+}
+input#job1_code{
+    margin-left:1rem;
+}
+input#job1_name{
+    margin-left:1rem;
+}
+input#job1_description{
+    margin-left:1rem;
 }

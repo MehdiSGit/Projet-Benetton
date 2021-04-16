@@ -1,13 +1,24 @@
 {% extends 'home/squelette.html.twig' %}
 
-{% block title %}Modifier d'offres{% endblock %}
-
-{% block body %}
-    <h1>Edit Job</h1>
-
-    {{ include('job_crud/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('job_crud_index') }}"><i class="fas fa-arrow-left"></i>Retour</a>
-
-    {{ include('job_crud/_delete_form.html.twig') }}
+{% block title %}Modifier mon annonce
 {% endblock %}
+
+{% block main %}
+	<section class='edit_offres'>
+		<h1>Modifier mon annonce</h1>
+
+		<section class='edit_profile_form'>
+
+			{{ include('job_crud/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+			{{ include('job_crud/_delete_form.html.twig') }}
+
+		</section>
+
+		<a href="{{ path('job_crud_index') }}">
+			<i class="fas fa-arrow-left"></i>Retour</a>
+
+	</section>
+{% endblock %}
+
