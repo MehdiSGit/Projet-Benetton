@@ -541,6 +541,11 @@ position: relative;
 
 /******************FORM CREATE CANDIDATE & RECRUTEUR**********/
 
+input#registration_form_plainPassword{
+    margin-left: 40px;
+}
+
+
 .form_create_candidat, .form_create_recruteur{
     width: 50%;
     background-color: white;
@@ -842,7 +847,7 @@ position: relative;
     margin-bottom: 2rem;
 }
 #inputEmail{
-    margin-left: 42px;
+    margin-left: 74px;
 }
 .form_login .btn1, 
 .form_login .btn2 {
@@ -1415,6 +1420,9 @@ position: relative;
 }
 
 /*********EDIT offres*************************/
+#job1_jobStartDate_time{
+    display: none;
+}
 
 .edit_offres{
     width: 50%;

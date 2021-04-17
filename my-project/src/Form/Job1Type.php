@@ -13,27 +13,27 @@ class Job1Type extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('code', null, [
+            ->add('code', null,["label"=>"Secteur d'activité : "],[
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_code']
             ])
-            ->add('name', null, [
+            ->add('name', null,["label"=>"Nom de l'entreprise : "],[
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_name']
             ])
-            ->add('description', null, [
+            ->add('description', null,["label"=>"Descriptif du poste : "], [
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_description']
             ])
-            ->add('jobStartDate', null, [
+            ->add('jobStartDate', null,["label"=>"Date de début : "], [
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_jobStartDate']
             ], DateType::class)
-            ->add('city', null, [
+            ->add('city', null,["label"=>"Ville : "], [
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_city']
             ])
-            ->add('TypeContrat', null, [
+            ->add('TypeContrat', null,["label"=>"Type de contrat : "], [
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_TypeContrat']
             ])
