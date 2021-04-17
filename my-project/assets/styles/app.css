@@ -1111,6 +1111,9 @@ position: relative;
     padding: 1rem;
     
 }
+#candidat_profil_lastName{
+    margin-left: 70px;
+}
 .required{
     font-weight: bold;
 }
@@ -1147,8 +1150,9 @@ position: relative;
     border: none;
 }
 #candidat_profil_education{
-    margin-left: 49px;
+    margin-left: 31px !important;
 }
+
 .label_candidat{
     margin-left: 3rem;
 }
@@ -1156,10 +1160,10 @@ position: relative;
     margin-left: 3rem;
 }
 #candidat_profil_descriptionCandidat{
-    margin-left: 25px;
+    margin-left: 20px !important;
 }
 #candidat_profil_experience{
-    margin-left: 43px;
+    margin-left: 48px !important;
 }
 .edit_candidat .btn,
 .edit_candidat a {
@@ -1250,6 +1254,7 @@ position: relative;
 }
 .edit_profile_form label {
     font-weight: bold;
+    margin-left: 10px !important;
 }
 .edit_profile_form input,
 .edit_profile_form textarea {
