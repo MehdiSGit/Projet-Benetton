@@ -557,6 +557,16 @@ input#registration_form_plainPassword{
     margin-bottom: 2rem;
     position: relative;
 }
+#registration_form_email{
+    margin-left: 61px !important;
+}
+#registration_recruter_form_email{
+    margin-left: 69px !important;
+}
+#registration_recruter_form_plainPassword{
+    margin-left: 10px !important;
+
+}
 .form_create_candidat h1, .form_create_recruteur h1{ 
     margin-bottom: 2rem !important;
     width: 41%;
@@ -1117,7 +1127,10 @@ input#registration_form_plainPassword{
     
 }
 #candidat_profil_lastName{
-    margin-left: 70px;
+    margin-left: 97px !important;
+}
+#candidat_profil_firstName{
+    margin-left: 75px !important;
 }
 .required{
     font-weight: bold;
@@ -1155,7 +1168,7 @@ input#registration_form_plainPassword{
     border: none;
 }
 #candidat_profil_education{
-    margin-left: 31px !important;
+    margin-left: 57px !important;
 }
 
 .label_candidat{
@@ -1273,11 +1286,14 @@ input#registration_form_plainPassword{
     box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 32%);
     
 }
+#recruteur1_email{
+    margin-left: 145px !important;
+}
 .edit_profile_form textarea {
     height: 2rem;
     vertical-align: middle;
     width:58%;
-    margin-left: 2rem;
+    margin-left: 102px !important;
 }
 
 #recruteur_profil_education{
@@ -1518,23 +1534,27 @@ div#job1{
 .link{
     text-decoration: none;
 }
-input#job1_code{
-    margin-left:5rem;
-}
+
 input#job1_name{
     margin-left:3.5rem;
 }
-input#job1_description{
-    margin-left:1rem;
+#job1_description{
+    margin-left: 24px !important;
 }
 input#job1_city{
-    margin-left:5.5rem;
+    
+    margin-left: 128px;
+
 }
 input#job1_TypeContrat{
-    margin-left:1.5rem;
+    margin-left: 42px;
 }
 #job1_jobStartDate_date{
-    margin-left:1rem;
+    margin-left:4rem;
+}
+.one {
+    position: relative;
+    top: -4rem;
 }
 .create_new_job{
     width: 50%;
@@ -1606,8 +1626,8 @@ input#job1_TypeContrat{
     position: relative;
 
 }
-.create_new_job label .label_jobStartDate{
-   
+.create_new_job label{
+
     position: relative;
     
 }
@@ -1615,8 +1635,8 @@ input#job1_TypeContrat{
     margin-left: 2rem;
     font-weight: bolder;
 }
-#job1_name{
-    margin-left: 75px !important;
+#job1_name{ 
+    margin-left: 18px !important;
 }
 #job1_jobStartDate{
     margin-left: 143px !important;

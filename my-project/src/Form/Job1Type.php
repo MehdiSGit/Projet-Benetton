@@ -23,7 +23,7 @@ class Job1Type extends AbstractType
             ])
             ->add('description', null,["label"=>"Description : "], [
                 'attr' =>['class' =>''],
-                'label_attr' =>['class' => 'label_description']
+                'label_attr' =>['class' => 'one']
             ])
             ->add('jobStartDate', null,["label"=>"Date : "], [
                 'attr' =>['class' =>''],
