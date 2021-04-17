@@ -12,13 +12,13 @@ class Recruteur1Type extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email', null, [
+            ->add('email', null,[ 'label'=>'Email : '],[
                 'label_attr' =>['class' => 'label_email']
                 ])
-            ->add('name', null, [
+            ->add('name', null, ["label"=>"Nom de l'entreprise : "],[
                 'label_attr' =>['class' => 'label_name']
                 ])
-            ->add('description', null, [
+            ->add('description', null,["label"=>"Description : "],[
                 'label_attr' =>['class' => 'label_description']
                 ])
         ;
