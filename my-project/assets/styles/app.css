@@ -1423,6 +1423,14 @@ input#registration_form_plainPassword{
 #job1_jobStartDate_time{
     display: none;
 }
+div#job1{
+    vertical-align: middle;
+}
+
+#job1_description{
+    width: 60%;
+}
+
 
 .edit_offres{
     width: 50%;
@@ -1617,4 +1625,74 @@ input#job1_TypeContrat{
 }
 #recruteur1_name{
     margin-left: 37px !important;
+}
+
+/* 404 */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.banner .content {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner .content h1 {
+    font-size: 4.5em;
+    color: #fff;
+}
+
+.banner .content p {
+    font-size: 1.7em;
+    color: #fff;
+}
+
+.button {
+    background-color: #FFD115;
+    ;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.header-overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #225470;
+    opacity: 0.55;
 }

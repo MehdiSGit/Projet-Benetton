@@ -8,7 +8,6 @@ class Blog extends React.Component {
         this.state = {
             events: [],
             search:'',
-           
         };
     }
 

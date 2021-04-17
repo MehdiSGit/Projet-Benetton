@@ -1,10 +1,46 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="fr">
 
-{% block body %}
-    <h1>Page not found</h1>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200;400;600&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+		{{ encore_entry_link_tags('app') }}
+		{# ci-dessous insert les balises <script> pour le fichier app.js #}
+		{{ encore_entry_script_tags('app') }}
+		<title></title>
+	</head>
+<body>
 
-    <p>
-        The requested page couldn't be located. Checkout for any URL
-        misspelling or <a href="{{ path('home') }}">return to the homepage</a>.
-    </p>
-{% endblock %}
+    <div class="banner">
+        <video autoplay muted loop id="video">
+            <source src="https://docs.google.com/uc?export=download&id=15f0zI8QNEdh5EVKUR1OQcjx7KUC4PNk4"
+                type="video/mp4">
+        </video>
+        <div class="header-overlay"></div>
+        <div class="content">
+            <h1>Page 404</h1>
+            <p>Vous vous êtes perdu sorry !</p>
+            <button class="button" id="btn">Demandez à Alexandre, la montagne ça lui parle</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
