@@ -16,20 +16,21 @@
 
 		<div class="espace_candidat_liens">
 			<a href="{{path ('favoris')}}">Annonces coups de coeur &#9829;</a>
-			<a href="{{path ('postuler')}}">Liste des offres postulés</a>
+			<a href="{{path ('postuler')}}">Liste de mes candidatures</a>
 		</div>
 		<table class="table">
 
 			<thead class="thead-dark">
 				<tr class="candidat_tr">
 					<th scope="col">Email</th>
-					<th scope="col">FirstName</th>
-					<th scope="col">LastName</th>
+					<th scope="col">Prénom</th>
+					<th scope="col">Nom</th>
 					{# <th scope="col">CreateAt</th> #}
-					<th scope="col">Education</th>
+					<th scope="col">Parcours scolaire</th>
 					<th scope="col">Experience</th>
-					<th scope="col">DescriptionCandidat</th>
-					<th scope="col">actions</th>
+					<th scope="col">Ma description</th>
+					<th scope="col">Editer</th>
+					
 				</tr>
 			</thead>
 
@@ -43,10 +44,6 @@
 				<td>{{ candidat.education }}</td>
 				<td>{{ candidat.experience }}</td>
 				<td>{{ candidat.descriptionCandidat }}</td>
-
-
-				<td></td>
-
 				<td>
 					<a href="{{ path('crud_candidat_edit') }}">
 						<i class="fas fa-pencil-alt"></i>
