@@ -1415,6 +1415,9 @@ input#registration_form_plainPassword{
 }
 
 /*********EDIT offres*************************/
+#job1_jobStartDate_time{
+    display: none;
+}
 
 .edit_offres{
     width: 50%;
