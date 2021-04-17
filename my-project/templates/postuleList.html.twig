@@ -4,7 +4,7 @@
 	{% if posts | length > 0 %}
 		<div class="container">
 			<h1>
-				Liste des offres postulés
+				Liste de mes candidatures
 			</h1>
 			{% for post in posts %}
 				<div class="modal" tabindex="-1">
@@ -31,8 +31,8 @@
 			<p>
 				Vous n'avez pas encore postulé</p>
 			<p>
-				{# <a href="{path:'offres'}">Allez voir plus d'offres</a> #}
-                <a  href="{{ path('offres') }}">Allez voir plus d'offres</a>
+
+				<a href="{{ path('offres') }}">Allez voir plus d'offres</a>
 
 			</p>
 		</div>
@@ -40,3 +40,4 @@
 
 
 {% endblock %}
+

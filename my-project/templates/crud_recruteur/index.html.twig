@@ -15,17 +15,18 @@
 			<thead class="thead-dark">
 				<tr class="recruteur_tr">
 					<th>Email</th>
-					<th>Name</th>
-					<th>Description</th>
+					<th>Nom de l'entreprise</th>
+					<th>Secteur d'activité</th>
+					<th>Editer son compte</th>
 				</tr>
 			</thead>
 
-			<tbody class="candidat_body">
+			<tbody class="recruteur_body">
 				<td>{{ recruteur.email }}</td>
 				<td>{{ recruteur.name }}</td>
 				<td>{{ recruteur.description }}</td>
 				<td>
-					<a href="{{ path('crud_recruteur_edit')}}">modifier</a>
+					<a href="{{ path('crud_recruteur_edit')}}">Modifier</a>
 				</td>
 			</tbody>
 		</table>

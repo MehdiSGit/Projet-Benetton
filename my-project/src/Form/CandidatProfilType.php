@@ -13,11 +13,12 @@ class CandidatProfilType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstName')
+            ->add('firstName', null,[ 'label'=>'Prénom'])
             // ->add('firstName', null,[
             //     'attr'=>[ 'class'=>'input']
             // ])
-            ->add('lastName')
+            ->add('lastName', null,[ 'label'=>'Nom']
+            )
             ->add('education', null, [
                 'attr' =>['class' =>''],
                 'label_attr' =>['class' => 'label_candidat']
@@ -26,7 +27,7 @@ class CandidatProfilType extends AbstractType
                 'label_attr' =>['class' => 'label_experience']
             ])
 
-            ->add('descriptionCandidat')
+            ->add('descriptionCandidat', null, ['label'=>'Ma description'])
             ->add('documents', CollectionType::class, [
                 'entry_type' => DocumentType::class,
             ])

@@ -14,12 +14,12 @@
             <div class="modal-header">
             
                 <h5>{{ item.job.name }}</h5>
-                 <button type="button" class="btn_send  btn-primary"> <a href="{{path('job_postuler',  {'id':item.job.id} )}}">Postulez</a>  </button>
+                 <button type="button" class="btn_send  btn-primary"> <a href="{{path('job_postuler',  {'id':item.job.id} )}}">Postuler</a>  </button>
 
             </div>
 
            
-                <a class="delete" href="{{path('remove_favoris', {'id':item.job.id})}}" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Supprimez</a>
+                <a class="delete" href="{{path('remove_favoris', {'id':item.job.id})}}" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Supprimer</a>
            
             <div class="modal-body">
                 <p>{{ item.job.description }}</p>

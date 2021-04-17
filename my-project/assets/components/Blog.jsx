@@ -53,7 +53,7 @@ class Blog extends React.Component {
             <>
                 <div class="blog_bar">
                 <h1>Tous nos articles</h1>
-                  <input type='text'onChange={this.updateSearch} value={this.state.search} placeholder="Search"/>
+                  <input type='text'onChange={this.updateSearch} value={this.state.search} placeholder="Rechercher"/>
                 </div>
                 <div className="r">
                 <section className="display">
