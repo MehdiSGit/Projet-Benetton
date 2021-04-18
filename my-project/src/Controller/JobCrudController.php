@@ -22,7 +22,6 @@ class JobCrudController extends AbstractController
     public function index(): Response
     {
         $recruteur = $this->getUser();
-            // dd($recruteur->getJobs()->count());
         return $this->render('job_crud/index.html.twig', [
             'jobs' => $recruteur->getJobs(),
         ]);

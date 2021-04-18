@@ -84,11 +84,11 @@ class JobController extends AbstractController
     public function displayJob(EntityManagerInterface $entityManager,HttpFoundationRequest $request, $id){
 
         //chercher id dans l'url
-        //dump($id);die;
+        
         // fetch le job avec id
         $job = $entityManager->getRepository(Job::class)->findOneBy(['id'=>$id]);
         
-        //dump($job);die;
+       
         return $this->render('displayJob.html.twig',[
             'job'   => $job,
             
@@ -135,11 +135,6 @@ class JobController extends AbstractController
         {
             $offre = $entityManager->getRepository(Job::class)->findOneBy(['id'=>$id]);;
             $posts = $offre->getPostulers();
-            
-            foreach($posts as $post){
-                //dd($post);
-                //dd($post->getCandidat()->getFirstName());
-            }
 
             return $this->render('postuleCandidat.html.twig',[
                 'posts' => $posts

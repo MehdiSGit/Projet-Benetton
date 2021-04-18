@@ -57,7 +57,7 @@ class CrudCandidatController extends AbstractController
     public function edit(Request $request,EntityManagerInterface $entityManager): Response
     {
         $candidat = $this->getUser();
-        // dd($candidat->getDocuments()[0]);
+        
         
         // Si les documents n'existent pas, je les initialisent pour la première fois
         if ($candidat->getDocuments()->count() < 3) {

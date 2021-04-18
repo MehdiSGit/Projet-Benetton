@@ -22,7 +22,7 @@ class RecruteurController extends AbstractController
     public function index(Request $request, EntityManagerInterface $entityManager): Response
     {
         $recruteur = $this->getUser();
-        // dd($recruteur);
+      
         $formulaire3 = $this->createForm(RecruteurType::class,$recruteur)->handleRequest($request);
 
         if ($formulaire3->isSubmitted() && $formulaire3->isValid()){

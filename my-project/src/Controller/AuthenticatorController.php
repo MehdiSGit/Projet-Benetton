@@ -21,7 +21,6 @@ class AuthenticatorController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
 
         if ($this->getUser() && $this->getUser() == true) {
-            //die('Hello');
             return $this->redirectToRoute('candidat');
         }
         else {
@@ -32,7 +31,7 @@ class AuthenticatorController extends AbstractController
 
             
         // return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
-        // die('ouech');
+        
         // return $this->render('candidat.html.twig');
     }
 

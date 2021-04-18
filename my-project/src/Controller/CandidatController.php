@@ -40,7 +40,7 @@ class CandidatController extends AbstractController
         // $this->getUser() récupère l'utilisateur connecté
         /** Candidat $candidat */
         $candidat = $this->getUser();
-        // dd($candidat->getDocuments()[0]);
+        
         
         // Si les documents n'existent pas, je les initialisent pour la première fois
         if ($candidat->getDocuments()->count() < 3) {
@@ -97,7 +97,10 @@ class CandidatController extends AbstractController
                 'id' => $id   
             ];
         }
-        //dd($favorisWithData);
+        
+        $items = $favorisWithData;
+       
+
         return $this->render('favoris.html.twig',[
             'items' => $favorisWithData
         ]);
@@ -127,7 +130,7 @@ class CandidatController extends AbstractController
         
         //remplir la session avec  le favoris
         $session->set('favoris',$favoris);
-        //dd($session->get('favoris'));
+       
 
         return $this->redirectToRoute('favoris');
     }
@@ -158,7 +161,7 @@ class CandidatController extends AbstractController
     {
         
         $candidat = $this->getUser();
-        //dd($candidat);   
+        
         $posts = $candidat->getPostulers();
         return $this->render('postuleList.html.twig',[
             'posts' => $posts
