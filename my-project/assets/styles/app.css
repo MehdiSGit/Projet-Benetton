@@ -1436,9 +1436,9 @@ input#registration_form_plainPassword{
 }
 
 /*********EDIT offres*************************/
-#job1_jobStartDate_time{
+/* #job1_jobStartDate_time{
     display: none;
-}
+} */
 div#job1{
     vertical-align: middle;
 }
