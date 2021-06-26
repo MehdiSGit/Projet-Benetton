@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Recruteur;
 use App\Form\RegistrationRecruterFormType;
-use App\Security\EmailVerifier;
+use App\Security\EmailRecruteurVerifier;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +18,7 @@ class RegistrationRecruterController extends AbstractController
 {
     private $emailVerifier;
 
-    public function __construct(EmailVerifier $emailVerifier)
+    public function __construct(EmailRecruteurVerifier $emailVerifier)
     {
         $this->emailVerifier = $emailVerifier;
     }
